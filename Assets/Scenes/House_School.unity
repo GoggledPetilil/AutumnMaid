@@ -226,7 +226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 40404981}
   - component: {fileID: 40404980}
-  - component: {fileID: 40404979}
+  - component: {fileID: 40404982}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -234,25 +234,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &40404979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 40404978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fbda10f96837474ea4926068dd53924, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MapID: 1
-  m_WarpCords: {x: 37.5, y: -3}
-  m_ZoomTransfer: 0
-  m_aud: {fileID: 40404980}
-  m_DoorSFX: {fileID: 8300000, guid: 84c6f5b03aa47d64b8668984896cfb1b, type: 3}
-  m_sr: {fileID: 807643033}
-  m_BlockDialogue: {fileID: 11400000, guid: c155c0796092cc94cb48fe3307dd3faf, type: 2}
 --- !u!82 &40404980
 AudioSource:
   m_ObjectHideFlags: 0
@@ -366,6 +347,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &40404982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40404978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0af716652a3b5314fb06e2896acd6625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MapID: 1
+  m_WarpCords: {x: 37.5, y: -3}
+  m_ZoomTransfer: 0
+  m_aud: {fileID: 40404980}
+  m_DoorSFX: {fileID: 8300000, guid: 84c6f5b03aa47d64b8668984896cfb1b, type: 3}
+  m_sr: {fileID: 807643033}
 --- !u!1 &160323776
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,9 +1011,9 @@ MonoBehaviour:
   m_Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 40404979}
-        m_TargetAssemblyTypeName: MapleDoor, Assembly-CSharp
-        m_MethodName: TriggerMapleDoor
+      - m_Target: {fileID: 40404982}
+        m_TargetAssemblyTypeName: DoorEvent, Assembly-CSharp
+        m_MethodName: TriggerDoor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

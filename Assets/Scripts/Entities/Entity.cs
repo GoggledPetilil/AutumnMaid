@@ -6,7 +6,10 @@ public class Entity : MonoBehaviour
 {
     
     [SerializeField] protected Transform m_srHolder;
-    protected bool m_Flipped;
+    [SerializeField] protected bool m_Flipped;
+    private bool m_Flipping;    // Character is still in the process of flipping.
+    [SerializeField] private AudioSource m_Aud;
+    [SerializeField] private AudioClip m_SpinSFX;
 
     public void FlipSprite(bool state)
     {
@@ -14,6 +17,7 @@ public class Entity : MonoBehaviour
         
         float startY = 180.0f;
         float endY = 0.0f;
+        float dur = 0.2f;
         if(state == true)
         {
             startY = 0.0f;
@@ -21,18 +25,36 @@ public class Entity : MonoBehaviour
         }
 
         m_Flipped = state;
-        //if(m_CanFlip == false) return;
 
-        StopCoroutine(FlipCharacter(startY, endY));
-        StartCoroutine(FlipCharacter(startY, endY));
+        StopCoroutine(FlipCharacter(startY, endY, dur));
+        StartCoroutine(FlipCharacter(startY, endY, dur));
     }
 
-    private IEnumerator FlipCharacter(float startRot, float endRot)
+    public void SpinSprite()
+    {
+        float startY = 360.0f * 1.5f;
+        float endY = 0.0f;
+        float dur = 0.45f;
+        if(m_Flipped == true)
+        {
+            startY = 0.0f;
+            endY = 180.0f * 3f;
+        }
+
+        m_Aud.clip = m_SpinSFX;
+        if(m_Flipping == false) m_Aud.Play();
+
+        StopCoroutine(FlipCharacter(startY, endY, dur));
+        StartCoroutine(FlipCharacter(startY, endY, dur));
+    }
+
+    private IEnumerator FlipCharacter(float startRot, float endRot, float dur)
     {
         float startY = startRot;
         float endY = endRot;
-        float flipDur = 0.2f;
+        float flipDur = dur;
         float t = 0.0f;
+        m_Flipping = true;
 
         while(t < 1f)
         {
@@ -43,6 +65,7 @@ public class Entity : MonoBehaviour
         }
 
         yield return null;
+        m_Flipping = false;
     }
 
     public IEnumerator Squeeze(float squeezeX, float squeezeY, float sec)

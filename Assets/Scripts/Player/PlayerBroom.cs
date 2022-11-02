@@ -78,7 +78,7 @@ public class PlayerBroom : MonoBehaviour
             {
                 Entity e = hitTarget.GetComponent(typeof(Entity)) as Entity;
                 if(e == null) return;
-                StartCoroutine(e.Squeeze(0.5f, 1.5f, 0.05f));
+                e.SpinSprite();
             }
 
             if(hitTarget.gameObject.CompareTag("Destructable"))

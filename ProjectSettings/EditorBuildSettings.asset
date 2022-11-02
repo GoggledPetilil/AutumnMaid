@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/House_Cafe.unity
     guid: 5ed25e50f1883d64087f738ce6b0d010
+  - enabled: 1
+    path: Assets/Scenes/House_0.unity
+    guid: 51395b8202b30574a90cf359463c9ec2
+  - enabled: 1
+    path: Assets/Scenes/House_1.unity
+    guid: ab4e299ec9b09ec41ac39894db8b3513
+  - enabled: 1
+    path: Assets/Scenes/House_2.unity
+    guid: dfeaea7422b775746b53b8f93ab593d7
   m_configObjects: {}
