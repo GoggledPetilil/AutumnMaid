@@ -21,7 +21,7 @@ public class Player : Entity
     public float m_DistanceMod;
 
     [Header("Components")]
-    [SerializeField] private Animator m_ani;
+    public Animator m_ani;
     [SerializeField] private Collider2D m_col;
     [SerializeField] private GameObject m_PromptHolder;
     [SerializeField] private Rigidbody2D m_rb;

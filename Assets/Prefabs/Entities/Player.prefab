@@ -463,6 +463,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_srHolder: {fileID: 6964213499176847088}
+  m_Flipped: 0
+  m_Aud: {fileID: 0}
+  m_SpinSFX: {fileID: 0}
   m_Speed: 1
   m_SpeedMod: 0
   m_MovDir: {x: 0, y: 0}
