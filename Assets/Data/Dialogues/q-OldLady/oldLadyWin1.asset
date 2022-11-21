@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da991f0f91c6d4408a100030743abd3, type: 3}
+  m_Name: oldLadyWin1
+  m_EditorClassIdentifier: 
+  increasesHappiness: 0
+  dialogueInfo:
+  - character: {fileID: 0}
+    sentence: 
+  - character: {fileID: 11400000, guid: 6883299909d6ea34cbe1147d9ef8c538, type: 2}
+    sentence: Thank you again for finding my glasses for me, Maple!
+  - character: {fileID: 11400000, guid: 6883299909d6ea34cbe1147d9ef8c538, type: 2}
+    sentence: Let's hope this is the last time I lose them... But I'm glad to know
+      I can count on you to find them!

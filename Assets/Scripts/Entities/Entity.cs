@@ -11,6 +11,17 @@ public class Entity : MonoBehaviour
     [SerializeField] private AudioSource m_Aud;
     [SerializeField] private AudioClip m_SpinSFX;
 
+    public bool isFacingRight()
+    {
+        return !m_Flipped;
+    }
+
+    public void SqueezeSprite(float squeezeX, float squeezeY, float sec)
+    {
+        StopCoroutine(Squeeze(squeezeX, squeezeY, sec));
+        StartCoroutine(Squeeze(squeezeX, squeezeY, sec));
+    }
+
     public void FlipSprite(bool state)
     {
         if(m_Flipped == state) return;
@@ -68,27 +79,26 @@ public class Entity : MonoBehaviour
         m_Flipping = false;
     }
 
-    public IEnumerator Squeeze(float squeezeX, float squeezeY, float sec)
+    private IEnumerator Squeeze(float squeezeX, float squeezeY, float sec)
     {
         Vector3 originSize = Vector3.one;
         Vector3 newSize = new Vector3(squeezeX, squeezeY, originSize.z);
         float t = 0f;
         
         Animator anim = GetComponent<Animator>();
-        SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
 
         anim.enabled = false;
         while (t <= 1f)
         {
             t += Time.deltaTime / sec;
-            sr.gameObject.transform.localScale = Vector3.Lerp(originSize, newSize, t);
+            m_srHolder.gameObject.transform.localScale = Vector3.Lerp(originSize, newSize, t);
             yield return null;
         }
         t = 0f;
         while (t <= 1f)
         {
             t += Time.deltaTime / sec;
-            sr.gameObject.transform.localScale = Vector3.Lerp(newSize, originSize, t);
+            m_srHolder.gameObject.transform.localScale = Vector3.Lerp(newSize, originSize, t);
             yield return null;
         }
         anim.enabled = true;

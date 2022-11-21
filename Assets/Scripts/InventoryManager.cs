@@ -10,6 +10,7 @@ public class InventoryManager : MonoBehaviour
     public Item m_CurrentItem;
     public bool m_IsActive;
     private bool m_WaitInput;
+    private bool m_IsPaused;
 
     [Header("Components")]
     [SerializeField] private CanvasGroup m_GroupHolder;
@@ -57,6 +58,25 @@ public class InventoryManager : MonoBehaviour
                 ExitGetAni();
             }
         }
+
+        if(CanPause() && Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(m_IsPaused)
+            {
+                Time.timeScale = 1.0f;
+            }
+            else 
+            {
+                Time.timeScale = 0.0f;
+            }
+        }
+    }
+
+    bool CanPause()
+    {
+        bool state = true;
+
+        return state;
     }
 
     void PlayAudio(AudioClip clip)

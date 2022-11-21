@@ -6,4 +6,5 @@ public class Fish : Item
     public float fishHealth;
     public float rageDuration;
     public float rageFrequency;
+    public bool isNotFish;
 }

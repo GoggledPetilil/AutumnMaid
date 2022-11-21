@@ -18,3 +18,4 @@ MonoBehaviour:
   fishHealth: 10
   rageDuration: 5
   rageFrequency: 3
+  isNotFish: 1

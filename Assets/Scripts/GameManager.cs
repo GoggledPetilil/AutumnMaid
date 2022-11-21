@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public Vector2 m_NewPosition;
+    public List<int> m_SheepOnHand = new List<int>();
+    public List<int> m_SheepSaved = new List<int>();
+    public int m_FishAmount;
 
     [Header("Components")]
     [SerializeField] private Animator m_Anim;
@@ -21,7 +24,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject m_SparklesPrefabs;
 
     [Header("Flags")]
-    public bool m_CleanedMapleRoom;
+    public bool m_FlagCleanedMapleRoom;
+    public bool m_FlagMetFarmer;
+    public bool m_FlagSavedSheep;
+    public bool m_FlagMetFisher;
+    public bool m_FlagThankFisher;
+    public bool m_FlagFedCat;
+    public bool m_FlagMetOldLady;
+    public bool m_FlagHaveGlasses;
+    public bool m_FlagLadyHelped;
 
     void Awake()
     {
@@ -70,6 +81,24 @@ public class GameManager : MonoBehaviour
     {
         InventoryManager inv = GetComponentInChildren<InventoryManager>();
         inv.GetItem(item);
+    }
+
+    public void AddSheep(int sheepID)
+    {
+        if(m_SheepOnHand.Contains(sheepID)) return;
+        m_SheepOnHand.Add(sheepID);
+    }
+
+    public void RemoveSheep(int sheepID)
+    {
+        if(!m_SheepOnHand.Contains(sheepID)) return;
+        m_SheepOnHand.Remove(sheepID);
+    }
+
+    public void SaveSheep(int sheepID)
+    {
+        if(m_SheepSaved.Contains(sheepID)) return;
+        m_SheepSaved.Add(sheepID);
     }
 
     public void IncreaseHappiness()

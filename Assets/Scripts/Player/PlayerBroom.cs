@@ -142,10 +142,15 @@ public class PlayerBroom : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0.1f);
-        m_isAttacking = false;
-        m_ps.Stop();
+        StopAttack();
 
         yield return null;
+    }
+
+    public void StopAttack()
+    {
+        m_isAttacking = false;
+        m_ps.Stop();
     }
 
     void OnDrawGizmosSelected()

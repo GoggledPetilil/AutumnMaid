@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class Leafpile : Destructable
 {
-    private Animator m_Anim;
-    private AudioSource m_Aud;
+    [Header("Parameters")]
+    [SerializeField] private GameObject m_HiddenItem;
+
+    [Header("Components")]
     [SerializeField] private ParticleSystem m_TouchParticles;
     [SerializeField] private ParticleSystem m_DeathParticles;
     [SerializeField] private GameObject m_SpriteHolder;
     [SerializeField] private GameObject m_SpriteShadow;
     [SerializeField] private AudioClip m_ShakeSFX;
     [SerializeField] private AudioClip m_DestroySFX;
+    private Animator m_Anim;
+    private AudioSource m_Aud;
     private bool m_IsActive;
 
     void Awake()
@@ -24,6 +28,7 @@ public class Leafpile : Destructable
     {
         m_Aud.clip = m_ShakeSFX;
         m_IsActive = true;
+        if(m_HiddenItem != null) m_HiddenItem.SetActive(false);
     }
 
     public override void GetHit()
@@ -32,6 +37,7 @@ public class Leafpile : Destructable
         
         m_SpriteHolder.SetActive(false);
         m_SpriteShadow.SetActive(false);
+        if(m_HiddenItem != null) m_HiddenItem.SetActive(true);
         
         m_Aud.clip = m_DestroySFX;
         m_Aud.pitch = Random.Range(0.8f, 1.0f);

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4f18f421f7ad4a42b8d74b559346f67, type: 3}
+  m_Name: Fish_Pirahna
+  m_EditorClassIdentifier: 
+  id: 0
+  itemName: Pirahna
+  sprite: {fileID: 21300000, guid: 5fa20e13c9907a5458f9ace6a14f8deb, type: 3}
+  fishHealth: 4
+  rageDuration: 5
+  rageFrequency: 1.5

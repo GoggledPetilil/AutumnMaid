@@ -20,36 +20,72 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Image m_PortraitImage;
 
     [Header("Parameters")]
+    private bool m_InConversation;
     public float m_TextSpeed;
     public Queue<Dialogue.Info> m_DialogueInfo = new Queue<Dialogue.Info>();
     private bool m_IncreaseHappy;
     private string m_CurrentSentence;
-    private bool m_InConversation;
     private bool m_IsTyping;
     private float talkTimer; // Prevents Player from insta-starting another conversation after finishing.
     private float talkDelay = 0.24f;
-
+    private float skipTimer;    // Adds little delay when skipping the text
+    private float skipDelay = 0.032f;
 
     void Update()
     {
         if(m_InConversation && Time.time > talkTimer)
         {
-            if(Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.K))
+            if((Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.K)))
             {
-                if(m_IsTyping)
+                AdvanceDialogue();
+            }
+            else if((Input.GetKey(KeyCode.X) || Input.GetKey(KeyCode.L)))
+            {
+                if(skipTimer > skipDelay)
                 {
-                    StopAllCoroutines();
-                    m_DialogueText.text = m_CurrentSentence;
-                    m_IsTyping = false;
-                    m_AdvanceArrow.SetActive(true);
-                    m_PortraitAnim.SetBool("isTalking", false);
+                    skipTimer = 0.0f;
+                    AdvanceDialogue();
                 }
                 else 
                 {
-                    DisplayNextSentence();
+                    skipTimer += Time.deltaTime;
                 }
             }
         }
+    }
+
+    void AdvanceDialogue()
+    {
+        if(m_IsTyping)
+        {
+            StopAllCoroutines();
+            m_DialogueText.text = m_CurrentSentence;
+            m_IsTyping = false;
+            m_AdvanceArrow.SetActive(true);
+            m_PortraitAnim.SetBool("isTalking", false);
+        }
+        else 
+        {
+            DisplayNextSentence();
+        }
+    }
+
+    public bool isTalking()
+    {
+        return m_InConversation;
+    }
+
+    public void SimpleMessage(string message)
+    {
+        if(m_InConversation || Time.time < talkTimer || message == "") return;
+
+        var msg = new Dialogue.Info[2];
+        msg[1].sentence = message;
+
+        Dialogue dia = new Dialogue();
+        dia.dialogueInfo = msg;
+
+        StartDialogue(dia);
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -109,7 +145,10 @@ public class DialogueManager : MonoBehaviour
             m_NameText.text = "";
             m_Aud.clip = m_DefaultTextSFX;
         }
-        m_PortraitImage.enabled = info.character != null;
+        bool hasPortrait = info.character != null;
+        //m_PortraitImage.enabled = hasPortrait;
+        m_PortraitAnim.SetBool("isOpen", hasPortrait);
+        m_BoxAnim.SetBool("hasPortrait", hasPortrait);
 
         // Start typing out the sentence
         m_CurrentSentence = info.sentence;

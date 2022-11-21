@@ -29,4 +29,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/House_2.unity
     guid: dfeaea7422b775746b53b8f93ab593d7
+  - enabled: 1
+    path: Assets/Scenes/House_3.unity
+    guid: c37f08e6ee5d7b54da7e3a6e304101ba
+  - enabled: 1
+    path: Assets/Scenes/House_4.unity
+    guid: 0102695ff63ec8146adbf71707224ff8
+  - enabled: 1
+    path: Assets/Scenes/House_5.unity
+    guid: bb47a278874ea7743a8a75f3d9b3f001
+  - enabled: 1
+    path: Assets/Scenes/House_6.unity
+    guid: 963d2590800293f41ba4f9c44784fce7
+  - enabled: 1
+    path: Assets/Scenes/House_Barn.unity
+    guid: 9de2db9b066f70943b01317c60dbea60
   m_configObjects: {}

@@ -136,7 +136,7 @@ MonoBehaviour:
   m_ZoomTransfer: 0
   m_aud: {fileID: 7847822823401464791}
   m_DoorSFX: {fileID: 8300000, guid: 84c6f5b03aa47d64b8668984896cfb1b, type: 3}
-  m_sr: {fileID: 7847822822332422565}
+  m_DoorSprite: {fileID: 7847822822332422567}
 --- !u!82 &7847822823401464791
 AudioSource:
   m_ObjectHideFlags: 0

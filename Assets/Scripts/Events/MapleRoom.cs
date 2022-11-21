@@ -11,7 +11,7 @@ public class MapleRoom : MonoBehaviour
     
     void Start()
     {
-        if(GameManager.instance.m_CleanedMapleRoom)
+        if(GameManager.instance.m_FlagCleanedMapleRoom)
         {
             m_TrashHolder.SetActive(false);
             m_ControlsHolder.SetActive(false);
@@ -29,7 +29,7 @@ public class MapleRoom : MonoBehaviour
         {
             // The player has cleaned everything.
             m_CompletedQuest = true;
-            GameManager.instance.m_CleanedMapleRoom = true;
+            GameManager.instance.m_FlagCleanedMapleRoom = true;
             m_ControlsHolder.SetActive(false);
             FindObjectOfType<DialogueManager>().StartDialogue(m_FinishDialogue);
         }
