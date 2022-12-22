@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da991f0f91c6d4408a100030743abd3, type: 3}
+  m_Name: diaHusband
+  m_EditorClassIdentifier: 
+  increasesHappiness: 0
+  dialogueInfo:
+  - character: {fileID: 0}
+    sentence: 
+  - character: {fileID: 11400000, guid: 9d6812cefe6715e4fbe92710b5d254a2, type: 2}
+    sentence: It's out anniversary today!
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Aw, congrats! What're you gonna do to celebrate?
+  - character: {fileID: 11400000, guid: 9d6812cefe6715e4fbe92710b5d254a2, type: 2}
+    sentence: We're renewing our wedding vows!
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: That's so sweet! How long has it been?
+  - character: {fileID: 11400000, guid: 9d6812cefe6715e4fbe92710b5d254a2, type: 2}
+    sentence: Going on three weeks!
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Oh. Wow.
+  - character: {fileID: 11400000, guid: 9d6812cefe6715e4fbe92710b5d254a2, type: 2}
+    sentence: I love my wife!

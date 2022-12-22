@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da991f0f91c6d4408a100030743abd3, type: 3}
+  m_Name: ghostThanks
+  m_EditorClassIdentifier: 
+  increasesHappiness: 0
+  dialogueInfo:
+  - character: {fileID: 0}
+    sentence: 
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: I think I found it! Is this it?
+  - character: {fileID: 11400000, guid: 7205890dfb836584b8dfce127554f8de, type: 2}
+    sentence: That's it! Aw, Harriet's so happy! I've never seen her so excited.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Aw, you two look so cute together!
+  - character: {fileID: 11400000, guid: 7205890dfb836584b8dfce127554f8de, type: 2}
+    sentence: There we go, back where it belongs.
+  - character: {fileID: 11400000, guid: 7205890dfb836584b8dfce127554f8de, type: 2}
+    sentence: '*sniff* I suppose it''s time to say goodbye now though, isn''t it?'
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Ah...
+  - character: {fileID: 11400000, guid: 7205890dfb836584b8dfce127554f8de, type: 2}
+    sentence: It's okay...I know this is what she needs... *sniff*
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Oh, Margie...you poor thing...
+  - character: {fileID: 11400000, guid: 7205890dfb836584b8dfce127554f8de, type: 2}
+    sentence: ...Thank you Maple. That was very nice of you.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Are you gonna be okay?
+  - character: {fileID: 11400000, guid: 7205890dfb836584b8dfce127554f8de, type: 2}
+    sentence: No, I'll be fine...I think...I think we just need a final moment here.

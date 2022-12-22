@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Cinemachine;
 
 public class GameManager : MonoBehaviour
@@ -11,6 +12,8 @@ public class GameManager : MonoBehaviour
     public List<int> m_SheepOnHand = new List<int>();
     public List<int> m_SheepSaved = new List<int>();
     public int m_FishAmount;
+    public bool m_IsDelivering;
+    public bool m_IsTalking;
 
     [Header("Components")]
     [SerializeField] private Animator m_Anim;
@@ -23,6 +26,18 @@ public class GameManager : MonoBehaviour
     [Header("Effects Prefabs")]
     [SerializeField] private GameObject m_SparklesPrefabs;
 
+    [Header("Level Up Components")]
+    [SerializeField] private CanvasGroup m_GroupHolder;
+    [SerializeField] private CanvasGroup m_LevelUpTint;
+    [SerializeField] private CanvasGroup m_HeartHolder;
+    [SerializeField] private Image m_HeartFill;
+    [SerializeField] private Image m_HeartGlow;
+    [SerializeField] private RectTransform m_GlowTransform;
+    [SerializeField] private AudioClip m_FadeSFX;
+    [SerializeField] private AudioClip m_IncreaseSFX;
+    public int m_HappyLevel;
+    private int m_MaxHappiness = 10;
+
     [Header("Flags")]
     public bool m_FlagCleanedMapleRoom;
     public bool m_FlagMetFarmer;
@@ -33,6 +48,24 @@ public class GameManager : MonoBehaviour
     public bool m_FlagMetOldLady;
     public bool m_FlagHaveGlasses;
     public bool m_FlagLadyHelped;
+    public bool m_FlagMetCafe;
+    public int m_DeliveryStage;
+    public bool m_FlagMetGhost;
+    public bool m_FlagHaveMemento;
+    public bool m_FlagGhostThanks;
+    public bool m_FlagHaveTea;
+    public bool m_FlagDrankTea;
+    public bool m_FlagMetPostman;
+    public bool m_FlagHaveToolbox;
+    public bool m_FlagThanksPostman;
+    public bool m_FlagAskedDIY;
+    public bool m_FlagMetHelena;
+    public bool m_FlagCleanedHelenaRoom;
+    public bool m_FlagHelenaBook;
+    public bool m_FlagCheckedMycen;
+    public bool m_FlagMycenDoorOpen;
+    public bool m_FlagMetOswald;
+    public bool m_FlagMetHilda;
 
     void Awake()
     {
@@ -60,7 +93,26 @@ public class GameManager : MonoBehaviour
 
     public void PlayBGM(AudioClip song)
     {
-        if(song == m_BGMPlayer.clip) return;
+        if((m_BGMPlayer.isPlaying && m_BGMPlayer.loop == false)) return;
+
+        if(SceneManager.GetActiveScene().buildIndex == 1 && m_BGMPlayer.loop == true)
+        {
+            // Music doesn't loop when outside.
+            m_BGMPlayer.loop = false;
+        }
+        else
+        {
+            // Music loops when indoors.
+            // When indoors, music is not overwritten.
+            if(m_BGMPlayer.isPlaying)
+            {
+                song = m_BGMPlayer.clip;
+            }
+            else 
+            {
+                m_BGMPlayer.loop = true;
+            }
+        }
         
         m_BGMPlayer.clip = song;
         m_BGMPlayer.Play();
@@ -104,6 +156,10 @@ public class GameManager : MonoBehaviour
     public void IncreaseHappiness()
     {
         Debug.Log("Yippee! You did something good!");
+
+        Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        player.StopMovement(true);
+        StartCoroutine(LevelUp());
     }
 
     public void LoadNewScene(int sceneIndex)
@@ -114,6 +170,25 @@ public class GameManager : MonoBehaviour
     public void TransferPlayer(int sceneIndex, Vector2 newPos, bool zoomTransfer)
     {
         StartCoroutine(TransferSequence(sceneIndex, newPos, zoomTransfer));
+    }
+
+    public void StartDelivery(bool state)
+    {
+        GameManager.instance.m_IsDelivering = state;
+        if(state == false) return;
+
+        Player p = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        p.CarryPizza(m_DeliveryStage+1);
+    }
+
+    public void HeartFill()
+    {
+        m_HeartFill.fillAmount = Mathf.Clamp((float)m_HappyLevel / (float)m_MaxHappiness, 0.0f, 1.0f);
+    }
+
+    public bool isTalking()
+    {
+        return m_IsTalking;
     }
 
     IEnumerator TransferSequence(int sceneIndex, Vector2 newPos, bool zoomTransfer)
@@ -144,5 +219,86 @@ public class GameManager : MonoBehaviour
 
         SceneManager.LoadScene(sceneIndex, LoadSceneMode.Single);
         m_Anim.SetTrigger("FadeIn");
+    }
+
+    IEnumerator LevelUp()
+    {
+        // Initialize Everything
+        Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        m_GroupHolder.alpha = 1.0f;
+        m_HeartHolder.alpha = 0.0f;
+        Color heartColor = new Color(0.859f, 0.267f, 0.49f);
+        m_HeartFill.color = heartColor;
+        m_HeartGlow.color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+        HeartFill();
+        
+        // Tint screen black
+        float blackDur = 1.0f;
+        float t = 0.0f;
+        while(t < 1.0f)
+        {
+            t += Time.deltaTime / blackDur;
+            m_LevelUpTint.alpha = t;
+            yield return null;
+        }
+
+        // Grow Heart on screen (with current fill)
+        float heartDur = 1.0f;
+        t = 0.0f;
+        PlaySFX(m_FadeSFX);
+        while(t < 1.0f)
+        {
+            t += Time.deltaTime / heartDur;
+            m_HeartHolder.alpha = t;
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(0.32f);
+
+        // Make fill bigger + white to pink fade
+        // Glow effect
+        m_HappyLevel++;
+        float fillDur = 1.0f;
+        t = 0.0f;
+        Color startColor = Color.white;
+        Color endColor = heartColor;
+        Color glowStart = new Color(1.0f, 1.0f, 1.0f, 0.5f);
+        Color glowEnd = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+        Vector2 startSize = new Vector2(1.1f, 1.1f);
+        Vector2 endSize = new Vector2(1.6f, 1.6f);
+        PlaySFX(m_IncreaseSFX);
+        HeartFill();
+        while(t < 1.0f)
+        {
+            t += Time.deltaTime / fillDur;
+            m_HeartFill.color = Color.Lerp(startColor, endColor, t);
+            m_GlowTransform.localScale = Vector2.Lerp(startSize, endSize, t);
+            m_HeartGlow.color = Color.Lerp(glowStart, glowEnd, t);
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(0.5f);
+
+        player.PlayLevelUp();
+
+        // Make heart shrink again
+        t = 0.0f;
+        while(t < 1.0f)
+        {
+            t += Time.deltaTime / heartDur;
+            m_HeartHolder.alpha = 1.0f - t;
+            yield return null;
+        }
+
+        // Get rid of tint
+        t = 0.0f;
+        while(t < 1.0f)
+        {
+            t += Time.deltaTime / blackDur;
+            m_LevelUpTint.alpha = 1.0f - t;
+            yield return null;
+        }
+
+        player.StopMovement(false);
     }
 }

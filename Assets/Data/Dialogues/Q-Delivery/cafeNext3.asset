@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da991f0f91c6d4408a100030743abd3, type: 3}
+  m_Name: cafeNext3
+  m_EditorClassIdentifier: 
+  increasesHappiness: 0
+  dialogueInfo:
+  - character: {fileID: 0}
+    sentence: 
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Order up!
+  - character: {fileID: 11400000, guid: 7276492335e4c8c43972bcaa15c718b6, type: 2}
+    sentence: Maple, you're amazing!
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Of course! Praise me a bit more, I did a really good job!
+  - character: {fileID: 11400000, guid: 7276492335e4c8c43972bcaa15c718b6, type: 2}
+    sentence: Okay, the last delivery is going to acre D-4. It's Eight large deep
+      dish pizzas.
+  - character: {fileID: 11400000, guid: 7276492335e4c8c43972bcaa15c718b6, type: 2}
+    sentence: Are you sure you can carry all that?
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: O-Of course! Anything for you, Niko!
+  - character: {fileID: 11400000, guid: 7276492335e4c8c43972bcaa15c718b6, type: 2}
+    sentence: It's a pretty tall order...So anyway, D-4...
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: (Wait, that's MY house... This is MY order!)
+  - character: {fileID: 11400000, guid: 7276492335e4c8c43972bcaa15c718b6, type: 2}
+    sentence: ...Isn't that where YOU live? Don't you think that's enough pizza,
+      Girl?
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Shove it, Niko! I just like pizza, okay? I didn't order your opinions
+      as a topping!
+  - character: {fileID: 11400000, guid: 7276492335e4c8c43972bcaa15c718b6, type: 2}
+    sentence: Alright, chill!
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Let's blow this place, little pizzas!

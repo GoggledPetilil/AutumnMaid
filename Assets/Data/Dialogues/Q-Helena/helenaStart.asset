@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da991f0f91c6d4408a100030743abd3, type: 3}
+  m_Name: helenaStart
+  m_EditorClassIdentifier: 
+  increasesHappiness: 0
+  dialogueInfo:
+  - character: {fileID: 0}
+    sentence: 
+  - character: {fileID: 11400000, guid: abb0b20417746304ea1ec57c5ec5c4e2, type: 2}
+    sentence: Agh! Where is it?!
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: What're you looking for, Helena?
+  - character: {fileID: 11400000, guid: abb0b20417746304ea1ec57c5ec5c4e2, type: 2}
+    sentence: 'Maple! Ugh, I''m sorry about the mess. '
+  - character: {fileID: 11400000, guid: abb0b20417746304ea1ec57c5ec5c4e2, type: 2}
+    sentence: I've just got to find my book, and I'm too tired to clean up right
+      now.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: It's okay, I can help you clean! Why don't you get some rest and look
+      for it later?
+  - character: {fileID: 11400000, guid: abb0b20417746304ea1ec57c5ec5c4e2, type: 2}
+    sentence: You don't understand! I can't sleep until I know what happens next!
+      Maple, I've been up for HOURS.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Wow...
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: It's not on the shelf over there?
+  - character: {fileID: 11400000, guid: abb0b20417746304ea1ec57c5ec5c4e2, type: 2}
+    sentence: 'No, and I''ve looked everywhere! '
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: It's okay! Let's get this place cleaned up and then we'll look for
+      it together.

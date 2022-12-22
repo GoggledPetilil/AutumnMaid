@@ -17,5 +17,8 @@ MonoBehaviour:
   - character: {fileID: 0}
     sentence: 
   - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
-    sentence: Thank you, Maple, for catching all those fish for me. It really cheered
-      me up.
+    sentence: Thank you again Maple, for catching all those fish.
+  - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
+    sentence: It really did cheer this old man up to see such spirit.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: That's good! Always happy to help!

@@ -6,6 +6,7 @@ public class Sheep : NPC
 {
     [Header("Parameters")]
     public int m_ID;
+    [SerializeField] private Dialogue m_FollowerDialogue;
     private float m_Speed = 4.85f;
     private float m_FollowDistance = 2.5f;    // Distance threshold between the Sheep and Player.
     private float m_StopDistance = 8.2f;      // Distance threshold to stop following the Player
@@ -84,6 +85,8 @@ public class Sheep : NPC
             GameManager.instance.AddSheep(m_ID);
 
             m_FollowDistance = m_FollowDistance * Random.Range(0.9f, 1.05f);
+
+            FindObjectOfType<DialogueManager>().StartDialogue(m_FollowerDialogue);
         }
         else 
         {

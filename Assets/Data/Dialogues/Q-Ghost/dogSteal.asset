@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da991f0f91c6d4408a100030743abd3, type: 3}
+  m_Name: dogSteal
+  m_EditorClassIdentifier: 
+  increasesHappiness: 0
+  dialogueInfo:
+  - character: {fileID: 0}
+    sentence: 
+  - character: {fileID: 11400000, guid: 6f1b951d8d0d4c64886723c6e518b1ea, type: 2}
+    sentence: Did you just steal Chomper's toy?
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Uhhh... Kinda...?
+  - character: {fileID: 11400000, guid: 6f1b951d8d0d4c64886723c6e518b1ea, type: 2}
+    sentence: ...
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: P-Please don't be mad, it's for a good cause!
+  - character: {fileID: 11400000, guid: 6f1b951d8d0d4c64886723c6e518b1ea, type: 2}
+    sentence: And what's that?
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: ...I'm bringing it back to a ghost that lost it?
+  - character: {fileID: 11400000, guid: 6f1b951d8d0d4c64886723c6e518b1ea, type: 2}
+    sentence: ...You for real?
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: I know it sounds crazy, but...
+  - character: {fileID: 11400000, guid: 6f1b951d8d0d4c64886723c6e518b1ea, type: 2}
+    sentence: Nah, nah! Take it, man! Take it!
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Huh?
+  - character: {fileID: 11400000, guid: 6f1b951d8d0d4c64886723c6e518b1ea, type: 2}
+    sentence: You think I want to get mixed up in this? I don't need some ghost out
+      to get me for the rest of my life. That's some supernatural bad karma!
+  - character: {fileID: 11400000, guid: 6f1b951d8d0d4c64886723c6e518b1ea, type: 2}
+    sentence: Get it out of here!
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Wow, thanks!

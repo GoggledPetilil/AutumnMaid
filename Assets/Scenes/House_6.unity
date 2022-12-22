@@ -1013,6 +1013,52 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 19, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1414471309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1414471311}
+  - component: {fileID: 1414471310}
+  m_Layer: 0
+  m_Name: Customer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1414471310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414471309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c9bb54586849245866649ca09d9525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CustomerID: 2
+  m_CustomerDialogue: {fileID: 11400000, guid: 0c6df0b7931087a40956d16f1db5608e, type: 2}
+--- !u!4 &1414471311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414471309}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1475844257
 GameObject:
   m_ObjectHideFlags: 0
@@ -1100,7 +1146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7898e65754c56ab43813b10d69ea9d20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BGM: {fileID: 8300000, guid: 35a5db08dd6caaf48b2c557e7d945e69, type: 3}
+  m_BGM:
+  - {fileID: 8300000, guid: 89974b5d0cc38a84b935c65f3dd06358, type: 3}
+  m_isOutside: 0
 --- !u!4 &1516046873
 Transform:
   m_ObjectHideFlags: 0
@@ -1403,6 +1451,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1913211210}
+  - component: {fileID: 1913211211}
   m_Layer: 0
   m_Name: Room
   m_TagString: Untagged
@@ -1433,6 +1482,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1913211211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913211209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e62d5326bb08449ba15bc36f7bdfd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1962246334
 GameObject:
   m_ObjectHideFlags: 0
@@ -2030,12 +2091,12 @@ SpriteRenderer:
   m_SortingLayerID: 2116949857
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ed284bf37595f8b4eadd7c3c731b957d, type: 3}
+  m_Sprite: {fileID: 130178213, guid: ed284bf37595f8b4eadd7c3c731b957d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.3519489, y: 2.2695312}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

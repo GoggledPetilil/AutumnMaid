@@ -17,19 +17,26 @@ MonoBehaviour:
   - character: {fileID: 0}
     sentence: 
   - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
-    sentence: Ah, are you unsure on how to fish?
-  - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
-    sentence: Just stand by the peer and press the action button, you'll cast your
-      fishing rod.
-  - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
-    sentence: Then, wait for your fishing rod's bobber to go down. Be sure to press
-      the action button fast.
-  - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
-    sentence: When you successfully hook in a fish, press the action button to reel
-      it in. Be sure to only real it in when you're in the green/blue zone.
-  - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
-    sentence: Eventually, you'll have yourself a salty prize.
+    sentence: Ah, are you not sure how to fish?
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: Okey-dokey! I understand everything now!
+    sentence: Mh... I've never done it before, actually...
+  - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
+    sentence: Hohoho, you silly thing!
+  - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
+    sentence: First, stand on the pier and press the action button to cast your line.
+  - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
+    sentence: Then, watch for your bobber carefully and press the action button again
+      once you get a bite.
+  - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
+    sentence: Once you've hooked a fish, you can press and hold the action button
+      to reel it in, but be sure to only do it when you're in the blue or green zones.
+  - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
+    sentence: Eventually you'll snag yourself a salty prize. You got all that?
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: I think...
+    sentence: Eh? I didn't understand any of that...
+  - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
+    sentence: Worry not, young Maple. Your subconscious self will understand.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Uh... Right... I'll try anyway...
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: (Has staring at the ocean for days on end caused Philip to reach enlightenment?)

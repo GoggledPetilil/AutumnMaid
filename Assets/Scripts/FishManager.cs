@@ -252,7 +252,7 @@ public class FishManager : MonoBehaviour
         else if(m_FishingStage == 4)
         {
             // Will end fishing if not in a textbox.
-            if(FindObjectOfType<DialogueManager>().isTalking() == false)
+            if(GameManager.instance.isTalking() == false)
             {
                 StopFishing();
             }
@@ -266,7 +266,8 @@ public class FishManager : MonoBehaviour
 
     public void StartFishing()
     {
-        if(m_IsFishing || m_FishingCoolDown > 0.0f) return;
+        if(m_IsFishing || m_FishingCoolDown > 0.0f || GameManager.instance.m_IsDelivering || 
+        GameManager.instance.m_FlagMetFisher == false) return;
         StartCoroutine("StartFishingEvent");
     }
 

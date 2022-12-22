@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da991f0f91c6d4408a100030743abd3, type: 3}
+  m_Name: cafeStart
+  m_EditorClassIdentifier: 
+  increasesHappiness: 0
+  dialogueInfo:
+  - character: {fileID: 0}
+    sentence: 
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Can I get a quick-- Oh wow, you look a little stressed out today Niko...
+  - character: {fileID: 11400000, guid: 7276492335e4c8c43972bcaa15c718b6, type: 2}
+    sentence: Oh wow, I sure am! Ahahahaha!
+  - character: {fileID: 11400000, guid: 7276492335e4c8c43972bcaa15c718b6, type: 2}
+    sentence: I'm all on my own today; I don't know how I'm going to run the cafe
+      AND make all these deliveries...
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Would you like some help? I could make a few deliveries for you!
+  - character: {fileID: 11400000, guid: 7276492335e4c8c43972bcaa15c718b6, type: 2}
+    sentence: ...Oh...Oh man, would you really?
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Of course!
+  - character: {fileID: 11400000, guid: 7276492335e4c8c43972bcaa15c718b6, type: 2}
+    sentence: Oh Maple, you've really saved me here. I've got a date tonight, and
+      I'd feel so terrible if I had to stay late...
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: A date? Tell me, tell me!
+  - character: {fileID: 11400000, guid: 7276492335e4c8c43972bcaa15c718b6, type: 2}
+    sentence: Oh...haha...yeah...Mint and I were planning to go on a hike together
+      after my shift.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Aw! That's so cute! In that case, I'm doubly in! Where to first?
+  - character: {fileID: 11400000, guid: 7276492335e4c8c43972bcaa15c718b6, type: 2}
+    sentence: The first delivery is for Acre-E3. It's the farm!
+  - character: {fileID: 11400000, guid: 7276492335e4c8c43972bcaa15c718b6, type: 2}
+    sentence: It's just a single pizza... Thanks for the help, Maple!
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Thumbs up!

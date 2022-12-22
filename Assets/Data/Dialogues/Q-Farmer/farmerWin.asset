@@ -17,9 +17,17 @@ MonoBehaviour:
   - character: {fileID: 0}
     sentence: 
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: Hello there! I found all your sheep for you, Morgan!
+    sentence: Hello there! I've got some good news! I found all your sheep for you!
   - character: {fileID: 11400000, guid: 492e1daa440d43b44820fb2408b3bd2e, type: 2}
-    sentence: You did?! Oh my goodness, thank you so much!!
+    sentence: You did!? Oh my goodness, thank you so much! None of them were hurt?
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Nope! They're all back and safe and sound.
   - character: {fileID: 11400000, guid: 492e1daa440d43b44820fb2408b3bd2e, type: 2}
-    sentence: Words cannot express my relief and joy... Thank you so much, Maple!
-      Thank you!
+    sentence: Oh Maple! Thank you again. You're too good to me.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Hehe, it wasn't too difficult. They're such cute little guys!
+  - character: {fileID: 11400000, guid: 492e1daa440d43b44820fb2408b3bd2e, type: 2}
+    sentence: Well, you're welcome to come by any time you might want to see them
+      again.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Yippee!

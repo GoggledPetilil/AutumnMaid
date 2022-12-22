@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class Player : Entity
 {
+    public enum TerrainTag
+    {
+        Dirt,
+        Stone,
+        Wood,
+        Sand
+    }
+    
     [Header("Parameters")]
     public float m_Speed;
     public float m_SpeedMod;
+    public TerrainTag m_CurrentTerrain;
 
     [Header("Move Physics")]
     public Vector2 m_MovDir;
@@ -23,6 +32,7 @@ public class Player : Entity
 
     [Header("Components")]
     public Animator m_ani;
+    [SerializeField] private ParticleSystem m_LevelParticles;
     [SerializeField] private Collider2D m_col;
     [SerializeField] private GameObject m_PromptHolder;
     [SerializeField] private Rigidbody2D m_rb;
@@ -32,7 +42,14 @@ public class Player : Entity
 
     [Header("Audio Components")]
     [SerializeField] private AudioSource m_StepAudio;
-    [SerializeField] private AudioClip m_SFXStepDirt;
+    [SerializeField] private AudioClip[] m_SFXStepDirt;
+    [SerializeField] private AudioClip[] m_SFXStepStone;
+    [SerializeField] private AudioClip[] m_SFXStepSand;
+    [SerializeField] private AudioClip[] m_SFXStepWood;
+
+    [Header("Item Components")]
+    [SerializeField] private SpriteRenderer m_PizzaRenderer;
+    [SerializeField] private Sprite[] m_PizzaSprites;
     
 
     void Awake()
@@ -50,6 +67,10 @@ public class Player : Entity
         m_SpeedMod = 1;
 
         PromptAppear(false);
+        if(GameManager.instance.m_IsDelivering)
+        {
+            CarryPizza(GameManager.instance.m_DeliveryStage);
+        }
     }
 
     void Update()
@@ -174,12 +195,47 @@ public class Player : Entity
 
     public void PlayFootstep()
     {
+        if(m_CurrentTerrain == TerrainTag.Dirt)
+        {
+            m_StepAudio.clip = m_SFXStepDirt[Random.Range(0, m_SFXStepDirt.Length)];
+        }
+        else if(m_CurrentTerrain == TerrainTag.Stone)
+        {
+            m_StepAudio.clip = m_SFXStepStone[Random.Range(0, m_SFXStepStone.Length)];
+        }
+        else if(m_CurrentTerrain == TerrainTag.Wood)
+        {
+            m_StepAudio.clip = m_SFXStepWood[Random.Range(0, m_SFXStepWood.Length)];
+        }
+        else if(m_CurrentTerrain == TerrainTag.Sand)
+        {
+            m_StepAudio.clip = m_SFXStepSand[Random.Range(0, m_SFXStepSand.Length)];
+        }
         m_StepAudio.Play();
     }
 
     public void PatObject(Entity obj)
     {
+        if(GameManager.instance.m_IsDelivering) return;
         StartCoroutine(PatThis(obj));
+    }
+
+    public void CarryPizza(int amount)
+    {
+        if(amount < 1)
+        {
+            m_ani.SetBool("isHolding", false);
+        }
+        else 
+        {
+            m_ani.SetBool("isHolding", true);
+            m_PizzaRenderer.sprite = m_PizzaSprites[Mathf.Clamp(amount-1, 0, m_PizzaSprites.Length)];
+        }
+    }
+
+    public void PlayLevelUp()
+    {
+        m_LevelParticles.Play();
     }
 
     IEnumerator PatThis(Entity obj)

@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da991f0f91c6d4408a100030743abd3, type: 3}
+  m_Name: diyAsk
+  m_EditorClassIdentifier: 
+  increasesHappiness: 0
+  dialogueInfo:
+  - character: {fileID: 0}
+    sentence: 
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Hello there!
+  - character: {fileID: 11400000, guid: 9a305df9342f713418d6568ee46f2a81, type: 2}
+    sentence: '*Yawn* So what''s up? Mint said you were looking for me?'
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Yeah, hopefully it's not bad timing...
+  - character: {fileID: 11400000, guid: 9a305df9342f713418d6568ee46f2a81, type: 2}
+    sentence: Eh, don't sweat it. I've always got my coffee to prop me back up.
+  - character: {fileID: 11400000, guid: 9a305df9342f713418d6568ee46f2a81, type: 2}
+    sentence: So, what's up?
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: You think I could borrow your toolbox for a bit?
+  - character: {fileID: 11400000, guid: 9a305df9342f713418d6568ee46f2a81, type: 2}
+    sentence: Huh? Never figured you much for a gearhead Maple. Whatcha workin' on?
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Oh, it's not for me! Matthew's scooter broke down and he needs some
+      help.
+  - character: {fileID: 11400000, guid: 9a305df9342f713418d6568ee46f2a81, type: 2}
+    sentence: 'Oh yeah, sure thing! I''ve got a set out back you guys can use. '
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Thanks! I'll bring them right back once we're done!

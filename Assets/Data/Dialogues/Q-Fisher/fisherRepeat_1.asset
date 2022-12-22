@@ -17,13 +17,13 @@ MonoBehaviour:
   - character: {fileID: 0}
     sentence: 
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: There! That was a pretty sweet catch, huh!
+    sentence: There! Did you see that? Pretty great catch, huh?
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
     sentence: How are you feeling now, Philip?
   - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
-    sentence: Hm... It is nice to see you enjoy yourself, I must admit...
+    sentence: Hmmm, it is nice to see you enjoy yourself, I must admit.
   - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
-    sentence: Perhaps... Would you be able to catch me some more fish? I would like
-      that, very much.
+    sentence: Perhaps...Would you be able to catch me a few more fish? I would like
+      that very much.
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
     sentence: Okey-dokey! NO problemo!

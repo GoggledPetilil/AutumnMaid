@@ -17,7 +17,5 @@ MonoBehaviour:
   - character: {fileID: 0}
     sentence: 
   - character: {fileID: 11400000, guid: 6883299909d6ea34cbe1147d9ef8c538, type: 2}
-    sentence: Thank you again for finding my glasses for me, Maple!
-  - character: {fileID: 11400000, guid: 6883299909d6ea34cbe1147d9ef8c538, type: 2}
-    sentence: Let's hope this is the last time I lose them... But I'm glad to know
-      I can count on you to find them!
+    sentence: "Have you come back to help with the crossword? I'm looking for a seven
+      letter word for \u201Cspectacles\u201D"

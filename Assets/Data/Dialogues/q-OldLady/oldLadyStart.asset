@@ -16,24 +16,20 @@ MonoBehaviour:
   dialogueInfo:
   - character: {fileID: 0}
     sentence: 
-  - character: {fileID: 11400000, guid: 6883299909d6ea34cbe1147d9ef8c538, type: 2}
-    sentence: Oh, where could they be...
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
     sentence: Hello there!
   - character: {fileID: 11400000, guid: 6883299909d6ea34cbe1147d9ef8c538, type: 2}
-    sentence: Oh, who is this?
+    sentence: Who's that at the door?
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: It's me, Maple!
-  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: Say, where are your glasses, Lillian?
+    sentence: It's Maple, you remember me, don't you?
   - character: {fileID: 11400000, guid: 6883299909d6ea34cbe1147d9ef8c538, type: 2}
-    sentence: I don't know... I've been looking everywhere for them! But I cannot
-      find them!
+    sentence: Oh, Maple! Yes, of course I do! I've still got my memory yet!
   - character: {fileID: 11400000, guid: 6883299909d6ea34cbe1147d9ef8c538, type: 2}
-    sentence: Sigh... I've been looking all day...
+    sentence: I've just lost my glasses is all. Do you think you could help me find
+      them?
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: Hmmm... I haven't seen them either...
-  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: If I see them, I'll be sure to return them to you, Lillian!
+    sentence: Sure! Do you remember when you had them last?
   - character: {fileID: 11400000, guid: 6883299909d6ea34cbe1147d9ef8c538, type: 2}
-    sentence: Oh, thank you Maple! You're too kind!
+    sentence: I think it was...well...no. I'm sorry dear.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Don't worry! I'll find them!

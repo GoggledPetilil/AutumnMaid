@@ -19,20 +19,22 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
     sentence: Hello there!
   - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
-    sentence: Greetings, young Maple.
+    sentence: Ah, greetings, young Maple.
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: You've been staring out towards the sea for days now, Philip. Are you
-      not going to be fishing?
+    sentence: You've been staring out towards the sea for days now Philip...Is something
+      bothering you?
   - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
-    sentence: Ah... I fear that the idea of fishing...doesn't seem very exciting
-      today.
+    sentence: I fear the idea of fishing... just doesn't seem very exciting today.
   - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
-    sentence: It's been a real struggle for these old bones.
+    sentence: It's been a real struggle for these old bones lately.
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: I'll try and catch something for you then, to show you how exciting
-      fishing can be!
+    sentence: Maybe I can help! Let me try to catch something special for you!
   - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
     sentence: I see... Alright then, I'll be watching.
   - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
-    sentence: Just go and stand over by the pier there. You'll have a firmer stance
-      there than on the sand here.
+    sentence: I'll lend you one of my poles.
+  - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
+    sentence: Why don't you stand over on the pier there? You'll have a firmer stance
+      than on the sand here.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Okey dokey!

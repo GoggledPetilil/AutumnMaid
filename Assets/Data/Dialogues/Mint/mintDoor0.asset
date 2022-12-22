@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da991f0f91c6d4408a100030743abd3, type: 3}
+  m_Name: mintDoor0
+  m_EditorClassIdentifier: 
+  increasesHappiness: 0
+  dialogueInfo:
+  - character: {fileID: 0}
+    sentence: 
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Have you seen Mycen anywhere? I need to borrow his tools.
+  - character: {fileID: 11400000, guid: 40605f7dfb7df2a438e84d44fe2ca7bc, type: 2}
+    sentence: He's not at home? He always is.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Well...the door was kinda locked...
+  - character: {fileID: 11400000, guid: 40605f7dfb7df2a438e84d44fe2ca7bc, type: 2}
+    sentence: That lump's probably just still sleeping. I'll give him a call.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Oh, if he's sleeping then I don't mind coming later!
+  - character: {fileID: 11400000, guid: 40605f7dfb7df2a438e84d44fe2ca7bc, type: 2}
+    sentence: It's fine. It's his fault he stays up so late working anyway.
+  - character: {fileID: 11400000, guid: 40605f7dfb7df2a438e84d44fe2ca7bc, type: 2}
+    sentence: I'll call him and let him know you're on your way.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: ...
+  - character: {fileID: 11400000, guid: 40605f7dfb7df2a438e84d44fe2ca7bc, type: 2}
+    sentence: ...
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: So... Are you going to call him, then...?
+  - character: {fileID: 11400000, guid: 40605f7dfb7df2a438e84d44fe2ca7bc, type: 2}
+    sentence: W-Well... I'd like to call him in private, if you don't mind...
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Okey-dokey!

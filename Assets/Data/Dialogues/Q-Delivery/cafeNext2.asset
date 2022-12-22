@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da991f0f91c6d4408a100030743abd3, type: 3}
+  m_Name: cafeNext2
+  m_EditorClassIdentifier: 
+  increasesHappiness: 0
+  dialogueInfo:
+  - character: {fileID: 0}
+    sentence: 
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Order up!
+  - character: {fileID: 11400000, guid: 7276492335e4c8c43972bcaa15c718b6, type: 2}
+    sentence: Wow, you're fast.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: They don't call me Speedy Maple for nothing!
+  - character: {fileID: 11400000, guid: 7276492335e4c8c43972bcaa15c718b6, type: 2}
+    sentence: 'Right, so the next one...it looks like it''s going to acre C-1. That
+      should be the school. '
+  - character: {fileID: 11400000, guid: 7276492335e4c8c43972bcaa15c718b6, type: 2}
+    sentence: Maybe they're having a pizza party or something? It's four pizzas this
+      time....Huh. Lotta pizza for such a small class...
+  - character: {fileID: 11400000, guid: 7276492335e4c8c43972bcaa15c718b6, type: 2}
+    sentence: Even so, Speedy Maple will get the job done! Here we go!

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da991f0f91c6d4408a100030743abd3, type: 3}
+  m_Name: fSonPizza
+  m_EditorClassIdentifier: 
+  increasesHappiness: 0
+  dialogueInfo:
+  - character: {fileID: 0}
+    sentence: 
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Hey, you should get inside! They're throwing a pizza party!
+  - character: {fileID: 11400000, guid: 35e0f53bb30dc3749b75fde7ae676488, type: 2}
+    sentence: But we're already have pizza at home!
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Ah. Did your grandmother tell you?
+  - character: {fileID: 11400000, guid: 35e0f53bb30dc3749b75fde7ae676488, type: 2}
+    sentence: No! I ordered them, as a surprise for her!
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: O-Oh! You must have been saving up for a while then...
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: But wait, you have a bank account...?
+  - character: {fileID: 11400000, guid: 35e0f53bb30dc3749b75fde7ae676488, type: 2}
+    sentence: I just borrowed my granny's card! It's a very magical item!
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: H-Hilda! You can't just do that, even with good intent! Don't just
+      take her card again, okay?
+  - character: {fileID: 11400000, guid: 35e0f53bb30dc3749b75fde7ae676488, type: 2}
+    sentence: Wah! I'm sorry...

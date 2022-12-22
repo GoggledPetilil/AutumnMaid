@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da991f0f91c6d4408a100030743abd3, type: 3}
+  m_Name: diaSportsFinish
+  m_EditorClassIdentifier: 
+  increasesHappiness: 0
+  dialogueInfo:
+  - character: {fileID: 0}
+    sentence: 
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Hello there! Fear not! You're safe!
+  - character: {fileID: 11400000, guid: 6f1b951d8d0d4c64886723c6e518b1ea, type: 2}
+    sentence: No hauntings? The ghost won't come back for us?
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Nein!
+  - character: {fileID: 11400000, guid: 6f1b951d8d0d4c64886723c6e518b1ea, type: 2}
+    sentence: Oh, phew... That's a relief...
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Yup! A win for everybody!
+  - character: {fileID: 11400000, guid: 6f1b951d8d0d4c64886723c6e518b1ea, type: 2}
+    sentence: What are you talking about? You still owe Chomper a new toy, you know...
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Crud, you're right... I forgot...
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: I-I'll buy him something nice, next time I'm in the city!
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: We could go together even, make it a date!
+  - character: {fileID: 11400000, guid: 6f1b951d8d0d4c64886723c6e518b1ea, type: 2}
+    sentence: Flattery won't get you anywhere.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Well, it was worth a shot...

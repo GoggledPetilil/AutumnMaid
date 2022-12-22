@@ -17,8 +17,8 @@ MonoBehaviour:
   - character: {fileID: 0}
     sentence: 
   - character: {fileID: 11400000, guid: 492e1daa440d43b44820fb2408b3bd2e, type: 2}
-    sentence: I think there should be three sheep around town.
-  - character: {fileID: 11400000, guid: 492e1daa440d43b44820fb2408b3bd2e, type: 2}
-    sentence: If you find them, can you lead them back to the barn for me?
+    sentence: Were you able to find all three of my sheep?
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: Okey-dokey!
+    sentence: Not yet! I've still got some searching to do!
+  - character: {fileID: 11400000, guid: 492e1daa440d43b44820fb2408b3bd2e, type: 2}
+    sentence: Oh, I hope they haven't caused too much trouble...

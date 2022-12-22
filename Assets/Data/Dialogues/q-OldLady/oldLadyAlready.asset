@@ -27,3 +27,13 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 6883299909d6ea34cbe1147d9ef8c538, type: 2}
     sentence: Finally, I can see again! Thank you so much, Maple! I really owe you
       one!
+  - character: {fileID: 11400000, guid: 6883299909d6ea34cbe1147d9ef8c538, type: 2}
+    sentence: Would you like to help me with today's crossword?
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: I should probably get going, I'm not sure I'd be much help anyway.
+  - character: {fileID: 11400000, guid: 6883299909d6ea34cbe1147d9ef8c538, type: 2}
+    sentence: "16 down. A three letter word for \u201Cdepart\u201D..."
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Bye!
+  - character: {fileID: 11400000, guid: 6883299909d6ea34cbe1147d9ef8c538, type: 2}
+    sentence: Oh! Thank you Maple! Such a humble girl...

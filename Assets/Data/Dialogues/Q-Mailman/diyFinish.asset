@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da991f0f91c6d4408a100030743abd3, type: 3}
+  m_Name: diyFinish
+  m_EditorClassIdentifier: 
+  increasesHappiness: 0
+  dialogueInfo:
+  - character: {fileID: 0}
+    sentence: 
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: 'How come you''ve been staying up so late? '
+  - character: {fileID: 11400000, guid: 9a305df9342f713418d6568ee46f2a81, type: 2}
+    sentence: I guess I just lose track of time sometimes. Get in the zone, you know?
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Don't work yourself too hard! Your sister looked really worried...
+  - character: {fileID: 11400000, guid: 9a305df9342f713418d6568ee46f2a81, type: 2}
+    sentence: I'm okay, really! I'm more of a night owl anyhow.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Please don't forget to take care of yourself, though!
+  - character: {fileID: 11400000, guid: 9a305df9342f713418d6568ee46f2a81, type: 2}
+    sentence: Are you really that worried about me? I appreciate it.
+  - character: {fileID: 11400000, guid: 9a305df9342f713418d6568ee46f2a81, type: 2}
+    sentence: I'll take care of myself. So you and Mint don't have to worry, ok?
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: You promised!

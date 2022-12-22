@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da991f0f91c6d4408a100030743abd3, type: 3}
+  m_Name: mintStart
+  m_EditorClassIdentifier: 
+  increasesHappiness: 0
+  dialogueInfo:
+  - character: {fileID: 0}
+    sentence: 
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Hello there!
+  - character: {fileID: 11400000, guid: 40605f7dfb7df2a438e84d44fe2ca7bc, type: 2}
+    sentence: Hi there Maple, you're up early!
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: So are you! What're you up to?
+  - character: {fileID: 11400000, guid: 40605f7dfb7df2a438e84d44fe2ca7bc, type: 2}
+    sentence: I'm going for a hike later...It's actually kind of a date.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: OOOH! Well, you look great! Who is it?
+  - character: {fileID: 11400000, guid: 40605f7dfb7df2a438e84d44fe2ca7bc, type: 2}
+    sentence: Niko.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Aw! That's cute!
+  - character: {fileID: 11400000, guid: 40605f7dfb7df2a438e84d44fe2ca7bc, type: 2}
+    sentence: I just hope he doesn't have to work too late. He seemed pretty busy
+      earlier.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Don't worry! I'm sure he'll make it!
+  - character: {fileID: 11400000, guid: 40605f7dfb7df2a438e84d44fe2ca7bc, type: 2}
+    sentence: Hopefully...

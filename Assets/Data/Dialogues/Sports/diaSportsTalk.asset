@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da991f0f91c6d4408a100030743abd3, type: 3}
+  m_Name: diaSportsTalk
+  m_EditorClassIdentifier: 
+  increasesHappiness: 0
+  dialogueInfo:
+  - character: {fileID: 0}
+    sentence: 
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Hello there!
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: I've been meaning to ask, Jan... What's your favorite sport?
+  - character: {fileID: 11400000, guid: 6f1b951d8d0d4c64886723c6e518b1ea, type: 2}
+    sentence: It isn't obvious?
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: ...
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: ...Basketball?
+  - character: {fileID: 11400000, guid: 6f1b951d8d0d4c64886723c6e518b1ea, type: 2}
+    sentence: Come on...
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Hee-hee-hee...
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Aren't you gonna ask me what my favorite sport is?
+  - character: {fileID: 11400000, guid: 6f1b951d8d0d4c64886723c6e518b1ea, type: 2}
+    sentence: Is it "sportsball?"
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Wowie! You're good!
+  - character: {fileID: 11400000, guid: 6f1b951d8d0d4c64886723c6e518b1ea, type: 2}
+    sentence: And you're not funny!

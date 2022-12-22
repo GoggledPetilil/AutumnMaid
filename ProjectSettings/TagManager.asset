@@ -7,6 +7,8 @@ TagManager:
   - Broom
   - Destructable
   - NPC
+  - Water
+  - Ball
   layers:
   - Default
   - TransparentFX

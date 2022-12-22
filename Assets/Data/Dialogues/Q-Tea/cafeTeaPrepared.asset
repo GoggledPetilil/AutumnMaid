@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da991f0f91c6d4408a100030743abd3, type: 3}
+  m_Name: cafeTeaPrepared
+  m_EditorClassIdentifier: 
+  increasesHappiness: 0
+  dialogueInfo:
+  - character: {fileID: 0}
+    sentence: 
+  - character: {fileID: 11400000, guid: 7276492335e4c8c43972bcaa15c718b6, type: 2}
+    sentence: Phew, you did it Maple! That's all of the deliveries for the day!
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Yay! I can't wait to go home and eat pizza.
+  - character: {fileID: 11400000, guid: 7276492335e4c8c43972bcaa15c718b6, type: 2}
+    sentence: I should be able to get this place all closed up here soon...
+  - character: {fileID: 11400000, guid: 7276492335e4c8c43972bcaa15c718b6, type: 2}
+    sentence: Actually, while you were away, I made you this.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Huh, for me? What is it?
+  - character: {fileID: 11400000, guid: 7276492335e4c8c43972bcaa15c718b6, type: 2}
+    sentence: Just a special cup of tea as a thank you.
+  - character: {fileID: 11400000, guid: 7276492335e4c8c43972bcaa15c718b6, type: 2}
+    sentence: Find a good place to sit where you can enjoy the sunset while you drink
+      this. I promise it'll taste that much better with a nice view.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Thank you so much, Nico! I'll try and find a good spot!

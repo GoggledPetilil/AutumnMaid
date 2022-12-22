@@ -16,22 +16,25 @@ MonoBehaviour:
   dialogueInfo:
   - character: {fileID: 0}
     sentence: 
-  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: Hello there!
-  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: Morgan, you look down. Is something wrong?
   - character: {fileID: 11400000, guid: 492e1daa440d43b44820fb2408b3bd2e, type: 2}
-    sentence: Ah, it's most terrible! I've lost my precious and adorable sheep...
-  - character: {fileID: 11400000, guid: 492e1daa440d43b44820fb2408b3bd2e, type: 2}
-    sentence: 'And even worse: I''ve injured my legs while tending to the field...
-      I can''t possibly run around town with an injured leg...'
+    sentence: ...
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: Oh dear, that sounds terrible!
+    sentence: Morgan, you look down, is something wrong?
+  - character: {fileID: 11400000, guid: 492e1daa440d43b44820fb2408b3bd2e, type: 2}
+    sentence: Oh Maple, it's just terrible...I've lost all my precious sheep!
+  - character: {fileID: 11400000, guid: 492e1daa440d43b44820fb2408b3bd2e, type: 2}
+    sentence: And what's worse is that I sprained my ankle last week tending the
+      field...I can't run around town like this...
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: You just focus on recovering, Morgan! I will go and find your sheep
-      for you!
+    sentence: Oh dear, I'm sorry Morgan!
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Why don't you rest here and I'll see if I can track down your sheep
+      for you.
   - character: {fileID: 11400000, guid: 492e1daa440d43b44820fb2408b3bd2e, type: 2}
-    sentence: You will?! Why, thank you, Maple!
+    sentence: You would? Oh Maple, thank you, that'd mean the world to me. Those
+      sheep are like children.
   - character: {fileID: 11400000, guid: 492e1daa440d43b44820fb2408b3bd2e, type: 2}
-    sentence: There should be three sheep. If you find them, just lead them back
-      to the barn!
+    sentence: There should be three sheep out there. All you'd need to do is lead
+      them back to the barn. It shouldn't take much coaxing to get them to follow.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Leave it to me!

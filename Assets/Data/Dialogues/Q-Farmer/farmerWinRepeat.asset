@@ -16,7 +16,14 @@ MonoBehaviour:
   dialogueInfo:
   - character: {fileID: 0}
     sentence: 
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: What made you decide to become a farmer?
   - character: {fileID: 11400000, guid: 492e1daa440d43b44820fb2408b3bd2e, type: 2}
-    sentence: Thank you again for finding all my lost sheep for me, Maple.
+    sentence: I'm not really sure, I've always just liked animals I guess...
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: You're really good at taking care of your animals. I can tell that
+      they've been raised with love.
   - character: {fileID: 11400000, guid: 492e1daa440d43b44820fb2408b3bd2e, type: 2}
-    sentence: I can sleep easy tonight!
+    sentence: Oh, thank you. What made you want to become a maid?
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: That's a good question... I guess I just like helping people!

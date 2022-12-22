@@ -17,7 +17,7 @@ MonoBehaviour:
   - character: {fileID: 0}
     sentence: 
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: Phew! There! I caught a lot of fish!
+    sentence: Phew! Quite a haul, wouldn't you say?
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
     sentence: How do you feel now, Philip?
   - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
@@ -25,9 +25,17 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
     sentence: I feel... a little bit better, actually.
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: Wowie! That's awesome!!
+    sentence: Wowie! That's awesome! Glad I could help!
   - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
-    sentence: I feel a bit more motivated again... I'll try and get back into fishing
-      again, soon.
+    sentence: I feel a bit more motivated again...I'll try to get back into fishing
+      again soon.
   - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
     sentence: Thank you, Maple.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Mh! Here's your pole back, thank you for lending it to me!
+  - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
+    sentence: No, you go on and keep it Maple, as a thank you.
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Aw, thanks! Maybe we can both go fishing together tomorrow!
+  - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
+    sentence: Yes... That would be nice.
