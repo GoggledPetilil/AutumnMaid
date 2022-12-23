@@ -20,6 +20,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioSource m_BGMPlayer;
     [SerializeField] private AudioSource m_SFXPlayer;
 
+    [Header("Music Parameters")]
+    private float m_MusicTime = 64;     // Time between each song.
+    private float m_NextSong;           // Time until next song.
+
     [Header("System Audio")]
     [SerializeField] private AudioClip m_TransferSFX;
 
@@ -95,22 +99,45 @@ public class GameManager : MonoBehaviour
     {
         if((m_BGMPlayer.isPlaying && m_BGMPlayer.loop == false)) return;
 
-        if(isOutside() && m_BGMPlayer.loop == true)
+        if(isOutside())
         {
-            // Music doesn't loop when outside.
-            m_BGMPlayer.loop = false;
+            if(Time.time > m_NextSong)
+            {
+                // When cooldown has passed, add new cooldown.
+                m_NextSong = Time.time + song.length + m_MusicTime;
+            }
+            else 
+            {
+                // If it's still under cooldown, then don't play anything.
+                m_BGMPlayer.Stop();
+                return;
+            }
+
+            if(m_BGMPlayer.loop == true)
+            {
+                // Music doesn't loop when outside.
+                m_BGMPlayer.loop = false;
+            }
         }
         else
         {
-            // Music loops when indoors.
-            // When indoors, music is not overwritten.
             if(m_BGMPlayer.isPlaying)
             {
+                // Indoor music will not cutout outdoor music.
                 song = m_BGMPlayer.clip;
             }
             else 
             {
+                // Music loops when indoors.
                 m_BGMPlayer.loop = true;
+
+                // Only play the indoor music sometimes.
+                int r = Random.Range(0, 4);
+                if(r != 0)
+                {
+                    m_BGMPlayer.Stop();
+                    return;
+                }
             }
         }
         
