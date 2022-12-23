@@ -20,7 +20,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Image m_PortraitImage;
 
     [Header("Parameters")]
-    private bool m_InConversation;
+    public bool m_InConversation;
     public float m_TextSpeed;
     public Queue<Dialogue.Info> m_DialogueInfo = new Queue<Dialogue.Info>();
     private bool m_IncreaseHappy;

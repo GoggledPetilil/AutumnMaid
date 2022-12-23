@@ -155,8 +155,6 @@ public class GameManager : MonoBehaviour
 
     public void IncreaseHappiness()
     {
-        Debug.Log("Yippee! You did something good!");
-
         Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         player.StopMovement(true);
         StartCoroutine(LevelUp());
@@ -188,7 +186,7 @@ public class GameManager : MonoBehaviour
 
     public bool isTalking()
     {
-        return m_IsTalking;
+        return FindObjectOfType<DialogueManager>().isTalking();
     }
 
     IEnumerator TransferSequence(int sceneIndex, Vector2 newPos, bool zoomTransfer)

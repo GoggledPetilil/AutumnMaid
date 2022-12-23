@@ -11,8 +11,8 @@ public class FishManager : MonoBehaviour
     [SerializeField] private Animator m_FishCursor;
     [SerializeField] private Animator m_FishPortrait;
     [SerializeField] private Animator m_MaplePortrait;
-    [SerializeField] private Animator m_SliderAnim;
     [SerializeField] private Slider m_FishingSlider;
+    [SerializeField] private Animator m_SliderAnim;
     [SerializeField] private Dialogue m_WinDialogue;
     
     [Header("Fishing Components")]
@@ -331,6 +331,8 @@ public class FishManager : MonoBehaviour
     {
         ToggleUIElements(false);
         GameManager.instance.SetCamFollower(m_SeaPosition.gameObject);
+
+        m_FisherRenderer.sprite = m_FisherIdleSprite;
         
         m_IsFishing = false;
         m_FishingPoleAS.Stop();
@@ -485,7 +487,6 @@ public class FishManager : MonoBehaviour
 
         FindObjectOfType<DialogueManager>().StartDialogue(m_WinDialogue);
         yield return new WaitForSeconds(0.2f);
-        m_FisherRenderer.sprite = m_FisherIdleSprite;
         m_FishingStage = 4;
 
         yield return null;
