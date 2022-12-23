@@ -195,17 +195,17 @@ public class Player : Entity
 
     public void PlayFootstep()
     {
-        if(m_CurrentTerrain == TerrainTag.Dirt)
+        if(!GameManager.instance.isOutside() || m_CurrentTerrain == TerrainTag.Wood)
+        {
+            m_StepAudio.clip = m_SFXStepWood[Random.Range(0, m_SFXStepWood.Length)];
+        }  
+        else if(m_CurrentTerrain == TerrainTag.Dirt)
         {
             m_StepAudio.clip = m_SFXStepDirt[Random.Range(0, m_SFXStepDirt.Length)];
         }
         else if(m_CurrentTerrain == TerrainTag.Stone)
         {
             m_StepAudio.clip = m_SFXStepStone[Random.Range(0, m_SFXStepStone.Length)];
-        }
-        else if(m_CurrentTerrain == TerrainTag.Wood)
-        {
-            m_StepAudio.clip = m_SFXStepWood[Random.Range(0, m_SFXStepWood.Length)];
         }
         else if(m_CurrentTerrain == TerrainTag.Sand)
         {

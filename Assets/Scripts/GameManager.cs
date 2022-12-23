@@ -95,7 +95,7 @@ public class GameManager : MonoBehaviour
     {
         if((m_BGMPlayer.isPlaying && m_BGMPlayer.loop == false)) return;
 
-        if(SceneManager.GetActiveScene().buildIndex == 1 && m_BGMPlayer.loop == true)
+        if(isOutside() && m_BGMPlayer.loop == true)
         {
             // Music doesn't loop when outside.
             m_BGMPlayer.loop = false;
@@ -189,6 +189,16 @@ public class GameManager : MonoBehaviour
         return FindObjectOfType<DialogueManager>().isTalking();
     }
 
+    public bool isOutside()
+    {
+        bool isOutside = false;
+        if(SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            isOutside = true;
+        }
+        return isOutside;
+    }
+
     IEnumerator TransferSequence(int sceneIndex, Vector2 newPos, bool zoomTransfer)
     {
         if(zoomTransfer)
@@ -197,15 +207,18 @@ public class GameManager : MonoBehaviour
             var brain = (camera == null) ? null : camera.GetComponent<CinemachineBrain>();
             var vcam = (brain == null) ? null : brain.ActiveVirtualCamera as CinemachineVirtualCamera;
 
-            float farSize = vcam.m_Lens.OrthographicSize;
-            float zoomSize = vcam.m_Lens.OrthographicSize * 0.75f;
-            float zoomDur = 0.75f;
-            float t = 0.0f;
-            while(t < 1.0f)
+            if(vcam != null)
             {
-                t += Time.deltaTime / zoomDur;
-                vcam.m_Lens.OrthographicSize = Mathf.Lerp(farSize, zoomSize, t);
-                yield return null;
+                float farSize = vcam.m_Lens.OrthographicSize;
+                float zoomSize = vcam.m_Lens.OrthographicSize * 0.75f;
+                float zoomDur = 0.75f;
+                float t = 0.0f;
+                while(t < 1.0f)
+                {
+                    t += Time.deltaTime / zoomDur;
+                    vcam.m_Lens.OrthographicSize = Mathf.Lerp(farSize, zoomSize, t);
+                    yield return null;
+                }
             }
         }
         
