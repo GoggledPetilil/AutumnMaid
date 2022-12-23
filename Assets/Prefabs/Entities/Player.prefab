@@ -5589,13 +5589,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8455707005567660247}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9331b5f1e278654b9fbe17715ff84f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 9361956730ce0174a9ad5faf74957161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_srHolder: {fileID: 6964213499176847088}
   m_Flipped: 0
   m_Aud: {fileID: 0}
-  m_SpinSFX: {fileID: 0}
+  m_SpinSFX: {fileID: 8300000, guid: 75985f9c5dada3843a9b30228b828063, type: 3}
   m_Speed: 1
   m_SpeedMod: 0
   m_CurrentTerrain: 0
@@ -5604,14 +5604,14 @@ MonoBehaviour:
   m_TargetPoint: {fileID: 8455707006485712210}
   m_TargetDistance: 1
   m_AttackPoint: {fileID: 240165968}
-  m_DistanceMod: 2
+  m_DistanceMod: 1.8
   m_ani: {fileID: 8455707005567660236}
   m_LevelParticles: {fileID: 6502663014205885710}
   m_col: {fileID: 8455707005567660243}
   m_PromptHolder: {fileID: 8455707004985951609}
   m_rb: {fileID: 8455707005567660242}
   m_sr: {fileID: 8455707006423556557}
-  m_broom: {fileID: 0}
+  m_broom: {fileID: 8455707006007989386}
   m_InteractEvent: {fileID: 0}
   m_StepAudio: {fileID: 3043684151732466073}
   m_SFXStepDirt:

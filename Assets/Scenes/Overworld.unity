@@ -6353,7 +6353,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82fbfa6a351cd6d449abfb0662600c32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FollowerObject: {fileID: 387182235}
 --- !u!1 &81866483
 GameObject:
   m_ObjectHideFlags: 0
@@ -6804,7 +6803,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 135913157}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.25, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1.1, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18834,9 +18833,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab2c8ebd10069474782b13daf4e49b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Contained: 1
-  m_Terrain: 1
-  m_ExitTerrain: 0
 --- !u!61 &257732921
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19159,9 +19155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab2c8ebd10069474782b13daf4e49b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Contained: 1
-  m_Terrain: 1
-  m_ExitTerrain: 0
 --- !u!61 &266543564
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19954,9 +19947,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab2c8ebd10069474782b13daf4e49b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Contained: 0
-  m_Terrain: 3
-  m_ExitTerrain: 2
 --- !u!61 &282596907
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20597,9 +20587,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab2c8ebd10069474782b13daf4e49b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Contained: 0
-  m_Terrain: 3
-  m_ExitTerrain: 0
 --- !u!61 &312479526
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21826,9 +21813,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab2c8ebd10069474782b13daf4e49b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Contained: 1
-  m_Terrain: 2
-  m_ExitTerrain: 0
 --- !u!61 &375362795
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21855,11 +21839,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 1}
   m_EdgeRadius: 0
---- !u!4 &387182235 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6849081139569377315, guid: f2f9612aa146c284e98639622ed2bb4d, type: 3}
-  m_PrefabInstance: {fileID: 6849081140815301083}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &390601950
 GameObject:
   m_ObjectHideFlags: 0
@@ -26123,9 +26102,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab2c8ebd10069474782b13daf4e49b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Contained: 0
-  m_Terrain: 2
-  m_ExitTerrain: 0
 --- !u!61 &660385435
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29293,9 +29269,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab2c8ebd10069474782b13daf4e49b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Contained: 1
-  m_Terrain: 2
-  m_ExitTerrain: 3
 --- !u!61 &847837351
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30491,9 +30464,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab2c8ebd10069474782b13daf4e49b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Contained: 0
-  m_Terrain: 3
-  m_ExitTerrain: 0
 --- !u!1 &918089335
 GameObject:
   m_ObjectHideFlags: 0
@@ -30810,9 +30780,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab2c8ebd10069474782b13daf4e49b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Contained: 1
-  m_Terrain: 1
-  m_ExitTerrain: 0
 --- !u!60 &932582498
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -31713,7 +31680,7 @@ GameObject:
   - component: {fileID: 971038495}
   - component: {fileID: 971038499}
   - component: {fileID: 971038497}
-  - component: {fileID: 971038496}
+  - component: {fileID: 971038502}
   - component: {fileID: 971038500}
   - component: {fileID: 971038501}
   m_Layer: 6
@@ -31730,8 +31697,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971038494}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.25, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -31739,27 +31706,6 @@ Transform:
   m_Father: {fileID: 640627590}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &971038496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 971038494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a99c039120137034d9e1c1f7172b327a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_collider: {fileID: 971038500}
-  m_collider2: {fileID: 1566299447}
-  m_rb: {fileID: 971038497}
-  m_Splash: {fileID: 1456581385}
-  m_SplashAudio: {fileID: 1456581386}
-  m_BallHit: {fileID: 971038501}
-  m_Shadow: {fileID: 135913158}
-  m_Power: 0.5
-  m_MovDir: {x: 0, y: 0}
 --- !u!50 &971038497
 Rigidbody2D:
   serializedVersion: 4
@@ -31774,7 +31720,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 1
-  m_AngularDrag: 0.05
+  m_AngularDrag: 1
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 3b2d4a15d807169408ba65259dcacbcc, type: 2}
   m_Interpolate: 0
@@ -31945,6 +31891,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &971038502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971038494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77c3d3762f9384141853ee42973247e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Speed: 5
+  m_ShadowOffset: -0.5
+  m_MovDir: {x: 0, y: 0}
+  m_Audiosource: {fileID: 971038501}
+  m_SplashAudio: {fileID: 1456581386}
+  m_BallCollider: {fileID: 971038500}
+  m_EntityCollider: {fileID: 1566299447}
+  m_Shadow: {fileID: 135913158}
+  m_WaterSplash: {fileID: 1456581385}
+  m_rb: {fileID: 971038497}
 --- !u!1001 &973973434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32598,11 +32566,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7898e65754c56ab43813b10d69ea9d20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BGM:
-  - {fileID: 8300000, guid: 89414a0de584d534898ac23d3694ff01, type: 3}
-  - {fileID: 8300000, guid: 22902da5beb8e924bb5345864ed5c0de, type: 3}
-  - {fileID: 8300000, guid: b19204628467b1a4f9a9c327d2a0b1ee, type: 3}
-  m_isOutside: 1
 --- !u!4 &1031940853
 Transform:
   m_ObjectHideFlags: 0
@@ -38658,11 +38621,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61c38978635c4e542910c73d817a0aa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstTalkDialogue: {fileID: 11400000, guid: 598b921a69d80594ab166bccbe76ac86, type: 2}
-  m_RepeatDialogue: {fileID: 11400000, guid: 3583bab741b9d174cb6425a377cd56af, type: 2}
-  m_RepeatDialogue_1: {fileID: 11400000, guid: c359acdc6abf479488c84f757cfe79b8, type: 2}
-  m_ThanksDialogue: {fileID: 11400000, guid: 6388a5679005d1b4491ec58cb1d4c705, type: 2}
-  m_ThanksRepeatDialogue: {fileID: 11400000, guid: 37e70dfde6643e043a3f2feb23e80334, type: 2}
 --- !u!1 &1393428373
 GameObject:
   m_ObjectHideFlags: 0
@@ -46390,9 +46348,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab2c8ebd10069474782b13daf4e49b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Contained: 0
-  m_Terrain: 2
-  m_ExitTerrain: 0
 --- !u!61 &1511664460
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48630,9 +48585,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab2c8ebd10069474782b13daf4e49b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Contained: 1
-  m_Terrain: 2
-  m_ExitTerrain: 3
 --- !u!61 &1666668850
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48772,53 +48724,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bbef3f983a8ec84aa13063f58d15e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Canvas: {fileID: 1144253912}
-  m_LureAnim: {fileID: 1314536459}
-  m_FishCursor: {fileID: 314137325}
-  m_FishPortrait: {fileID: 1478671964}
-  m_MaplePortrait: {fileID: 329918650}
-  m_SliderAnim: {fileID: 1201214555}
-  m_FishingSlider: {fileID: 1201214554}
-  m_WinDialogue: {fileID: 11400000, guid: 2fa40f6a9a8c38d41921d18318504149, type: 2}
-  m_SeaPosition: {fileID: 839331081}
-  m_FishingPosition: {fileID: 1819633214}
-  m_FishingLure: {fileID: 1314536456}
-  m_SplashParticles: {fileID: 236327081}
-  m_CommonFish:
-  - {fileID: 11400000, guid: ffbb0decd94ee9641b926fe98a78bd54, type: 2}
-  - {fileID: 11400000, guid: ffbb0decd94ee9641b926fe98a78bd54, type: 2}
-  - {fileID: 11400000, guid: ffbb0decd94ee9641b926fe98a78bd54, type: 2}
-  - {fileID: 11400000, guid: ffbb0decd94ee9641b926fe98a78bd54, type: 2}
-  - {fileID: 11400000, guid: d807f67832fa01f4dae0e8f30a5c71a5, type: 2}
-  - {fileID: 11400000, guid: d807f67832fa01f4dae0e8f30a5c71a5, type: 2}
-  - {fileID: 11400000, guid: d807f67832fa01f4dae0e8f30a5c71a5, type: 2}
-  - {fileID: 11400000, guid: 1bd192c12abfad94dbe43858adc55018, type: 2}
-  - {fileID: 11400000, guid: 1bd192c12abfad94dbe43858adc55018, type: 2}
-  - {fileID: 11400000, guid: e474fb1ce9606ac4aa27725fe8b40e38, type: 2}
-  - {fileID: 11400000, guid: e474fb1ce9606ac4aa27725fe8b40e38, type: 2}
-  - {fileID: 11400000, guid: e51cb405f4ca8fa4c9782adee5074854, type: 2}
-  - {fileID: 11400000, guid: a1aedd35f97d30b45800ea7befb90d2e, type: 2}
-  m_UncommonFish:
-  - {fileID: 11400000, guid: fe79d792cdb4f8143bb28b948dd59e8d, type: 2}
-  m_RareFish:
-  - {fileID: 11400000, guid: 28026cedb5318c04dbc8714c88f635ae, type: 2}
-  - {fileID: 11400000, guid: 16032cdaecfdbbf468cdfdc90b23bfcc, type: 2}
-  - {fileID: 11400000, guid: 49178f2b3fb213e45a0dff7f8be39340, type: 2}
-  m_HookedFish: {fileID: 0}
-  m_FishObject: {fileID: 1819220118}
-  m_aud: {fileID: 1677353936}
-  m_FishingPoleAS: {fileID: 275741076}
-  m_LureAS: {fileID: 401498466}
-  m_RageSFX: {fileID: 8300000, guid: 7c6012a8dc2304443af600e49d3985e3, type: 3}
-  m_ReelSFX: {fileID: 8300000, guid: e91010bf9417a564c8ab589707a50b1d, type: 3}
-  m_CastSFX: {fileID: 8300000, guid: 12c52897b036226499dfcbf10b5ac9d8, type: 3}
-  m_SplashSFX: {fileID: 8300000, guid: 34107bbcc45034549815446fde7d29e1, type: 3}
-  m_HookSFX: {fileID: 8300000, guid: a510446bfdba7e34bbb2252782c4a176, type: 3}
-  m_FallingSFX: {fileID: 8300000, guid: b031a4422c8a4d745aa96131cf2c475c, type: 3}
-  m_ItemGetSFX: {fileID: 8300000, guid: 63967cd5b96ec7d4381b6a70e5eb4a76, type: 3}
-  m_FisherRenderer: {fileID: 6421613681001023054}
-  m_FisherIdleSprite: {fileID: 1855604857, guid: 390ec21c2b879884faba3a5d94be9704, type: 3}
-  m_FisherShockSprite: {fileID: 1457271745, guid: 390ec21c2b879884faba3a5d94be9704, type: 3}
 --- !u!82 &1677353936
 AudioSource:
   m_ObjectHideFlags: 0
@@ -51414,9 +51319,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab2c8ebd10069474782b13daf4e49b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Contained: 0
-  m_Terrain: 2
-  m_ExitTerrain: 0
 --- !u!61 &1845520608
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -53322,9 +53224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab2c8ebd10069474782b13daf4e49b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Contained: 1
-  m_Terrain: 1
-  m_ExitTerrain: 0
 --- !u!60 &1950558364
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -55677,7 +55576,6 @@ MonoBehaviour:
   m_FaceLeft: 1
   m_SitPosition: {fileID: 1999300963}
   m_StandPosition: {fileID: 1178345923}
-  m_IsSpecial: 1
 --- !u!1 &2128705772
 GameObject:
   m_ObjectHideFlags: 0
@@ -58688,20 +58586,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6691f32e64a53fe4e82e3265f76eab5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Scooter: {fileID: 6455313360452168493}
-  m_ScooterAnim: {fileID: 6455313360452168494}
-  m_StartDialogue: {fileID: 11400000, guid: 32be14335e2a09249859b60640b6705e, type: 2}
-  m_RepeatDialogue: {fileID: 11400000, guid: b91c93adaef98b64c8b10cbdbb39b9e8, type: 2}
-  m_RewardDialogue: {fileID: 11400000, guid: 3ee0d39610d5b0744aedaf1362ac37ba, type: 2}
-  m_Shadow: {fileID: 6421613681002136618}
-  m_sr: {fileID: 6421613681949784653}
-  m_SadSprite: {fileID: 1207140944, guid: 13785517a54eb5d42bb9e01e7345c5ff, type: 3}
-  m_HappySprite: {fileID: 836659121, guid: 13785517a54eb5d42bb9e01e7345c5ff, type: 3}
---- !u!212 &6421613681001023054 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 3463611402708203331, guid: d8da4c38b2e8b544aa4edd48d17b3ab5, type: 3}
-  m_PrefabInstance: {fileID: 7570304300328481037}
-  m_PrefabAsset: {fileID: 0}
 --- !u!212 &6421613681002136616
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -58921,10 +58805,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a6985647ff75e40ae7d6d7b4a3ca83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_StartDialogue: {fileID: 11400000, guid: e743d9f895a5e8b42b522026dfb46562, type: 2}
-  m_PizzaDialogue:
-  - {fileID: 11400000, guid: 8c14962e2630be141a55b687de57c380, type: 2}
-  - {fileID: 11400000, guid: d69eceb8c9940114c9aa08b3f900850e, type: 2}
 --- !u!1 &6421613681230599387
 GameObject:
   m_ObjectHideFlags: 0
@@ -59093,12 +58973,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f65b2f97784fd64ea3b39c5d9e2f435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_StartDialogue: {fileID: 11400000, guid: cb162ebd663c5eb4e8271310525e1f44, type: 2}
-  m_DoorDialogue:
-  - {fileID: 11400000, guid: c3decd77a4fdbfb4a9aed5a7cd09ac9a, type: 2}
-  - {fileID: 11400000, guid: db645d831d54b394384eee569a003919, type: 2}
-  m_NikoDialogue: {fileID: 11400000, guid: 74e0315b9a4e7cc4d9d502c98144dea5, type: 2}
-  m_PostmanDialogue: {fileID: 11400000, guid: 5dfb8c93a0fc2964ba176557770263ed, type: 2}
 --- !u!212 &6421613681283856769
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -59674,14 +59548,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca7e3041a4d4178438ba4e0bc9eed6f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_StartDialogue:
-  - {fileID: 11400000, guid: f08c6753c8daf9d43b79d63fb66ab271, type: 2}
-  - {fileID: 11400000, guid: 6cbd38d868ad1164f8cdc45de7d9c889, type: 2}
-  m_RepeatDialogue:
-  - {fileID: 11400000, guid: f4ee00c43cad0c34d87ef0375d2ca095, type: 2}
-  - {fileID: 11400000, guid: 69b8ede2dbc98f043ae8837e36f9d957, type: 2}
-  m_ThanksDialogue: {fileID: 11400000, guid: 66c17afc38a82dd45b8db7a523a1a17d, type: 2}
-  m_PlushObject: {fileID: 1692695476}
 --- !u!1 &6421613682496570904
 GameObject:
   m_ObjectHideFlags: 0
@@ -60789,13 +60655,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 139f4eaf6822fe54ea5bb48ea22648e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MapID: 6
-  m_WarpCords: {x: -0.2, y: -3.3}
-  m_ZoomTransfer: 1
-  m_aud: {fileID: 7847822823972334003}
-  m_DoorSFX: {fileID: 8300000, guid: 84c6f5b03aa47d64b8668984896cfb1b, type: 3}
-  m_DoorSprite: {fileID: 7847822822902404035}
-  m_LockedDialogue: {fileID: 11400000, guid: 3f38c9376a49c3a40968139f2d1dffa3, type: 2}
 --- !u!4 &7896234957244815721
 Transform:
   m_ObjectHideFlags: 0
@@ -61066,9 +60925,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a232e1115cb6b4dbfc1ff178916e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InspectDialogue: {fileID: 11400000, guid: d4a6005391d36d24bb54a1da14d571d4, type: 2}
-  m_NoTakeDialogue: {fileID: 11400000, guid: 613510765eb04b042919d3b86e0b66a4, type: 2}
-  m_TakeDialogue: {fileID: 11400000, guid: c1937a0369066584fa250300ba779dc4, type: 2}
 --- !u!4 &8597147787789605372
 Transform:
   m_ObjectHideFlags: 0

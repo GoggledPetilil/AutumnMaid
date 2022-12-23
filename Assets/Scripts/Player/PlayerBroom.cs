@@ -86,6 +86,12 @@ public class PlayerBroom : MonoBehaviour
                 Destructable d = hitTarget.GetComponent(typeof(Destructable)) as Destructable;
                 d.GetHit();
             }
+
+            if(hitTarget.gameObject.CompareTag("Ball"))
+            {
+                BeachBall b = hitTarget.transform.parent.GetComponent<BeachBall>();
+                b.BounceBall(GameObject.FindGameObjectWithTag("Player").transform, true);
+            }
         }
     }
 
