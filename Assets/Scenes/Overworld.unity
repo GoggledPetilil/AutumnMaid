@@ -6350,9 +6350,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 81497483}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82fbfa6a351cd6d449abfb0662600c32, type: 3}
+  m_Script: {fileID: 11500000, guid: 42bd6e06072ee6748843b0e28c739e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_FollowObject: {fileID: 427547727}
 --- !u!1 &81866483
 GameObject:
   m_ObjectHideFlags: 0
@@ -22608,6 +22609,11 @@ SortingGroup:
   m_SortingLayerID: 2116949857
   m_SortingLayer: 1
   m_SortingOrder: 0
+--- !u!4 &427547727 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8455707006485712211, guid: 9a937c0bda4c0284ba84346ddbdb2e5e, type: 3}
+  m_PrefabInstance: {fileID: 721825107}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &434135484
 GameObject:
   m_ObjectHideFlags: 0
