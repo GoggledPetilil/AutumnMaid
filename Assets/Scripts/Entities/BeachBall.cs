@@ -52,13 +52,14 @@ public class BeachBall : MonoBehaviour
     {
         if(col.gameObject.CompareTag("Water"))
         {
+            Vector3 other = col.collider.ClosestPoint(m_rb.transform.position);
             m_BallCollider.enabled = false;
             m_EntityCollider.enabled = false;
             m_Shadow.gameObject.SetActive(false);
 
             // Shoot into current direction
-            m_MovDir = (col.transform.position - m_rb.transform.position).normalized;
-            m_rb.AddForce(m_MovDir * 2.5f, ForceMode2D.Impulse);
+            m_MovDir = (other - m_rb.transform.position).normalized;
+            m_rb.AddForce(m_MovDir * 4.0f, ForceMode2D.Impulse);
 
             Invoke("DrownBall", 0.25f);
         }
