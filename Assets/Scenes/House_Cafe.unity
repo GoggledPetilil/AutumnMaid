@@ -554,29 +554,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 629818498}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad3ee1ffd800e0b44949aa2d734ec547, type: 3}
+  m_Script: {fileID: 11500000, guid: db17f7433d4638646affb2107ff20253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_StartDialogue:
   - {fileID: 11400000, guid: c97be0877c2241d4293676a5affb2d37, type: 2}
-  m_Repeat1Dialogue:
-  - {fileID: 11400000, guid: f2166f726b386a04699edd3c35be63d0, type: 2}
+  - {fileID: 11400000, guid: 8371317c1f8bc8745b5d339ecf8365c3, type: 2}
+  - {fileID: 11400000, guid: 733cdf45264d86e4cb3188b48f07f943, type: 2}
+  - {fileID: 11400000, guid: ee1733087ffb70a4c8b26f5d34efe660, type: 2}
+  m_RepeatDialogue:
   - {fileID: 11400000, guid: 565abc21231168f479502ddac1ede34a, type: 2}
   - {fileID: 11400000, guid: 3a41dd29fd8f41347982a8f694b75f9e, type: 2}
   - {fileID: 11400000, guid: 655dc2b0be24fd041a982a5a00666617, type: 2}
   - {fileID: 11400000, guid: 31b95d631a5793749bb18ad67bf547d5, type: 2}
-  m_RewardDialogue:
-  - {fileID: 11400000, guid: 8f71be52f4a0fc041986f74eca219170, type: 2}
-  - {fileID: 11400000, guid: 8371317c1f8bc8745b5d339ecf8365c3, type: 2}
-  - {fileID: 11400000, guid: 733cdf45264d86e4cb3188b48f07f943, type: 2}
-  - {fileID: 11400000, guid: ee1733087ffb70a4c8b26f5d34efe660, type: 2}
-  m_FinishDialogue:
+  m_WinDialogue:
   - {fileID: 11400000, guid: 37c7da16e6081f1438dd197c01f3142d, type: 2}
+  - {fileID: 11400000, guid: 8e6f71d273afff94d8ccab4f9253c6ea, type: 2}
+  m_ThanksDialogue:
   - {fileID: 11400000, guid: d84001ff4a8dff449a0c7e3e95e022cb, type: 2}
-  m_TeaReady: {fileID: 11400000, guid: 19373976799fa8a47907616df8f36b26, type: 2}
-  m_TeaAlreadyReady: {fileID: 11400000, guid: 8e6f71d273afff94d8ccab4f9253c6ea, type: 2}
-  m_TeaRepeat: {fileID: 11400000, guid: dad6445d0d3d6e340b7debff5c05649a, type: 2}
-  m_TeaAfter: {fileID: 11400000, guid: 90862022b8c051b4ab56c384056fca54, type: 2}
+  - {fileID: 11400000, guid: 19373976799fa8a47907616df8f36b26, type: 2}
+  m_TeaDialogue:
+  - {fileID: 11400000, guid: dad6445d0d3d6e340b7debff5c05649a, type: 2}
+  - {fileID: 11400000, guid: 90862022b8c051b4ab56c384056fca54, type: 2}
+  m_NikoRenderer: {fileID: 1880551631}
+  m_SpriteIdle: {fileID: -630199361, guid: d4e8c641fcc716548a90f9b6a44ddb7c, type: 3}
+  m_SpriteSad: {fileID: -2134255549, guid: d4e8c641fcc716548a90f9b6a44ddb7c, type: 3}
 --- !u!1 &726028095
 GameObject:
   m_ObjectHideFlags: 0

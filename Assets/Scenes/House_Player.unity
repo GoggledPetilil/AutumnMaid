@@ -1265,11 +1265,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1426754033}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89c9bb54586849245866649ca09d9525, type: 3}
+  m_Script: {fileID: 11500000, guid: 4cc7315011541a04a8207ac1a15d249e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CustomerID: 4
-  m_CustomerDialogue: {fileID: 11400000, guid: 2e0c0583d58018e4abe58db042ff396b, type: 2}
+  m_CustomerID: 3
+  m_DeliveryDialogue: {fileID: 11400000, guid: 2e0c0583d58018e4abe58db042ff396b, type: 2}
 --- !u!4 &1426754035
 Transform:
   m_ObjectHideFlags: 0
@@ -1531,11 +1531,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1619262077}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ca30c1afb41f54478737cec439fc3cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b878287768e2a844bd3d0f42211a5d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_TrashHolder: {fileID: 1986503487}
-  m_ControlsHolder: {fileID: 1479334573}
+  m_ControlsHolder: {fileID: 718746445}
   m_FinishDialogue: {fileID: 11400000, guid: aee7a650e557dd6499e1c9cdfe3b1dc4, type: 2}
 --- !u!1 &1820639800
 GameObject:

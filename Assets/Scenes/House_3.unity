@@ -1080,11 +1080,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1147423774}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89c9bb54586849245866649ca09d9525, type: 3}
+  m_Script: {fileID: 11500000, guid: 4cc7315011541a04a8207ac1a15d249e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CustomerID: 1
-  m_CustomerDialogue: {fileID: 11400000, guid: ca71a59665ab59c498400be845e8383b, type: 2}
+  m_CustomerID: 0
+  m_DeliveryDialogue: {fileID: 11400000, guid: ca71a59665ab59c498400be845e8383b, type: 2}
 --- !u!4 &1147423776
 Transform:
   m_ObjectHideFlags: 0
@@ -1758,6 +1758,7 @@ MonoBehaviour:
   m_RepeatDialogue: {fileID: 11400000, guid: e3bdbb9cdd98ed84ca1d3633c98c77b9, type: 2}
   m_ThanksDialogue: {fileID: 11400000, guid: b91765910247cda49961738045aed40b, type: 2}
   m_ThanksRepeatDialogue: {fileID: 11400000, guid: 659d473f122634b48a5472627efd987e, type: 2}
+  m_Customer: {fileID: 1147423775}
 --- !u!114 &4442713861538695043
 MonoBehaviour:
   m_ObjectHideFlags: 0

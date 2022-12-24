@@ -53,7 +53,7 @@ public class PlayerBroom : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(m_SweepTimer > Time.time && !m_isAttacking)
+        if(m_SweepTimer > Time.time && !m_isAttacking && !GameManager.instance.m_IsDelivering)
         {
             AfterImagePool.instance.GetFromPool();
             StartCoroutine("Attack");

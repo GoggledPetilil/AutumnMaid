@@ -222,14 +222,14 @@ public class Player : Entity
 
     public void CarryPizza(int amount)
     {
-        if(amount < 1)
+        if(amount < 0)
         {
             m_ani.SetBool("isHolding", false);
         }
         else 
         {
             m_ani.SetBool("isHolding", true);
-            m_PizzaRenderer.sprite = m_PizzaSprites[Mathf.Clamp(amount-1, 0, m_PizzaSprites.Length)];
+            m_PizzaRenderer.sprite = m_PizzaSprites[Mathf.Clamp(amount, 0, m_PizzaSprites.Length)];
         }
     }
 

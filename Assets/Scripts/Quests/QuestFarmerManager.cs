@@ -8,9 +8,16 @@ public class QuestFarmerManager : MonoBehaviour
     public Dialogue m_RepeatDialogue;
     public Dialogue m_ThanksDialogue;
     public Dialogue m_ThanksRepeatDialogue;
+    public Customer m_Customer;
     
     public void TriggerDialogue()
     {
+        if(m_Customer.isCurrentCustomer())
+        {
+            m_Customer.TriggerDialogue();
+            return;
+        }
+        
         Dialogue dialogue = null;
         if(GameManager.instance.m_FlagMetFarmer == false)
         {

@@ -754,11 +754,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 696057319}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89c9bb54586849245866649ca09d9525, type: 3}
+  m_Script: {fileID: 11500000, guid: 4cc7315011541a04a8207ac1a15d249e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CustomerID: 3
-  m_CustomerDialogue: {fileID: 11400000, guid: 1bb5f708f00173b4ebd73f975a8d7571, type: 2}
+  m_CustomerID: 2
+  m_DeliveryDialogue: {fileID: 11400000, guid: 1bb5f708f00173b4ebd73f975a8d7571, type: 2}
 --- !u!4 &696057321
 Transform:
   m_ObjectHideFlags: 0

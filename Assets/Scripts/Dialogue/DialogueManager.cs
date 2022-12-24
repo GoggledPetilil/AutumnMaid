@@ -75,19 +75,6 @@ public class DialogueManager : MonoBehaviour
         return m_InConversation;
     }
 
-    public void SimpleMessage(string message)
-    {
-        if(m_InConversation || Time.time < talkTimer || message == "") return;
-
-        var msg = new Dialogue.Info[2];
-        msg[1].sentence = message;
-
-        Dialogue dia = new Dialogue();
-        dia.dialogueInfo = msg;
-
-        StartDialogue(dia);
-    }
-
     public void StartDialogue(Dialogue dialogue)
     {
         if(m_InConversation || Time.time < talkTimer) return;

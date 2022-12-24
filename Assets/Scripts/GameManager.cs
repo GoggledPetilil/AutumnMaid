@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     public List<int> m_SheepSaved = new List<int>();
     public int m_FishAmount;
     public bool m_IsDelivering;
-    public bool m_IsTalking;
 
     [Header("Components")]
     [SerializeField] private Animator m_Anim;
@@ -200,10 +199,16 @@ public class GameManager : MonoBehaviour
     public void StartDelivery(bool state)
     {
         GameManager.instance.m_IsDelivering = state;
-        if(state == false) return;
-
+        
         Player p = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        p.CarryPizza(m_DeliveryStage+1);
+        if(state == true)
+        {
+            p.CarryPizza(m_DeliveryStage);
+        }
+        else 
+        {
+            p.CarryPizza(-1);
+        }
     }
 
     public void HeartFill()
