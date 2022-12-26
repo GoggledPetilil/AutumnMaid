@@ -153,7 +153,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &15914266
 MonoBehaviour:
@@ -250,6 +250,7 @@ GameObject:
   - component: {fileID: 79671628}
   - component: {fileID: 79671627}
   - component: {fileID: 79671626}
+  - component: {fileID: 79671631}
   m_Layer: 6
   m_Name: Sheep
   m_TagString: NPC
@@ -436,8 +437,28 @@ Transform:
   - {fileID: 1392726792}
   - {fileID: 281639083}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &79671631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79671625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f09d713f58bd514e89a525077fdd239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_srHolder: {fileID: 1047629325}
+  m_Flipped: 0
+  m_Aud: {fileID: 79671626}
+  m_SpinSFX: {fileID: 8300000, guid: 75985f9c5dada3843a9b30228b828063, type: 3}
+  m_ID: 0
+  m_PetOnly: 1
+  m_Anim: {fileID: 79671627}
+  m_rb: {fileID: 79671628}
 --- !u!1 &147496793
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,9 +731,9 @@ MonoBehaviour:
   m_Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 79671631}
         m_TargetAssemblyTypeName: Sheep, Assembly-CSharp
-        m_MethodName: FollowPlayer
+        m_MethodName: Pet
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -948,9 +969,9 @@ MonoBehaviour:
   m_Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 931332214}
         m_TargetAssemblyTypeName: Sheep, Assembly-CSharp
-        m_MethodName: FollowPlayer
+        m_MethodName: Pet
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1225,7 +1246,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -2.3175688, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1236,7 +1257,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 16}
+  m_Size: {x: 5.6351376, y: 16}
   m_EdgeRadius: 0
 --- !u!1 &653153883
 GameObject:
@@ -1251,6 +1272,7 @@ GameObject:
   - component: {fileID: 653153886}
   - component: {fileID: 653153885}
   - component: {fileID: 653153884}
+  - component: {fileID: 653153889}
   m_Layer: 6
   m_Name: Sheep (2)
   m_TagString: NPC
@@ -1437,8 +1459,28 @@ Transform:
   - {fileID: 770734413}
   - {fileID: 2026978318}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &653153889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653153883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f09d713f58bd514e89a525077fdd239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_srHolder: {fileID: 1178824162}
+  m_Flipped: 0
+  m_Aud: {fileID: 653153884}
+  m_SpinSFX: {fileID: 8300000, guid: 75985f9c5dada3843a9b30228b828063, type: 3}
+  m_ID: 0
+  m_PetOnly: 1
+  m_Anim: {fileID: 653153885}
+  m_rb: {fileID: 653153886}
 --- !u!1 &665295680
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,7 +1526,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 2.4364195, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1495,7 +1537,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 16}
+  m_Size: {x: 5.872839, y: 16}
   m_EdgeRadius: 0
 --- !u!1 &676438758
 GameObject:
@@ -1938,6 +1980,7 @@ GameObject:
   - component: {fileID: 931332211}
   - component: {fileID: 931332210}
   - component: {fileID: 931332209}
+  - component: {fileID: 931332214}
   m_Layer: 6
   m_Name: Sheep (1)
   m_TagString: NPC
@@ -2124,8 +2167,28 @@ Transform:
   - {fileID: 1459110736}
   - {fileID: 429340118}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &931332214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931332208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f09d713f58bd514e89a525077fdd239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_srHolder: {fileID: 614859158}
+  m_Flipped: 0
+  m_Aud: {fileID: 931332209}
+  m_SpinSFX: {fileID: 8300000, guid: 75985f9c5dada3843a9b30228b828063, type: 3}
+  m_ID: 0
+  m_PetOnly: 1
+  m_Anim: {fileID: 931332210}
+  m_rb: {fileID: 931332211}
 --- !u!1 &1047629324
 GameObject:
   m_ObjectHideFlags: 0
@@ -3373,7 +3436,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500633700}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -6.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4017,9 +4080,9 @@ MonoBehaviour:
   m_Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 653153889}
         m_TargetAssemblyTypeName: Sheep, Assembly-CSharp
-        m_MethodName: FollowPlayer
+        m_MethodName: Pet
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4515,9 +4578,9 @@ MonoBehaviour:
   m_Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8954311595764556509}
         m_TargetAssemblyTypeName: Sheep, Assembly-CSharp
-        m_MethodName: FollowPlayer
+        m_MethodName: Pet
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4861,8 +4924,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8954311595764556508}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.62, y: -0.37, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.62, y: -0.3699999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4870,7 +4933,7 @@ Transform:
   - {fileID: 8954311595861674784}
   - {fileID: 1800751407036776392}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &8954311595764556499
 BoxCollider2D:
@@ -4911,6 +4974,7 @@ GameObject:
   - component: {fileID: 8954311595764556496}
   - component: {fileID: 8954311595764556497}
   - component: {fileID: 7262938735718433836}
+  - component: {fileID: 8954311595764556509}
   m_Layer: 6
   m_Name: Sheep (3)
   m_TagString: NPC
@@ -4918,6 +4982,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8954311595764556509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8954311595764556508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f09d713f58bd514e89a525077fdd239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_srHolder: {fileID: 8954311594797029861}
+  m_Flipped: 1
+  m_Aud: {fileID: 7262938735718433836}
+  m_SpinSFX: {fileID: 8300000, guid: 75985f9c5dada3843a9b30228b828063, type: 3}
+  m_ID: 0
+  m_PetOnly: 1
+  m_Anim: {fileID: 8954311595764556497}
+  m_rb: {fileID: 8954311595764556496}
 --- !u!4 &8954311595861674784
 Transform:
   m_ObjectHideFlags: 0

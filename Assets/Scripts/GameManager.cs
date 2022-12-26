@@ -231,6 +231,11 @@ public class GameManager : MonoBehaviour
         return isOutside;
     }
 
+    public int getSceneID()
+    {
+        return SceneManager.GetActiveScene().buildIndex;
+    }
+
     IEnumerator TransferSequence(int sceneIndex, Vector2 newPos, bool zoomTransfer)
     {
         if(zoomTransfer)

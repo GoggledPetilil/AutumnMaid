@@ -6,7 +6,7 @@ public class Sheep : NPC
 {
     [Header("Parameters")]
     public int m_ID;
-    [SerializeField] private Dialogue m_FollowerDialogue;
+    public bool m_PetOnly;
     private float m_Speed = 4.85f;
     private float m_FollowDistance = 2.5f;    // Distance threshold between the Sheep and Player.
     private float m_StopDistance = 8.2f;      // Distance threshold to stop following the Player
@@ -19,6 +19,8 @@ public class Sheep : NPC
 
     void Start()
     {
+        if(m_PetOnly) return;
+
         if(GameManager.instance.m_SheepSaved.Contains(m_ID))
         {
             this.gameObject.SetActive(false);
@@ -76,21 +78,23 @@ public class Sheep : NPC
 
     public void FollowPlayer()
     {
-        Player p = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         if(m_FollowTarget == null && GameManager.instance.m_FlagMetFarmer)
         {
+            Player p = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
             transform.parent = null;    // Sheep will unparent itself from the acre, so it doesn't despawn when the acre does.
             
             m_FollowTarget = p.gameObject.transform;
             GameManager.instance.AddSheep(m_ID);
 
             m_FollowDistance = m_FollowDistance * Random.Range(0.9f, 1.05f);
+        }
 
-            FindObjectOfType<DialogueManager>().StartDialogue(m_FollowerDialogue);
-        }
-        else 
-        {
-            p.PatObject(this);
-        }
+        Pet();
+    }
+
+    public void Pet()
+    {
+        Player p = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        p.PatObject(this);
     }
 }
