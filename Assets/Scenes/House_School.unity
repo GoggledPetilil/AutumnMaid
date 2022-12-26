@@ -2072,11 +2072,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6421613680598664836}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fc3d790c8547cd49a5b1a60d99d85b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a43e9fef2350a6468b7df493654fe47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_NoPizza: {fileID: 11400000, guid: 4ca4128e13f67b547a1d8790db75699d, type: 2}
-  m_YesPizza: {fileID: 11400000, guid: 2dea11353cfcec14da8e0376d7df3f61, type: 2}
+  m_DeliveredDialogue: {fileID: 11400000, guid: 2dea11353cfcec14da8e0376d7df3f61, type: 2}
+  m_StandardDialogue: {fileID: 11400000, guid: 4ca4128e13f67b547a1d8790db75699d, type: 2}
+  m_Customer: {fileID: 696057320}
 --- !u!1 &6421613681546870202
 GameObject:
   m_ObjectHideFlags: 0
