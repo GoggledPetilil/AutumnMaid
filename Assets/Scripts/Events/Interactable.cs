@@ -13,7 +13,15 @@ public class Interactable : MonoBehaviour
         m_Event.Invoke();
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    /*void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.CompareTag("Player"))
+        {
+
+        }
+    }*/
+
+    void OnTriggerStay2D(Collider2D col)
     {
         if(col.gameObject.CompareTag("Player"))
         {
@@ -21,15 +29,12 @@ public class Interactable : MonoBehaviour
             if(player.m_InteractEvent == null)
             {
                 player.m_InteractEvent = this;
+            }
+            if(!GameManager.instance.isTalking())
+            {
                 player.PromptAppear(true);
             }
-        }
-    }
-
-    void OnTriggerStay2D(Collider2D col)
-    {
-        if(col.gameObject.CompareTag("Player"))
-        {
+            
             if(m_WillTurn && gameObject.transform.parent.transform.CompareTag("NPC"))
             {
                 if(col.gameObject.transform.position.x > gameObject.transform.parent.transform.position.x)

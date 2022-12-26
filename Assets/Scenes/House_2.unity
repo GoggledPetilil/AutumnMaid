@@ -6456,7 +6456,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873020460280856341}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6464,7 +6464,7 @@ Transform:
   - {fileID: 873020459569550256}
   m_Father: {fileID: 873020461494879269}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &873020460280856341
 GameObject:
   m_ObjectHideFlags: 0
@@ -6580,7 +6580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_srHolder: {fileID: 873020460280856338}
-  m_Flipped: 0
+  m_Flipped: 1
   m_Aud: {fileID: 1482433882599318235}
   m_SpinSFX: {fileID: 8300000, guid: 75985f9c5dada3843a9b30228b828063, type: 3}
 --- !u!1 &873020461494879275
@@ -6797,9 +6797,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f09d6cac2cd3da74a81f976977e7c406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Dialogue:
-  - {fileID: 11400000, guid: 827b5456aeccd34479f12e8c9eda51be, type: 2}
-  - {fileID: 11400000, guid: 495647375108c5b42b18a25176fa90ba, type: 2}
 --- !u!210 &3982353103529784002
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -7419,19 +7416,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6421613682073740571}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82f8a25d72dd03a4ab53d3ef020cf877, type: 3}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_srHolder: {fileID: 6421613681145536034}
-  m_Flipped: 0
-  m_Aud: {fileID: 4724585135399371755}
-  m_SpinSFX: {fileID: 8300000, guid: 75985f9c5dada3843a9b30228b828063, type: 3}
-  m_StartDialogue: {fileID: 11400000, guid: 55db0b6d3d4226d4da682cb795435bab, type: 2}
-  m_StealDialogue: {fileID: 11400000, guid: c15dd9f84bc524649a5b730fcb00fdf3, type: 2}
-  m_sr: {fileID: 6421613680844960385}
-  m_DogSprites:
-  - {fileID: -857509742, guid: 8aa88e72e50a522418789fcf89debbfa, type: 3}
-  - {fileID: 1035122074, guid: 8aa88e72e50a522418789fcf89debbfa, type: 3}
 --- !u!210 &7081798166275085298
 SortingGroup:
   m_ObjectHideFlags: 0
