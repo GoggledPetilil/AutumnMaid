@@ -22,11 +22,8 @@ MonoBehaviour:
     sentence: Yup! Has he ever taken you along with him?
   - character: {fileID: 11400000, guid: 225f36f667e220448bf4ca713ed63399, type: 2}
     sentence: Oh, all the time! But... It's kinda boring!
-  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: Haha, I guess so. It's fun when you actually catch something though,
-      isn't it?
   - character: {fileID: 11400000, guid: 225f36f667e220448bf4ca713ed63399, type: 2}
-    sentence: But most of the time you're just sitting there and that's boring...
+    sentence: Most of the time you're just sitting there and that's boring...
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
     sentence: Well, I like it.
   - character: {fileID: 11400000, guid: 225f36f667e220448bf4ca713ed63399, type: 2}

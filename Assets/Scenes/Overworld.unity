@@ -55242,6 +55242,8 @@ MonoBehaviour:
   m_FaceLeft: 1
   m_SitPosition: {fileID: 1999300963}
   m_StandPosition: {fileID: 1178345923}
+  m_IsSpecial: 1
+  m_Minutes: 5
 --- !u!1 &2128705772
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,9 +11,34 @@ public class BenchEvent : MonoBehaviour
     private bool m_IsSitting;
     private bool m_InAnimation;
 
+    [Header("Special Components")]
+    public bool m_IsSpecial;    // On this beach, you drink.
+    public int m_Minutes;       // How many minutes you gotta wait.
+    private float m_WaitTimer;
+
+    void Update()
+    {
+        if(!m_IsSpecial) return;
+
+        if(m_IsSitting && GameManager.instance.m_FlagHaveTea && !GameManager.instance.m_FlagDrankTea)
+        {
+            if(Time.time > m_WaitTimer)
+            {
+                Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+                player.m_ani.SetBool("isDrinking", false);
+
+                GameManager.instance.m_FlagDrankTea = true;
+                GameManager.instance.IncreaseHappiness();
+            }
+        }
+    }
+
     public void SitEvent()
     {
         if(m_InAnimation) return;
+
+        SetWaitTimer();     // Wait timer is set when the player gets off,
+                            // To prevent the quest from being completed while getting off.
 
         if(!m_IsSitting)
         {
@@ -50,6 +75,10 @@ public class BenchEvent : MonoBehaviour
         }
         player.m_ani.SetBool("isMoving", false);
         player.m_ani.SetBool("isSitting", true);
+        if(m_IsSpecial && GameManager.instance.m_FlagHaveTea && !GameManager.instance.m_FlagDrankTea)
+        {
+            player.m_ani.SetBool("isDrinking", true);
+        }
 
         if(m_FaceRight && !m_FaceLeft)
         {
@@ -96,6 +125,7 @@ public class BenchEvent : MonoBehaviour
             if(t > 0.5f)
             {
                 player.m_ani.SetBool("isSitting", false);
+                player.m_ani.SetBool("isDrinking", false);
                 player.m_ani.SetBool("isMoving", true);
             }
             yield return null;
@@ -108,5 +138,10 @@ public class BenchEvent : MonoBehaviour
 
         m_IsSitting = false;
         m_InAnimation = false;
+    }
+
+    void SetWaitTimer()
+    {
+        m_WaitTimer = Time.time + (m_Minutes * 60);
     }
 }
