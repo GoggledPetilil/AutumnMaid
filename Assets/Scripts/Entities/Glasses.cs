@@ -15,8 +15,14 @@ public class Glasses : MonoBehaviour
         }
     }
 
+    public void TriggerEvent()
+    {
+        StartCoroutine(ItemObtain());
+    }
+
     IEnumerator ItemObtain()
     {
+        GameManager.instance.m_FlagHaveGlasses = true;
         DialogueManager dm = FindObjectOfType<DialogueManager>();
         
         if(GameManager.instance.m_FlagMetOldLady)
@@ -34,14 +40,5 @@ public class Glasses : MonoBehaviour
         }
 
         this.gameObject.SetActive(false);
-    }
-
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if(col.gameObject.CompareTag("Player"))
-        {
-            GameManager.instance.m_FlagHaveGlasses = true;
-            StartCoroutine(ItemObtain());
-        }
     }
 }
