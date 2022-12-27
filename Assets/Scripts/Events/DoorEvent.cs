@@ -23,7 +23,7 @@ public class DoorEvent : MonoBehaviour
         }
     }
 
-    public void TriggerDoor()
+    public virtual void TriggerDoor()
     {
         StartCoroutine(DoorSequence());
     }

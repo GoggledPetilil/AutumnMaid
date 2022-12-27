@@ -58690,8 +58690,8 @@ GameObject:
   - component: {fileID: 6421613681246490738}
   - component: {fileID: 6421613681246490739}
   - component: {fileID: 6421613681246490748}
-  - component: {fileID: 4724585136247895694}
   - component: {fileID: 6421613681246490751}
+  - component: {fileID: 4724585136247895694}
   m_Layer: 6
   m_Name: NPC
   m_TagString: NPC
@@ -58708,9 +58708,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 6421613681246490750}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f65b2f97784fd64ea3b39c5d9e2f435, type: 3}
+  m_Script: {fileID: 11500000, guid: 65335eecafacdca48be84c1eba3296e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_IdleDialogue: {fileID: 11400000, guid: cb162ebd663c5eb4e8271310525e1f44, type: 2}
+  m_UnlockDialogue: {fileID: 11400000, guid: c3decd77a4fdbfb4a9aed5a7cd09ac9a, type: 2}
+  m_OpenDialogue: {fileID: 11400000, guid: db645d831d54b394384eee569a003919, type: 2}
+  m_FinishDialogue:
+  - {fileID: 11400000, guid: 5dfb8c93a0fc2964ba176557770263ed, type: 2}
+  - {fileID: 11400000, guid: 74e0315b9a4e7cc4d9d502c98144dea5, type: 2}
 --- !u!212 &6421613681283856769
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -60398,9 +60404,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 7847822823972334006}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 139f4eaf6822fe54ea5bb48ea22648e0, type: 3}
+  m_Script: {fileID: 11500000, guid: 83e9b26dffa79f147badd28068f1ef41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_MapID: 6
+  m_WarpCords: {x: -0.2, y: -3.3}
+  m_ZoomTransfer: 1
+  m_aud: {fileID: 7847822823972334003}
+  m_DoorSFX: {fileID: 8300000, guid: 84c6f5b03aa47d64b8668984896cfb1b, type: 3}
+  m_DoorSprite: {fileID: 7847822822902404035}
+  m_BlockDialogue:
+  - {fileID: 11400000, guid: 3f38c9376a49c3a40968139f2d1dffa3, type: 2}
+  - {fileID: 11400000, guid: fd7b8081b388eab4f949b524e241c653, type: 2}
 --- !u!4 &7896234957244815721
 Transform:
   m_ObjectHideFlags: 0
@@ -60668,9 +60683,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8597147787751469056}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44a232e1115cb6b4dbfc1ff178916e9c, type: 3}
+  m_Script: {fileID: 11500000, guid: 29d536c85507d164eaca5251b94780da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_NormalDialogue: {fileID: 11400000, guid: d4a6005391d36d24bb54a1da14d571d4, type: 2}
+  m_NoPermissionDialogue: {fileID: 11400000, guid: 613510765eb04b042919d3b86e0b66a4, type: 2}
+  m_TakeDialogue: {fileID: 11400000, guid: c1937a0369066584fa250300ba779dc4, type: 2}
 --- !u!4 &8597147787789605372
 Transform:
   m_ObjectHideFlags: 0

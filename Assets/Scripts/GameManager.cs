@@ -41,32 +41,43 @@ public class GameManager : MonoBehaviour
     public int m_HappyLevel;
     private int m_MaxHappiness = 10;
 
-    [Header("Flags")]
+    [Header("Flags - Maple")]
     public bool m_FlagCleanedMapleRoom;
+    [Header("Flags - Farmer")]
     public bool m_FlagMetFarmer;
     public bool m_FlagSavedSheep;
+    [Header("Flags - Fisher")]
     public bool m_FlagMetFisher;
     public bool m_FlagThankFisher;
+    [Header("Flags - Cat")]
     public bool m_FlagFedCat;
+    [Header("Flags - Old Lady")]
     public bool m_FlagMetOldLady;
     public bool m_FlagHaveGlasses;
     public bool m_FlagLadyHelped;
+    [Header("Flags - Cafe")]
     public bool m_FlagMetCafe;
     public int m_DeliveryStage;
+    public bool m_FlagHaveTea;
+    public bool m_FlagDrankTea;
+    [Header("Flags - Old Ghost")]
     public bool m_FlagMetGhost;
     public bool m_FlagHaveMemento;
     public bool m_FlagGhostThanks;
-    public bool m_FlagHaveTea;
-    public bool m_FlagDrankTea;
+    [Header("Flags - Postman")]
     public bool m_FlagMetPostman;
-    public bool m_FlagHaveToolbox;
     public bool m_FlagThanksPostman;
+    [Header("Flags - Mycen")]
+    public bool m_FlagCheckedMycen;
+    public bool m_FlagMycenDoorOpen;
     public bool m_FlagAskedDIY;
+    public bool m_FlagHaveToolbox;
+    public bool m_FlagReturnedToolbox;
+    [Header("Flags - Helena")]
     public bool m_FlagMetHelena;
     public bool m_FlagCleanedHelenaRoom;
     public bool m_FlagHelenaBook;
-    public bool m_FlagCheckedMycen;
-    public bool m_FlagMycenDoorOpen;
+    [Header("Flags - NPCs")]
     public bool m_FlagMetOswald;
     public bool m_FlagMetHilda;
     public bool m_FlagMetJan;

@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8da991f0f91c6d4408a100030743abd3, type: 3}
-  m_Name: mycenDoor
+  m_Name: mycenDoor_1
   m_EditorClassIdentifier: 
   increasesHappiness: 0
   dialogueInfo:
   - character: {fileID: 0}
     sentence: 
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: Hmmm... The door is locked. Seems like Mycen is not available at the
-      moment. Oh well.
+    sentence: Seems like it's locked...and Mycen is not opening the door, either...
+  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+    sentence: Maybe Mint might know where he's at. I think I saw her out in the courtyard.

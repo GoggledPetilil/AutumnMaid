@@ -2108,15 +2108,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6421613682504592190}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73622d55a4426b8418969f664d0d2361, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e85bb5cd368aba4e8daee009d6dce6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_StartDialogue: {fileID: 11400000, guid: 4a9242cfc5f7e0848bb5de4e724d7f83, type: 2}
-  m_AskDialogue: {fileID: 11400000, guid: 79448fba1f36abe4899450a228f8ec76, type: 2}
+  m_StartDialogue: {fileID: 11400000, guid: 79448fba1f36abe4899450a228f8ec76, type: 2}
   m_RepeatDialogue: {fileID: 11400000, guid: 5cecea6fbc4ab8b4f83dd5ebb4767604, type: 2}
-  m_FinishDialogue:
-  - {fileID: 11400000, guid: 4c9bee935951f384aaa52eb06ae7b092, type: 2}
-  - {fileID: 11400000, guid: aa2bcf4ace0ae1c49953f79fb6a6d691, type: 2}
+  m_ReturnDialogue: {fileID: 11400000, guid: 4c9bee935951f384aaa52eb06ae7b092, type: 2}
+  m_FinishDialogue: {fileID: 11400000, guid: aa2bcf4ace0ae1c49953f79fb6a6d691, type: 2}
 --- !u!210 &7081798166636699095
 SortingGroup:
   m_ObjectHideFlags: 0
