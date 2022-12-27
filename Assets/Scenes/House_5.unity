@@ -1928,9 +1928,10 @@ GameObject:
   - component: {fileID: 6421613682438225181}
   - component: {fileID: 6421613682438225180}
   - component: {fileID: 6421613682438225183}
+  - component: {fileID: 6421613682438225185}
+  - component: {fileID: 6421613682438225184}
   - component: {fileID: 6421613682438225182}
   - component: {fileID: 4724585135303662563}
-  - component: {fileID: 6421613682438225184}
   m_Layer: 6
   m_Name: NPC
   m_TagString: NPC
@@ -2032,13 +2033,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 6421613682438225171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63d6aeaed7b3bbd478828a854bd7c617, type: 3}
+  m_Script: {fileID: 11500000, guid: fe31b43932248f6499adaac8c7f7be5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_StartDialogue: {fileID: 11400000, guid: 83a7b3846f8f7fd4da4f7d21b09bf17e, type: 2}
+  m_SheepDialogue: {fileID: 11400000, guid: 83a7b3846f8f7fd4da4f7d21b09bf17e, type: 2}
   m_FishDialogue:
   - {fileID: 11400000, guid: f95a9162ee443e948b487dad105db177, type: 2}
   - {fileID: 11400000, guid: 7b2c05712c5868f41ab193c7b3f04b2b, type: 2}
+--- !u!114 &6421613682438225185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6421613682438225171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b46c55fcbfaddad498244003f43fdb0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_srHolder: {fileID: 6421613681242031658}
+  m_Flipped: 0
+  m_Aud: {fileID: 4724585135303662563}
+  m_SpinSFX: {fileID: 8300000, guid: 75985f9c5dada3843a9b30228b828063, type: 3}
 --- !u!212 &6421613682468230380
 SpriteRenderer:
   m_ObjectHideFlags: 0

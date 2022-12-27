@@ -68167,9 +68167,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6421613681020383119}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09a6985647ff75e40ae7d6d7b4a3ca83, type: 3}
+  m_Script: {fileID: 11500000, guid: d82d4c3a93505104598251a782b3f4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StartDialogue: {fileID: 11400000, guid: e743d9f895a5e8b42b522026dfb46562, type: 2}
+  m_PizzaDialogue:
+  - {fileID: 11400000, guid: 8c14962e2630be141a55b687de57c380, type: 2}
+  - {fileID: 11400000, guid: d69eceb8c9940114c9aa08b3f900850e, type: 2}
 --- !u!1 &6421613681230599387
 GameObject:
   m_ObjectHideFlags: 0

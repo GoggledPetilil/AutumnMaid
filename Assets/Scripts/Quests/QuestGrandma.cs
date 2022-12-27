@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class QuestGrandma : MonoBehaviour
 {
+    [Header("Dialogue")]
     public Dialogue m_FirstTalkDialogue;
     public Dialogue m_RepeatDialogue;
     public Dialogue m_ThanksDialogue;
     public Dialogue m_ThanksRepeatDialogue;
     public Dialogue m_AlreadyGotDialogue;
 
+    [Header("Components")]
     public Customer m_Customer;
-
     [SerializeField] private SpriteRenderer m_Renderer;
     [SerializeField] private Sprite m_GlassesSprite;
     [SerializeField] private Sprite m_NoGlassesSprite;
