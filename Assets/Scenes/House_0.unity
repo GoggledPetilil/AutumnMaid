@@ -694,7 +694,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1542816146}
         m_TargetAssemblyTypeName: HelenaRoom, Assembly-CSharp
-        m_MethodName: StartBookEvent
+        m_MethodName: TriggerEvent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -733,11 +733,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8455707005567660240, guid: 9a937c0bda4c0284ba84346ddbdb2e5e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.7
+      value: 1.79
       objectReference: {fileID: 0}
     - target: {fileID: 8455707005567660240, guid: 9a937c0bda4c0284ba84346ddbdb2e5e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.34
+      value: -2.38
       objectReference: {fileID: 0}
     - target: {fileID: 8455707005567660240, guid: 9a937c0bda4c0284ba84346ddbdb2e5e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1438,9 +1438,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1542816144}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 4fe4a7cca5c593f4d83a92e7953c8007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_TrashHolder: {fileID: 999300164}
+  m_Book: {fileID: 1650872336}
+  m_Helena: {fileID: 6421613680397972304}
+  m_FindBookDialogue: {fileID: 11400000, guid: db81d4a206831f94aab79889f36d1795, type: 2}
+  m_ReadingDialogue: {fileID: 11400000, guid: 157ee0460b0f42a4fb889fb63f4dca10, type: 2}
+  m_SleepingDialogue: {fileID: 11400000, guid: 66d20c548c25d564abbe4e0f77889658, type: 2}
 --- !u!1 &1650872336
 GameObject:
   m_ObjectHideFlags: 0
@@ -6824,8 +6830,8 @@ MonoBehaviour:
   m_Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1542816146}
-        m_TargetAssemblyTypeName: HelenaRoom, Assembly-CSharp
+      - m_Target: {fileID: 6421613680397972304}
+        m_TargetAssemblyTypeName: Helena, Assembly-CSharp
         m_MethodName: TriggerDialogue
         m_Mode: 1
         m_Arguments:
@@ -7119,19 +7125,6 @@ MonoBehaviour:
   m_Flipped: 0
   m_Aud: {fileID: 4724585137079178674}
   m_SpinSFX: {fileID: 8300000, guid: 75985f9c5dada3843a9b30228b828063, type: 3}
---- !u!114 &6421613680397972289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6421613680397972290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f6163922dfa598479e123b5f83d5ab5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Dialogue: {fileID: 11400000, guid: 1f14b8ede8d0419438025a5784f621fb, type: 2}
 --- !u!1 &6421613680397972290
 GameObject:
   m_ObjectHideFlags: 0
@@ -7144,7 +7137,7 @@ GameObject:
   - component: {fileID: 6421613680397972301}
   - component: {fileID: 6421613680397972302}
   - component: {fileID: 6421613680397972288}
-  - component: {fileID: 6421613680397972289}
+  - component: {fileID: 6421613680397972304}
   - component: {fileID: 4724585137079178674}
   - component: {fileID: 6421613680397972303}
   m_Layer: 6
@@ -7162,7 +7155,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6421613680397972290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.6, y: -0.81, z: 0}
+  m_LocalPosition: {x: -5, y: -0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7239,6 +7232,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6421613680397972304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6421613680397972290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daa1560e3edb7f248ab2770d624883a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Anim: {fileID: 6421613680397972303}
+  m_InteractCircle: {fileID: 4442713861617610325}
+  m_StartDialogue: {fileID: 11400000, guid: 133f0155b9970e243b9f943dac915a21, type: 2}
+  m_RepeatDialogue: {fileID: 11400000, guid: 877d07174cea3db46af8e4f4616eba1d, type: 2}
+  m_SleepDialogue: {fileID: 11400000, guid: 7c0f24c695b094c42899066d3db0d3f7, type: 2}
 --- !u!212 &6421613680485653181
 SpriteRenderer:
   m_ObjectHideFlags: 0

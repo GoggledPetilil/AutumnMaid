@@ -21,6 +21,4 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: abb0b20417746304ea1ec57c5ec5c4e2, type: 2}
     sentence: You can just start at the beginning, I don't mind!
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: The end.
-  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
     sentence: '"Once there was--'

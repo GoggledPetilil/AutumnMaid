@@ -7,7 +7,6 @@ public class MapleRoom : MonoBehaviour
     [SerializeField] private GameObject m_TrashHolder;
     [SerializeField] private GameObject m_ControlsHolder;
     [SerializeField] private Dialogue m_FinishDialogue;
-    private bool m_CompletedQuest;
     
     void Start()
     {
@@ -21,14 +20,13 @@ public class MapleRoom : MonoBehaviour
 
     void Update()
     {
-        if(m_CompletedQuest) return;
+        if(GameManager.instance.m_FlagCleanedMapleRoom) return;
         
         GameObject[] trash = GameObject.FindGameObjectsWithTag("Destructable");
 
         if(trash.Length < 1)
         {
             // The player has cleaned everything.
-            m_CompletedQuest = true;
             GameManager.instance.m_FlagCleanedMapleRoom = true;
             m_ControlsHolder.SetActive(false);
             FindObjectOfType<DialogueManager>().StartDialogue(m_FinishDialogue);
