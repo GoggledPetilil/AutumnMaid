@@ -6596,8 +6596,8 @@ GameObject:
   - component: {fileID: 873020461494879271}
   - component: {fileID: 873020461494879270}
   - component: {fileID: 873020461494879273}
-  - component: {fileID: 1482433882599318235}
   - component: {fileID: 1482433882599318236}
+  - component: {fileID: 1482433882599318235}
   m_Layer: 6
   m_Name: NPC
   m_TagString: NPC
@@ -6794,9 +6794,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 873020461494879275}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f09d6cac2cd3da74a81f976977e7c406, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b61d92b2a37ee94095e12835b5791fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StartDialogue: {fileID: 11400000, guid: 827b5456aeccd34479f12e8c9eda51be, type: 2}
+  m_CursedDialogue: {fileID: 11400000, guid: 90dff4b1158d2ef4c8aae9e1c9379eb1, type: 2}
+  m_FinishedDialogue:
+  - {fileID: 11400000, guid: 495647375108c5b42b18a25176fa90ba, type: 2}
+  - {fileID: 11400000, guid: cce3940385b74b7458d5109392d4b38e, type: 2}
 --- !u!210 &3982353103529784002
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -7416,9 +7421,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 6421613682073740571}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: a035e2ad492e9d344b8eb5fdad848e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_srHolder: {fileID: 6421613681145536034}
+  m_Flipped: 0
+  m_Aud: {fileID: 4724585135399371755}
+  m_SpinSFX: {fileID: 8300000, guid: 75985f9c5dada3843a9b30228b828063, type: 3}
+  m_StealDialogue: {fileID: 11400000, guid: c15dd9f84bc524649a5b730fcb00fdf3, type: 2}
+  m_sr: {fileID: 6421613680844960385}
+  m_DogSprites:
+  - {fileID: -857509742, guid: 8aa88e72e50a522418789fcf89debbfa, type: 3}
+  - {fileID: 1035122074, guid: 8aa88e72e50a522418789fcf89debbfa, type: 3}
 --- !u!210 &7081798166275085298
 SortingGroup:
   m_ObjectHideFlags: 0

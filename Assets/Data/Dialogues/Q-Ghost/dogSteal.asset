@@ -19,10 +19,6 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 6f1b951d8d0d4c64886723c6e518b1ea, type: 2}
     sentence: Did you just steal Chomper's toy?
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: Uhhh... Kinda...?
-  - character: {fileID: 11400000, guid: 6f1b951d8d0d4c64886723c6e518b1ea, type: 2}
-    sentence: ...
-  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
     sentence: P-Please don't be mad, it's for a good cause!
   - character: {fileID: 11400000, guid: 6f1b951d8d0d4c64886723c6e518b1ea, type: 2}
     sentence: And what's that?

@@ -1438,18 +1438,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1542816144}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc7e5f715bc4a1047a8cad714f70bbc5, type: 3}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Helena: {fileID: 6421613680397972290}
-  m_TrashHolder: {fileID: 999300164}
-  m_Book: {fileID: 1650872336}
-  m_FindDialogue: {fileID: 11400000, guid: db81d4a206831f94aab79889f36d1795, type: 2}
-  m_BookDialogue: {fileID: 11400000, guid: 157ee0460b0f42a4fb889fb63f4dca10, type: 2}
-  m_EndDialogue: {fileID: 11400000, guid: 66d20c548c25d564abbe4e0f77889658, type: 2}
-  m_HelenaStart: {fileID: 11400000, guid: 133f0155b9970e243b9f943dac915a21, type: 2}
-  m_HelenaRepeat: {fileID: 11400000, guid: 877d07174cea3db46af8e4f4616eba1d, type: 2}
-  m_HelenaSleeps: {fileID: 11400000, guid: 7c0f24c695b094c42899066d3db0d3f7, type: 2}
 --- !u!1 &1650872336
 GameObject:
   m_ObjectHideFlags: 0

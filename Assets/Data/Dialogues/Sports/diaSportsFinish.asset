@@ -30,11 +30,3 @@ MonoBehaviour:
     sentence: What are you talking about? You still owe Chomper a new toy, you know...
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
     sentence: Crud, you're right... I forgot...
-  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: I-I'll buy him something nice, next time I'm in the city!
-  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: We could go together even, make it a date!
-  - character: {fileID: 11400000, guid: 6f1b951d8d0d4c64886723c6e518b1ea, type: 2}
-    sentence: Flattery won't get you anywhere.
-  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: Well, it was worth a shot...

@@ -2016,6 +2016,10 @@ MonoBehaviour:
   m_ThanksDialogue: {fileID: 11400000, guid: 8089c0ea48560cd4eaed99e792226cb2, type: 2}
   m_ThanksRepeatDialogue: {fileID: 11400000, guid: f570f85b23331d140b289011cfc69139, type: 2}
   m_AlreadyGotDialogue: {fileID: 11400000, guid: 872179f35238ccd4fa3ff90740510d80, type: 2}
+  m_Customer: {fileID: 1414471310}
+  m_Renderer: {fileID: 4143579166814853160}
+  m_GlassesSprite: {fileID: 1176374479, guid: ed284bf37595f8b4eadd7c3c731b957d, type: 3}
+  m_NoGlassesSprite: {fileID: 130178213, guid: ed284bf37595f8b4eadd7c3c731b957d, type: 3}
 --- !u!4 &4143579166103565451
 Transform:
   m_ObjectHideFlags: 0

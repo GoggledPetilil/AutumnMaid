@@ -69,6 +69,7 @@ public class GameManager : MonoBehaviour
     public bool m_FlagMycenDoorOpen;
     public bool m_FlagMetOswald;
     public bool m_FlagMetHilda;
+    public bool m_FlagMetJan;
 
     void Awake()
     {
