@@ -58204,8 +58204,8 @@ GameObject:
   - component: {fileID: 6421613680955354587}
   - component: {fileID: 6421613680955354586}
   - component: {fileID: 6421613680955354581}
-  - component: {fileID: 4724585136505015079}
   - component: {fileID: 6421613680955354588}
+  - component: {fileID: 4724585136505015079}
   m_Layer: 6
   m_Name: NPC
   m_TagString: NPC
@@ -58307,9 +58307,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 6421613680955354583}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6691f32e64a53fe4e82e3265f76eab5c, type: 3}
+  m_Script: {fileID: 11500000, guid: a720de247a669524faeaed886b3f55d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_MailManHolder: {fileID: 6421613682188162793}
+  m_Renderer: {fileID: 6421613681949784653}
+  m_IdleSprite: {fileID: 836659121, guid: 13785517a54eb5d42bb9e01e7345c5ff, type: 3}
+  m_SadSprite: {fileID: 1207140944, guid: 13785517a54eb5d42bb9e01e7345c5ff, type: 3}
+  m_ScooterAnim: {fileID: 6455313360452168494}
+  m_StartDialogue: {fileID: 11400000, guid: 32be14335e2a09249859b60640b6705e, type: 2}
+  m_RepeatDialogue: {fileID: 11400000, guid: b91c93adaef98b64c8b10cbdbb39b9e8, type: 2}
+  m_ThanksDialogue: {fileID: 11400000, guid: 3ee0d39610d5b0744aedaf1362ac37ba, type: 2}
+  m_OopsDialogue: {fileID: 11400000, guid: 8cf791687af990249bae1368248f6ca8, type: 2}
 --- !u!212 &6421613681001023054 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 3463611402708203331, guid: d8da4c38b2e8b544aa4edd48d17b3ab5, type: 3}
