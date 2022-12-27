@@ -103,7 +103,7 @@ public class CafeManager : MonoBehaviour
         Dialogue dialogue = null;
 
         int i = Mathf.Clamp(GameManager.instance.m_DeliveryStage, 0, m_StartDialogue.Length);
-        if(GameManager.instance.m_DeliveryStage > m_StartDialogue.Length)
+        if(GameManager.instance.m_DeliveryStage >= m_StartDialogue.Length)
         {
             m_NikoRenderer.sprite = m_SpriteIdle;
             if(GameManager.instance.m_HappyLevel < m_QuestQuota)
@@ -128,7 +128,7 @@ public class CafeManager : MonoBehaviour
             yield return null;
         }
         
-        if(GameManager.instance.m_DeliveryStage > m_StartDialogue.Length)
+        if(GameManager.instance.m_DeliveryStage >= m_StartDialogue.Length)
         {
             GameManager.instance.m_DeliveryStage = 99;
             GameManager.instance.IncreaseHappiness();

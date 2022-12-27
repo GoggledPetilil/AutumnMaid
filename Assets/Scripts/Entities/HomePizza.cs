@@ -13,6 +13,7 @@ public class HomePizza : MonoBehaviour
         int stage = GameManager.instance.m_DeliveryStage;
         if(m_Customer.isCurrentCustomer())
         {
+            m_SpriteHolder.SetActive(false);
             m_InteractCircle.SetActive(true);
         }
         else if((!GameManager.instance.m_IsDelivering && stage == m_Customer.m_CustomerID) || stage > m_Customer.m_CustomerID)
@@ -30,6 +31,8 @@ public class HomePizza : MonoBehaviour
     public void TriggerDialogue()
     {
         m_SpriteHolder.SetActive(true);
+        m_InteractCircle.SetActive(false);
+
         if(m_Customer.isCurrentCustomer())
         {
             m_Customer.TriggerDialogue();
