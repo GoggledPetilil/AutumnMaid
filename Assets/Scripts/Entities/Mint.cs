@@ -28,7 +28,7 @@ public class Mint : MonoBehaviour
         {
             dialogue = m_OpenDialogue;
         }
-        else if(GameManager.instance.m_FlagCheckedMycen)
+        else if(GameManager.instance.m_FlagCheckedMycen && GameManager.instance.m_FlagMetPostman)
         {
             dialogue = m_UnlockDialogue;
             GameManager.instance.m_FlagMycenDoorOpen = true;
