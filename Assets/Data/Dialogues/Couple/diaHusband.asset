@@ -17,7 +17,7 @@ MonoBehaviour:
   - character: {fileID: 0}
     sentence: 
   - character: {fileID: 11400000, guid: 9d6812cefe6715e4fbe92710b5d254a2, type: 2}
-    sentence: It's out anniversary today!
+    sentence: It's our anniversary today!
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
     sentence: Aw, congrats! What're you gonna do to celebrate?
   - character: {fileID: 11400000, guid: 9d6812cefe6715e4fbe92710b5d254a2, type: 2}

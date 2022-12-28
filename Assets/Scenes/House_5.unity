@@ -1643,8 +1643,8 @@ MonoBehaviour:
   m_Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+      - m_Target: {fileID: 6421613682438225184}
+        m_TargetAssemblyTypeName: Oswald, Assembly-CSharp
         m_MethodName: TriggerDialogue
         m_Mode: 1
         m_Arguments:
