@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class Hilda : MonoBehaviour
 {
+    [Header("Components")]
+    [SerializeField] private Animator m_Anim;
+
+    [Header("Dialogue")]
     public Dialogue m_StartDialogue;
     public Dialogue[] m_PizzaDialogue;
+
+    void OnEnable()
+    {
+        m_Anim.SetBool("isSweeping", GameManager.instance.m_DeliveryStage < 2);
+    }
 
     public void TriggerDialogue()
     {

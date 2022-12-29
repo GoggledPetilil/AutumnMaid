@@ -16,8 +16,6 @@ MonoBehaviour:
   dialogueInfo:
   - character: {fileID: 0}
     sentence: 
-  - character: {fileID: 11400000, guid: 492e1daa440d43b44820fb2408b3bd2e, type: 2}
-    sentence: ...
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
     sentence: Morgan, you look down, is something wrong?
   - character: {fileID: 11400000, guid: 492e1daa440d43b44820fb2408b3bd2e, type: 2}

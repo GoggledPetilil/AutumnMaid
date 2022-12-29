@@ -6,9 +6,16 @@ using UnityEngine.UI;
 public class PauseManager : MonoBehaviour
 {
     [SerializeField] private CanvasGroup m_CanvasGroup;
+    [SerializeField] private RectTransform m_CanvasTransform;
+    [SerializeField] private GameObject m_MapHolder;
     [SerializeField] private RectTransform m_IconTransform;
+    [SerializeField] private GameObject m_ItemHolder;
+    [SerializeField] private GameObject m_SystemHolder;
+    [SerializeField] private AudioSource m_AudioSource;
+    [SerializeField] private AudioClip m_SFXPage;
     
-    private bool m_isPaused;
+    [SerializeField] private bool m_isPaused;
+    private int m_CurrentSection;
 
     private float m_PlayerMinPosX = -7.5f;
     private float m_PlayerMinPosY = -70.0f;
@@ -37,23 +44,27 @@ public class PauseManager : MonoBehaviour
     {
         if(state == false)
         {
-            Time.timeScale = 1.0f;
             m_CanvasGroup.alpha = 0.0f;
-
-            m_isPaused = false;
+            Time.timeScale = 1.0f;
         }
         else 
         {
-            Time.timeScale = 0.0f;
             m_CanvasGroup.alpha = 1.0f;
+            m_CurrentSection = -1;
             OpenMapScreen();
-
-            m_isPaused = true;
+            Time.timeScale = 0.0f;
         }
+        m_isPaused = state;
     }
 
-    void OpenMapScreen()
+    public void OpenMapScreen()
     {
+        if(m_CurrentSection == 0) return;
+        m_CurrentSection = 0;
+        SetCurrentPage();
+        PlayFlipSound();
+        FlipPage();
+        
         Vector2 mapPos = Vector2.zero;
         if(GameManager.instance.isOutside())
         {
@@ -78,5 +89,58 @@ public class PauseManager : MonoBehaviour
             }
         }
         m_IconTransform.anchoredPosition = mapPos;
+    }
+
+    public void OpenItemsScreen()
+    {
+        if(m_CurrentSection == 1) return;
+        m_CurrentSection = 1;
+        SetCurrentPage();
+        PlayFlipSound();
+        FlipPage();
+    }
+
+    public void OpenSystemScreen()
+    {
+        if(m_CurrentSection == 2) return;
+        m_CurrentSection = 2;
+        SetCurrentPage();
+        PlayFlipSound();
+        FlipPage();
+    }
+
+    void SetCurrentPage()
+    {
+        m_MapHolder.SetActive(m_CurrentSection == 0);
+        m_ItemHolder.SetActive(m_CurrentSection == 1);
+        m_SystemHolder.SetActive(m_CurrentSection == 2);
+    }
+
+    void FlipPage()
+    {
+        StopCoroutine(FlippingPage());
+        StartCoroutine(FlippingPage());
+    }
+
+    void PlayFlipSound()
+    {
+        m_AudioSource.clip = m_SFXPage;
+        m_AudioSource.pitch = 1.0f;
+        m_AudioSource.Play();
+    }
+
+    IEnumerator FlippingPage()
+    {
+        Vector2 startSize = Vector2.one * 1.01f;
+        Vector2 endSize = Vector2.one;
+        float t = 0.0f;
+        float flipDur = 0.2f;
+        while(t < 1.0f)
+        {
+            t += Time.unscaledDeltaTime / flipDur;
+            m_CanvasTransform.localScale = Vector2.Lerp(startSize, endSize, t);
+            yield return null;
+        }
+        m_CanvasTransform.localScale = endSize;
     }
 }
