@@ -195,6 +195,8 @@ public class PauseManager : MonoBehaviour
 
     public void VisitProfile(string name)
     {
+        if(m_CurrentSection != 2 && m_isPaused == false) return;
+
         Application.OpenURL("https://" + name + ".newgrounds.com/");
     }
 
