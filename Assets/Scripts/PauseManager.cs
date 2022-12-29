@@ -49,10 +49,13 @@ public class PauseManager : MonoBehaviour
         }
         else 
         {
-            m_CanvasGroup.alpha = 1.0f;
-            m_CurrentSection = -1;
-            OpenMapScreen();
-            Time.timeScale = 0.0f;
+            if(GameManager.instance.getSceneID() != 0)
+            {
+                m_CanvasGroup.alpha = 1.0f;
+                m_CurrentSection = -1;
+                OpenMapScreen();
+                Time.timeScale = 0.0f;
+            }
         }
         m_isPaused = state;
     }
@@ -127,6 +130,26 @@ public class PauseManager : MonoBehaviour
         m_AudioSource.clip = m_SFXPage;
         m_AudioSource.pitch = 1.0f;
         m_AudioSource.Play();
+    }
+
+    public void AdjustMasterVolume(float value)
+    {
+        GameManager.instance.AdjustMasterVolume(value);
+    }
+
+    public void AdjustBGMVolume(float value)
+    {
+        GameManager.instance.AdjustBGMVolume(value);
+    }
+
+    public void AdjustBGSVolume(float value)
+    {
+        GameManager.instance.AdjustBGSVolume(value); 
+    }
+
+    public void AdjustSFXVolume(float value)
+    {
+        GameManager.instance.AdjustSFXVolume(value);
     }
 
     IEnumerator FlippingPage()

@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Aud: {fileID: 144178797432453264}
   m_SpinSFX: {fileID: 8300000, guid: 75985f9c5dada3843a9b30228b828063, type: 3}
   m_ID: 0
-  m_FollowerDialogue: {fileID: 0}
+  m_PetOnly: 0
   m_Anim: {fileID: 1913756487419928173}
   m_rb: {fileID: 1913756487419928172}
 --- !u!82 &144178797432453264
@@ -263,7 +263,7 @@ AudioSource:
   m_GameObject: {fileID: 1913756487419928160}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1220995686524898248, guid: ba3425bb84c757e4ba840d2d1e1be697, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 using Cinemachine;
 
 public class GameManager : MonoBehaviour
@@ -16,6 +17,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Components")]
     [SerializeField] private Animator m_Anim;
+    [SerializeField] private AudioMixer m_AudioMixer;
     [SerializeField] private AudioSource m_BGMPlayer;
     [SerializeField] private AudioSource m_SFXPlayer;
 
@@ -160,6 +162,26 @@ public class GameManager : MonoBehaviour
     {
         m_SFXPlayer.clip = sound;
         m_SFXPlayer.Play();
+    }
+
+    public void AdjustMasterVolume(float value)
+    {
+        m_AudioMixer.SetFloat("master", value);
+    }
+
+    public void AdjustBGMVolume(float value)
+    {
+        m_AudioMixer.SetFloat("bgm", value);
+    }
+
+    public void AdjustBGSVolume(float value)
+    {
+        m_AudioMixer.SetFloat("bgs", value);
+    }
+
+    public void AdjustSFXVolume(float value)
+    {
+        m_AudioMixer.SetFloat("sfx", value);
     }
 
     public void SpawnSparkles(Vector3 pos)
