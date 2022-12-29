@@ -13076,13 +13076,49 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4481321771004744, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481321771004744, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481321771004744, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 567749221466660854, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
       propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854012572780649318, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854012572780649318, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854012572780649318, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3469460342838373083, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625627413043838223, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625627413043838223, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625627413043838223, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4880032995374387652, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
       propertyPath: m_Name
@@ -13130,6 +13166,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4880032995374387654, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899591084558066109, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899591084558066109, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899591084558066109, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8022090533301461857, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
@@ -36049,7 +36097,7 @@ AudioSource:
   m_GameObject: {fileID: 1239709346}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 5547698146138090866, guid: ba3425bb84c757e4ba840d2d1e1be697, type: 2}
   m_audioClip: {fileID: 8300000, guid: ecb053be95e0b714f8a8e0ee7a53fd53, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -67593,7 +67641,7 @@ AudioSource:
   m_GameObject: {fileID: 6421613681020383119}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1220995686524898248, guid: ba3425bb84c757e4ba840d2d1e1be697, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1

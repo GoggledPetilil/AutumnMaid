@@ -152,6 +152,11 @@ public class PauseManager : MonoBehaviour
         GameManager.instance.AdjustSFXVolume(value);
     }
 
+    public void VisitProfile(string name)
+    {
+        Application.OpenURL("https://" + name + ".newgrounds.com/");
+    }
+
     IEnumerator FlippingPage()
     {
         Vector2 startSize = Vector2.one * 1.01f;
