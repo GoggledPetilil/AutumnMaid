@@ -1120,7 +1120,7 @@ RectTransform:
   m_Children:
   - {fileID: 6884341156311672776}
   m_Father: {fileID: 2887262027662560518}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -1419,7 +1419,7 @@ RectTransform:
   m_Children:
   - {fileID: 3976740874774876192}
   m_Father: {fileID: 2887262027662560518}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -1969,9 +1969,9 @@ RectTransform:
   - {fileID: 5453793669345417899}
   - {fileID: 4755036316846207983}
   - {fileID: 8579451688953734215}
-  - {fileID: 2842440806185831937}
-  - {fileID: 2295498813915446155}
   - {fileID: 3035465280574209928}
+  - {fileID: 2295498813915446155}
+  - {fileID: 2842440806185831937}
   - {fileID: 8935315768423343394}
   m_Father: {fileID: 4880032994500838718}
   m_RootOrder: 3
@@ -1989,7 +1989,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3611657139359635562}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -2012,7 +2012,7 @@ MonoBehaviour:
   m_ItemHolder: {fileID: 654829732975401643}
   m_SystemHolder: {fileID: 2605303882087123086}
   m_AudioSource: {fileID: 4333218864973152662}
-  m_SFXPage: {fileID: 8300000, guid: ae2ba7a12835bd54a81f748553b78b8b, type: 3}
+  m_SFXPage: {fileID: 8300000, guid: 02919d3f2623b6c48b84ef18ac6f80e2, type: 3}
   m_isPaused: 0
 --- !u!82 &4333218864973152662
 AudioSource:
@@ -2024,7 +2024,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ae2ba7a12835bd54a81f748553b78b8b, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
