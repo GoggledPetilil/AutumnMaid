@@ -14,7 +14,7 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private AudioSource m_AudioSource;
     [SerializeField] private AudioClip m_SFXPage;
     
-    [SerializeField] private bool m_isPaused;
+    private bool m_isPaused;
     private int m_CurrentSection;
 
     private float m_PlayerMinPosX = -7.5f;
@@ -86,8 +86,49 @@ public class PauseManager : MonoBehaviour
         {
             switch(GameManager.instance.getSceneID())
             {
-                case 0:
-                    mapPos = Vector2.zero;
+                case 2:
+                    // Player
+                    mapPos = new Vector2(261,-230);
+                    break;
+                case 3:
+                    // School
+                    mapPos = new Vector2(192,10);
+                    break;
+                case 4:
+                    // Cafe
+                    mapPos = new Vector2(4.5f,-70);
+                    break;
+                case 5:
+                    // House Helena
+                    mapPos = new Vector2(109,-155);
+                    break;
+                case 6:
+                    // House Mycen
+                    mapPos = new Vector2(72,-217);
+                    break;
+                case 7:
+                    // House Jan
+                    mapPos = new Vector2(128,-75);
+                    break;
+                case 8:
+                    // House Barn
+                    mapPos = new Vector2(334,-158);
+                    break;
+                case 9:
+                    // House Couple
+                    mapPos = new Vector2(199,-75);
+                    break;
+                case 10:
+                    // House Fisher
+                    mapPos = new Vector2(227,-157);
+                    break;
+                case 11:
+                    // House Grannie
+                    mapPos = new Vector2(283,-30);
+                    break;
+                case 12:
+                    // Barn
+                    mapPos = new Vector2(288.5f,-190);
                     break;
             }
         }
