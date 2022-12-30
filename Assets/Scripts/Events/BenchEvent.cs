@@ -12,6 +12,8 @@ public class BenchEvent : MonoBehaviour
     private bool m_InAnimation;
 
     [Header("Special Components")]
+    [SerializeField] private Quest m_QuestData;
+    [SerializeField] private Item m_TeaItem;
     public bool m_IsSpecial;    // On this beach, you drink.
     public int m_Minutes;       // How many minutes you gotta wait.
     private float m_WaitTimer;
@@ -29,6 +31,8 @@ public class BenchEvent : MonoBehaviour
 
                 GameManager.instance.m_FlagDrankTea = true;
                 GameManager.instance.IncreaseHappiness();
+                GameManager.instance.CompleteQuest(m_QuestData);
+                GameManager.instance.RemoveItem(m_TeaItem);
             }
         }
     }

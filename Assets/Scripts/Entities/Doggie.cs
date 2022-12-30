@@ -8,6 +8,7 @@ public class Doggie : Entity
     [SerializeField] private Dialogue m_StealDialogue;
     [SerializeField] private SpriteRenderer m_sr;
     [SerializeField] private Sprite[] m_DogSprites;
+    [SerializeField] private Item m_ItemMemento;
 
     void Start()
     {
@@ -28,6 +29,7 @@ public class Doggie : Entity
             m_sr.sprite = m_DogSprites[1];
             FindObjectOfType<DialogueManager>().StartDialogue(m_StealDialogue);
             GameManager.instance.m_FlagHaveMemento = true;
+            GameManager.instance.AddItem(m_ItemMemento);
         }
         else 
         {

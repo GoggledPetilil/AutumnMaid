@@ -9,6 +9,7 @@ public class QuestFarmerManager : MonoBehaviour
     public Dialogue m_ThanksDialogue;
     public Dialogue m_ThanksRepeatDialogue;
     public Customer m_Customer;
+    [SerializeField] private Quest m_QuestData;
     
     public void TriggerDialogue()
     {
@@ -18,6 +19,7 @@ public class QuestFarmerManager : MonoBehaviour
             return;
         }
         
+        GameManager.instance.AddQuest(m_QuestData);
         Dialogue dialogue = null;
         if(GameManager.instance.m_FlagMetFarmer == false)
         {
@@ -36,6 +38,7 @@ public class QuestFarmerManager : MonoBehaviour
                 {
                     dialogue = m_ThanksDialogue;
                     GameManager.instance.m_FlagSavedSheep = true;
+                    GameManager.instance.CompleteQuest(m_QuestData);
                 }
             }
             else 

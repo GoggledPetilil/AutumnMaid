@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using System.Collections.Generic; 
 using UnityEngine;
 
 public class QuestGhost : MonoBehaviour
@@ -8,6 +8,8 @@ public class QuestGhost : MonoBehaviour
     public Dialogue[] m_RepeatDialogue;
     public Dialogue m_ThanksDialogue;
     public GameObject m_PlushObject;
+    [SerializeField] private Quest m_QuestData;
+    [SerializeField] private Item m_ItemMemento;
 
     void Start()
     {
@@ -17,6 +19,7 @@ public class QuestGhost : MonoBehaviour
     public void TriggerDialogue()
     {
         Dialogue dialogue = null;
+        GameManager.instance.AddQuest(m_QuestData);
         if(GameManager.instance.m_FlagMetGhost)
         {
             // Already met ghost
@@ -32,6 +35,8 @@ public class QuestGhost : MonoBehaviour
                     // Not given back yet
                     dialogue = m_ThanksDialogue;
                     GameManager.instance.m_FlagGhostThanks = true;
+                    GameManager.instance.CompleteQuest(m_QuestData);
+                    GameManager.instance.RemoveItem(m_ItemMemento);
                 }
             }
             else 
@@ -46,6 +51,8 @@ public class QuestGhost : MonoBehaviour
             {
                 dialogue = m_StartDialogue[1];
                 GameManager.instance.m_FlagGhostThanks = true;
+                GameManager.instance.CompleteQuest(m_QuestData);
+                GameManager.instance.RemoveItem(m_ItemMemento);
             }
             else
             {

@@ -7,6 +7,7 @@ public class Helena : MonoBehaviour
     [Header("Components")]
     [SerializeField] private Animator m_Anim;
     [SerializeField] private GameObject m_InteractCircle;
+    [SerializeField] private Quest m_QuestData;
 
     [Header("Dialogue")]
     public Dialogue m_StartDialogue;
@@ -23,6 +24,11 @@ public class Helena : MonoBehaviour
         m_Anim.SetBool("isSleeping", true);
     }
 
+    public Quest GetQuestData()
+    {
+        return m_QuestData;
+    }
+
     public void CanInteract(bool state)
     {
         m_InteractCircle.SetActive(state);
@@ -30,6 +36,7 @@ public class Helena : MonoBehaviour
 
     public void TriggerDialogue()
     {
+        GameManager.instance.AddQuest(m_QuestData);
         Dialogue dialogue = null;
         
         if(GameManager.instance.m_FlagHelenaBook)

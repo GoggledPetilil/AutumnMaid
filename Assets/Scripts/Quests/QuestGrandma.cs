@@ -16,6 +16,8 @@ public class QuestGrandma : MonoBehaviour
     [SerializeField] private SpriteRenderer m_Renderer;
     [SerializeField] private Sprite m_GlassesSprite;
     [SerializeField] private Sprite m_NoGlassesSprite;
+    [SerializeField] private Quest m_QuestData;
+    [SerializeField] private Item m_ItemGlasses;
 
     void Start()
     {
@@ -37,6 +39,8 @@ public class QuestGrandma : MonoBehaviour
             return;
         }
         
+        GameManager.instance.AddQuest(m_QuestData);
+
         Dialogue dialogue = null;
         if(GameManager.instance.m_FlagLadyHelped)
         {
@@ -53,6 +57,8 @@ public class QuestGrandma : MonoBehaviour
                 dialogue = m_AlreadyGotDialogue;
             }
             GameManager.instance.m_FlagLadyHelped = true;
+            GameManager.instance.RemoveItem(m_ItemGlasses);
+            GameManager.instance.CompleteQuest(m_QuestData);
             m_Renderer.sprite = m_GlassesSprite;
         }
         else 

@@ -8,6 +8,7 @@ public class Mycen : MonoBehaviour
     public Dialogue m_RepeatDialogue;
     public Dialogue m_ReturnDialogue;
     public Dialogue m_FinishDialogue;
+    [SerializeField] private Item m_ToolboxItem;
 
     public void TriggerDialogue()
     {
@@ -20,6 +21,7 @@ public class Mycen : MonoBehaviour
         else if(GameManager.instance.m_FlagThanksPostman)
         {
             dialogue = m_ReturnDialogue;
+            GameManager.instance.RemoveItem(m_ToolboxItem);
             GameManager.instance.m_FlagReturnedToolbox = true;
         }
         else if(GameManager.instance.m_FlagAskedDIY)

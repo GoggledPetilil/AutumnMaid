@@ -19,6 +19,11 @@ public class CafeManager : MonoBehaviour
     [SerializeField] private Sprite m_SpriteIdle;
     [SerializeField] private Sprite m_SpriteSad;
 
+    [Header("Quest Data")]
+    [SerializeField] private Quest m_QuestData;
+    [SerializeField] private Quest m_TeaQuest;
+    [SerializeField] private Item m_TeaItem;
+
     void Start()
     {
         if(GameManager.instance.m_DeliveryStage > 90)
@@ -42,6 +47,7 @@ public class CafeManager : MonoBehaviour
     public void TriggerDialogue()
     {
         if(canTalk == false) return;
+        GameManager.instance.AddQuest(m_QuestData);
         
         if(GameManager.instance.m_IsDelivering)
         {
@@ -82,6 +88,8 @@ public class CafeManager : MonoBehaviour
                     // Tea is ready
                     dialogue = m_ThanksDialogue[1];
                     GameManager.instance.m_FlagHaveTea = true;
+                    GameManager.instance.AddQuest(m_TeaQuest);
+                    GameManager.instance.AddItem(m_TeaItem);
                 }
             }
 
@@ -114,6 +122,8 @@ public class CafeManager : MonoBehaviour
             {
                 dialogue = m_WinDialogue[1];
                 GameManager.instance.m_FlagHaveTea = true;
+                GameManager.instance.AddQuest(m_TeaQuest);
+                GameManager.instance.AddItem(m_TeaItem);
             }
         }
         else 
@@ -132,6 +142,7 @@ public class CafeManager : MonoBehaviour
         {
             GameManager.instance.m_DeliveryStage = 99;
             GameManager.instance.IncreaseHappiness();
+            GameManager.instance.CompleteQuest(m_QuestData);
         }
         else 
         {

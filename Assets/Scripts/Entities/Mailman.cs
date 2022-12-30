@@ -13,6 +13,8 @@ public class Mailman : MonoBehaviour
     [SerializeField] private Animator m_ScooterAnim;
     [SerializeField] private ParticleSystem m_BrokenSmoke;
     [SerializeField] private ParticleSystem m_ScooterSmoke;
+    [SerializeField] private Quest m_QuestData;
+
     [Header("Dialogue")]
     public Dialogue m_StartDialogue;
     public Dialogue m_RepeatDialogue;
@@ -42,6 +44,7 @@ public class Mailman : MonoBehaviour
 
     IEnumerator DialogueEvent()
     {
+        GameManager.instance.AddQuest(m_QuestData);
         m_Renderer.sprite = m_IdleSprite;
 
         if(GameManager.instance.m_FlagMetPostman)
@@ -118,6 +121,7 @@ public class Mailman : MonoBehaviour
         }
 
         GameManager.instance.IncreaseHappiness();
+        GameManager.instance.CompleteQuest(m_QuestData);
         this.gameObject.SetActive(false);
     }
 }

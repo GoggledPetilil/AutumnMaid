@@ -2020,6 +2020,8 @@ MonoBehaviour:
   m_Renderer: {fileID: 4143579166814853160}
   m_GlassesSprite: {fileID: 1176374479, guid: ed284bf37595f8b4eadd7c3c731b957d, type: 3}
   m_NoGlassesSprite: {fileID: 130178213, guid: ed284bf37595f8b4eadd7c3c731b957d, type: 3}
+  m_QuestData: {fileID: 11400000, guid: ec83d3441629e93438b1443339444a11, type: 2}
+  m_ItemGlasses: {fileID: 11400000, guid: e6d55cae2c922564994709b4f6781491, type: 2}
 --- !u!4 &4143579166103565451
 Transform:
   m_ObjectHideFlags: 0

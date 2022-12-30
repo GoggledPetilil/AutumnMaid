@@ -7250,6 +7250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Anim: {fileID: 6421613680397972303}
   m_InteractCircle: {fileID: 4442713861617610325}
+  m_QuestData: {fileID: 11400000, guid: 243642aa01a77374eb43b3cf5baf11f6, type: 2}
   m_StartDialogue: {fileID: 11400000, guid: 133f0155b9970e243b9f943dac915a21, type: 2}
   m_RepeatDialogue: {fileID: 11400000, guid: 877d07174cea3db46af8e4f4616eba1d, type: 2}
   m_SleepDialogue: {fileID: 11400000, guid: 7c0f24c695b094c42899066d3db0d3f7, type: 2}

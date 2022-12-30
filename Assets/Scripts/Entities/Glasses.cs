@@ -6,6 +6,7 @@ public class Glasses : MonoBehaviour
 {
     public Dialogue m_KnowDialogue;
     public Dialogue m_NoNoDialogue;
+    [SerializeField] private Item m_ItemData;
 
     void Start()
     {
@@ -23,6 +24,7 @@ public class Glasses : MonoBehaviour
     IEnumerator ItemObtain()
     {
         GameManager.instance.m_FlagHaveGlasses = true;
+        GameManager.instance.AddItem(m_ItemData);
         DialogueManager dm = FindObjectOfType<DialogueManager>();
         
         if(GameManager.instance.m_FlagMetOldLady)

@@ -9,6 +9,7 @@ public class Cat : Entity
     [SerializeField] private Dialogue m_FeedingDialogue;
     [SerializeField] private SpriteRenderer m_sr;
     [SerializeField] private Sprite[] m_CatSprites;
+    [SerializeField] private Quest m_QuestData;
 
     void Start()
     {
@@ -31,11 +32,13 @@ public class Cat : Entity
             {
                 dialogue = m_FeedingDialogue;
                 GameManager.instance.m_FlagFedCat = true;
+                GameManager.instance.CompleteQuest(m_QuestData);
                 m_sr.sprite = m_CatSprites[0];
             }
             else 
             {
                 dialogue = m_NoFoodDialogue;
+                GameManager.instance.AddQuest(m_QuestData);
             }
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         }

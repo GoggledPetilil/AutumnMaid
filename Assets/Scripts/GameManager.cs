@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     public Vector2 m_NewPosition;
     public List<int> m_SheepOnHand = new List<int>();
     public List<int> m_SheepSaved = new List<int>();
+    public List<Quest> m_AllQuests = new List<Quest>();
+    public List<Quest> m_CompletedQuests = new List<Quest>();
+    public List<Item> m_Items = new List<Item>();
     public int m_FishAmount;
     public bool m_IsDelivering;
 
@@ -164,24 +167,65 @@ public class GameManager : MonoBehaviour
         m_SFXPlayer.Play();
     }
 
-    public void AdjustMasterVolume(float value)
+    public void SetMasterVolume(float value)
     {
         m_AudioMixer.SetFloat("master", value);
     }
 
-    public void AdjustBGMVolume(float value)
+    public void SetBGMVolume(float value)
     {
         m_AudioMixer.SetFloat("bgm", value);
     }
 
-    public void AdjustBGSVolume(float value)
+    public void SetBGSVolume(float value)
     {
         m_AudioMixer.SetFloat("bgs", value);
     }
 
-    public void AdjustSFXVolume(float value)
+    public void SetSFXVolume(float value)
     {
         m_AudioMixer.SetFloat("sfx", value);
+    }
+
+    public float GetMasterVolume()
+    {
+        float value;
+        m_AudioMixer.GetFloat("master", out value);
+        return value;
+    }
+
+    public float GetBGMVolume()
+    {
+        float value;
+        m_AudioMixer.GetFloat("bgm", out value);
+        return value;
+    }
+
+    public float GetBGSVolume()
+    {
+        float value;
+        m_AudioMixer.GetFloat("bgs", out value);
+        return value;
+    }
+
+    public float GetSFXVolume()
+    {
+        float value;
+        m_AudioMixer.GetFloat("sfx", out value);
+        return value;
+    }
+
+    public void AddQuest(Quest quest)
+    {
+        if(m_AllQuests.Contains(quest)) return;
+        m_AllQuests.Add(quest);
+    }
+
+    public void CompleteQuest(Quest quest)
+    {
+        if(m_CompletedQuests.Contains(quest)) return;
+        if(!m_AllQuests.Contains(quest)) AddQuest(quest);
+        m_CompletedQuests.Add(quest);
     }
 
     public void SpawnSparkles(Vector3 pos)
@@ -189,10 +233,16 @@ public class GameManager : MonoBehaviour
         GameObject go = Instantiate(m_SparklesPrefabs, pos, Quaternion.identity) as GameObject;
     }
 
-    public void GetItem(Item item)
+    public void AddItem(Item item)
     {
-        InventoryManager inv = GetComponentInChildren<InventoryManager>();
-        inv.GetItem(item);
+        if(m_Items.Contains(item)) return;
+        m_Items.Add(item);
+    }
+
+    public void RemoveItem(Item item)
+    {
+        if(!m_Items.Contains(item)) return;
+        m_Items.Remove(item);
     }
 
     public void AddSheep(int sheepID)

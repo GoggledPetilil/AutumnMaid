@@ -8,12 +8,18 @@ public class HelenaRoom : MonoBehaviour
     [SerializeField] private GameObject m_TrashHolder;
     [SerializeField] private GameObject m_Book;
     [SerializeField] private Helena m_Helena;
+    private Quest m_QuestData;
     private Vector2 m_HelenaSitPos = new Vector2(-4.5f, 0.5f);
 
     [Header("Dialogue")]
     public Dialogue m_FindBookDialogue;
     public Dialogue m_ReadingDialogue;
     public Dialogue m_SleepingDialogue;
+
+    void Awake()
+    {
+        m_QuestData = m_Helena.GetQuestData();
+    }
 
     void Start()
     {
@@ -113,6 +119,7 @@ public class HelenaRoom : MonoBehaviour
         player.DisableColliders(false);
 
         GameManager.instance.IncreaseHappiness();
+        GameManager.instance.CompleteQuest(m_QuestData);
         m_Helena.CanInteract(true);
     }
 }

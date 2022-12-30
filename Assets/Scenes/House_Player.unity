@@ -1808,6 +1808,7 @@ MonoBehaviour:
   m_TrashHolder: {fileID: 1986503487}
   m_ControlsHolder: {fileID: 718746445}
   m_FinishDialogue: {fileID: 11400000, guid: aee7a650e557dd6499e1c9cdfe3b1dc4, type: 2}
+  m_QuestData: {fileID: 11400000, guid: 0afa5431b4d0ea9408a6f36bac690136, type: 2}
 --- !u!1 &1671739128
 GameObject:
   m_ObjectHideFlags: 0

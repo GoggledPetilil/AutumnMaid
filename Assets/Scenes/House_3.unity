@@ -1759,6 +1759,7 @@ MonoBehaviour:
   m_ThanksDialogue: {fileID: 11400000, guid: b91765910247cda49961738045aed40b, type: 2}
   m_ThanksRepeatDialogue: {fileID: 11400000, guid: 659d473f122634b48a5472627efd987e, type: 2}
   m_Customer: {fileID: 1147423775}
+  m_QuestData: {fileID: 11400000, guid: 187dabce1b5df344499c04b75d3b2604, type: 2}
 --- !u!114 &4442713861538695043
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PauseManager : MonoBehaviour
 {
@@ -10,7 +11,12 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private GameObject m_MapHolder;
     [SerializeField] private RectTransform m_IconTransform;
     [SerializeField] private GameObject m_ItemHolder;
+    [SerializeField] private TMP_Text m_QuestLog;
     [SerializeField] private GameObject m_SystemHolder;
+    [SerializeField] private Slider m_MasterSlider;
+    [SerializeField] private Slider m_BGMSlider;
+    [SerializeField] private Slider m_BGSSlider;
+    [SerializeField] private Slider m_SFXSlider;
     [SerializeField] private AudioSource m_AudioSource;
     [SerializeField] private AudioClip m_SFXPage;
     
@@ -142,6 +148,22 @@ public class PauseManager : MonoBehaviour
         SetCurrentPage();
         PlayFlipSound();
         FlipPage();
+
+        // Get all the items
+
+        m_QuestLog.text = "";
+        foreach(Quest quest in GameManager.instance.m_AllQuests)
+        {
+            if(GameManager.instance.m_CompletedQuests.Contains(quest))
+            {
+                m_QuestLog.text += "<s>" + quest.description + "</s>";
+            }
+            else 
+            {
+                m_QuestLog.text += quest.description;
+            }
+            m_QuestLog.text += "\n";
+        }
     }
 
     public void OpenSystemScreen()
@@ -151,6 +173,11 @@ public class PauseManager : MonoBehaviour
         SetCurrentPage();
         PlayFlipSound();
         FlipPage();
+
+        m_MasterSlider.value = GameManager.instance.GetMasterVolume();
+        m_BGMSlider.value = GameManager.instance.GetBGMVolume();
+        m_BGSSlider.value = GameManager.instance.GetBGSVolume();
+        m_SFXSlider.value = GameManager.instance.GetSFXVolume();
     }
 
     void SetCurrentPage()
@@ -175,22 +202,22 @@ public class PauseManager : MonoBehaviour
 
     public void AdjustMasterVolume(float value)
     {
-        GameManager.instance.AdjustMasterVolume(value);
+        GameManager.instance.SetMasterVolume(value);
     }
 
     public void AdjustBGMVolume(float value)
     {
-        GameManager.instance.AdjustBGMVolume(value);
+        GameManager.instance.SetBGMVolume(value);
     }
 
     public void AdjustBGSVolume(float value)
     {
-        GameManager.instance.AdjustBGSVolume(value); 
+        GameManager.instance.SetBGSVolume(value); 
     }
 
     public void AdjustSFXVolume(float value)
     {
-        GameManager.instance.AdjustSFXVolume(value);
+        GameManager.instance.SetSFXVolume(value);
     }
 
     public void VisitProfile(string name)

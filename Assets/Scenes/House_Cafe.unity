@@ -579,6 +579,9 @@ MonoBehaviour:
   m_NikoRenderer: {fileID: 1880551631}
   m_SpriteIdle: {fileID: -630199361, guid: d4e8c641fcc716548a90f9b6a44ddb7c, type: 3}
   m_SpriteSad: {fileID: -2134255549, guid: d4e8c641fcc716548a90f9b6a44ddb7c, type: 3}
+  m_QuestData: {fileID: 11400000, guid: 3227223d29d9c3041bdb6b23fd86a265, type: 2}
+  m_TeaQuest: {fileID: 11400000, guid: e8d152d8abf20d745b99b56051693f71, type: 2}
+  m_TeaItem: {fileID: 11400000, guid: 9a180f2e08ab1ef4db37f3d01a0c081b, type: 2}
 --- !u!1 &726028095
 GameObject:
   m_ObjectHideFlags: 0

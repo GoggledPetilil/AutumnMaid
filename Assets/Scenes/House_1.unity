@@ -2115,6 +2115,7 @@ MonoBehaviour:
   m_RepeatDialogue: {fileID: 11400000, guid: 5cecea6fbc4ab8b4f83dd5ebb4767604, type: 2}
   m_ReturnDialogue: {fileID: 11400000, guid: 4c9bee935951f384aaa52eb06ae7b092, type: 2}
   m_FinishDialogue: {fileID: 11400000, guid: aa2bcf4ace0ae1c49953f79fb6a6d691, type: 2}
+  m_ToolboxItem: {fileID: 11400000, guid: 588252a67a2a48d49bfa42ae349a2da6, type: 2}
 --- !u!210 &7081798166636699095
 SortingGroup:
   m_ObjectHideFlags: 0
