@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: FootballGu
   m_EditorClassIdentifier: 
   charName: Jan
-  voiceClip: {fileID: 8300000, guid: d5b335f8c636bf74eb92ecfeea748dac, type: 3}
+  voiceClip: {fileID: 8300000, guid: 97bca0b0fdb5e294c86909da36c750b4, type: 3}
   portraitSprite: {fileID: 21300000, guid: 057bf926fe84fdb48a9a774a76002f6e, type: 3}
