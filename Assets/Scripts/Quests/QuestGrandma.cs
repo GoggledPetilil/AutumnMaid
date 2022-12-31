@@ -38,41 +38,43 @@ public class QuestGrandma : MonoBehaviour
             m_Customer.TriggerDialogue();
             return;
         }
-        
-        GameManager.instance.AddQuest(m_QuestData);
+        else
+        {
+            GameManager.instance.AddQuest(m_QuestData);
 
-        Dialogue dialogue = null;
-        if(GameManager.instance.m_FlagLadyHelped)
-        {
-            dialogue = m_ThanksRepeatDialogue;
-        }
-        else if(GameManager.instance.m_FlagHaveGlasses)
-        {
-            if(GameManager.instance.m_FlagMetOldLady)
+            Dialogue dialogue = null;
+            if(GameManager.instance.m_FlagLadyHelped)
             {
-                dialogue = m_ThanksDialogue;
+                dialogue = m_ThanksRepeatDialogue;
+            }
+            else if(GameManager.instance.m_FlagHaveGlasses)
+            {
+                if(GameManager.instance.m_FlagMetOldLady)
+                {
+                    dialogue = m_ThanksDialogue;
+                }
+                else 
+                {
+                    dialogue = m_AlreadyGotDialogue;
+                }
+                GameManager.instance.m_FlagLadyHelped = true;
+                GameManager.instance.RemoveItem(m_ItemGlasses);
+                GameManager.instance.CompleteQuest(m_QuestData);
+                m_Renderer.sprite = m_GlassesSprite;
             }
             else 
             {
-                dialogue = m_AlreadyGotDialogue;
+                if(GameManager.instance.m_FlagMetOldLady)
+                {
+                    dialogue = m_RepeatDialogue;
+                }
+                else 
+                {
+                    dialogue = m_FirstTalkDialogue;
+                    GameManager.instance.m_FlagMetOldLady = true;
+                }
             }
-            GameManager.instance.m_FlagLadyHelped = true;
-            GameManager.instance.RemoveItem(m_ItemGlasses);
-            GameManager.instance.CompleteQuest(m_QuestData);
-            m_Renderer.sprite = m_GlassesSprite;
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         }
-        else 
-        {
-            if(GameManager.instance.m_FlagMetOldLady)
-            {
-                dialogue = m_RepeatDialogue;
-            }
-            else 
-            {
-                dialogue = m_FirstTalkDialogue;
-                GameManager.instance.m_FlagMetOldLady = true;
-            }
-        }
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 }

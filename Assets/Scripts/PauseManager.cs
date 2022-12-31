@@ -11,7 +11,9 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private GameObject m_MapHolder;
     [SerializeField] private RectTransform m_IconTransform;
     [SerializeField] private GameObject m_ItemHolder;
+    [SerializeField] private Transform m_InventoryHolder;
     [SerializeField] private TMP_Text m_QuestLog;
+    [SerializeField] private Item m_FishItem;
     [SerializeField] private GameObject m_SystemHolder;
     [SerializeField] private Slider m_MasterSlider;
     [SerializeField] private Slider m_BGMSlider;
@@ -149,7 +151,29 @@ public class PauseManager : MonoBehaviour
         PlayFlipSound();
         FlipPage();
 
-        // Get all the items
+        int c = m_InventoryHolder.childCount;
+        for(int i = 0; i < c; i++)
+        {
+            GameObject child = m_InventoryHolder.transform.GetChild(i).gameObject;
+            
+            if(i < GameManager.instance.m_Items.Count)
+            {
+                child.SetActive(true);
+                ItemSlot itemSlot = child.GetComponentInChildren<ItemSlot>();
+                Item item = GameManager.instance.m_Items[i];
+                itemSlot.SetItemSlot(item.itemName, item.sprite, 0);
+            }
+            else if(i == GameManager.instance.m_Items.Count && GameManager.instance.m_FishAmount>0)
+            {
+                child.SetActive(true);
+                ItemSlot itemSlot = child.GetComponentInChildren<ItemSlot>();
+                itemSlot.SetItemSlot(m_FishItem.itemName, m_FishItem.sprite, GameManager.instance.m_FishAmount);
+            }
+            else
+            {
+                child.SetActive(false);
+            }
+        }
 
         m_QuestLog.text = "";
         foreach(Quest quest in GameManager.instance.m_AllQuests)

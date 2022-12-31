@@ -95,7 +95,6 @@ public class DialogueManager : MonoBehaviour
         // Entering Dialogue Mode.
         m_Canvas.alpha = 1.0f;
         talkTimer = Time.time + talkDelay;
-        InventoryManager.instance.m_IsActive = false;
         m_BoxAnim.SetBool("isOpen", true);
         m_PortraitAnim.SetBool("isOpen", true);
         m_InConversation = true;
@@ -150,7 +149,6 @@ public class DialogueManager : MonoBehaviour
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         player.GetComponent<Player>().StopMovement(false);
-        InventoryManager.instance.m_IsActive = true;
 
         m_InConversation = false;
         talkTimer = Time.time + talkDelay;

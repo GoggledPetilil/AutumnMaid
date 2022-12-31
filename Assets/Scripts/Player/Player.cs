@@ -87,16 +87,20 @@ public class Player : Entity
                 PromptAppear(false);
                 m_InteractEvent.InvokeEvent();
 
-                if(transform.position.x > m_InteractEvent.transform.position.x)
+                if(m_InteractEvent.isActiveAndEnabled)
                 {
-                    FlipSprite(true);
-                    m_LookDir = Vector2.left;
+                    if(transform.position.x > m_InteractEvent.transform.position.x)
+                    {
+                        FlipSprite(true);
+                        m_LookDir = Vector2.left;
+                    }
+                    else if(transform.position.x < m_InteractEvent.transform.position.x)
+                    {
+                        FlipSprite(false);
+                        m_LookDir = Vector2.right;
+                    }
                 }
-                else if(transform.position.x < m_InteractEvent.transform.position.x)
-                {
-                    FlipSprite(false);
-                    m_LookDir = Vector2.right;
-                }
+
                 SetTargetPoint();
             }
         }
