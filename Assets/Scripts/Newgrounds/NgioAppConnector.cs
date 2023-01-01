@@ -95,26 +95,26 @@ public class NgioAppConnector : MonoBehaviour
         
         // =============================== Button handlers ======================================= //
 
-        if (DontLoginButton != null) 
+        if (DontLoginButton is not null) 
             DontLoginButton.GetComponent<Button>().onClick.AddListener(this.OnDontLoginButtonClick);
 
-        if (LoginButton != null) 
+        if (LoginButton is not null) 
             LoginButton.GetComponent<Button>().onClick.AddListener(this.OnLoginButtonClick);
 
-        if (PlayLegalVersionButton != null) 
+        if (PlayLegalVersionButton is not null) 
             PlayLegalVersionButton.GetComponent<Button>().onClick.AddListener(this.OnPlayLegalVersionButtonClick);
 
-        if (NewVersionAvailableButton != null) 
+        if (NewVersionAvailableButton is not null) 
             NewVersionAvailableButton.GetComponent<Button>().onClick.AddListener(this.OnNewVersionAvailableButtonClick);
 
-        if (CancelLoginButton != null) 
+        if (CancelLoginButton is not null) 
             CancelLoginButton.GetComponent<Button>().onClick.AddListener(this.OnCancelLoginButtonClick);
 
-        if (LogoutButton != null) 
+        if (LogoutButton is not null) 
             LogoutButton.GetComponent<Button>().onClick.AddListener(this.OnLogoutButtonClick);
 
         // get text template for "Logged In" message
-        if (LoggedInTextTemplate != null) 
+        if (LoggedInTextTemplate is not null) 
             LoggedInTextTemplate = LoggedInText.GetComponent<TextMeshProUGUI>().text;
 
         objectGroups.Add("LoginOverlay", new List<GameObject> {
@@ -231,16 +231,16 @@ public class NgioAppConnector : MonoBehaviour
     /// </summary>
     public void HideUIElements()
     {
-        if (PleaseLogInText != null) PleaseLogInText.SetActive(false);
-        if (LoggedInText != null) LoggedInText.SetActive(false);
-        if (PleaseWaitObject != null) PleaseWaitObject.SetActive(false);
-        if (HostIsIllegalText != null) HostIsIllegalText.SetActive(false);
-        if (LoginButton != null) LoginButton.SetActive(false);
-        if (DontLoginButton != null) DontLoginButton.SetActive(false);
-        if (CancelLoginButton != null) CancelLoginButton.SetActive(false);
-        if (LogoutButton != null) LogoutButton.SetActive(false);
-        if (PlayLegalVersionButton != null) PlayLegalVersionButton.SetActive(false);
-        if (NewVersionAvailableButton != null) NewVersionAvailableButton.SetActive(false);
+        if (PleaseLogInText is not null) PleaseLogInText.SetActive(false);
+        if (LoggedInText is not null) LoggedInText.SetActive(false);
+        if (PleaseWaitObject is not null) PleaseWaitObject.SetActive(false);
+        if (HostIsIllegalText is not null) HostIsIllegalText.SetActive(false);
+        if (LoginButton is not null) LoginButton.SetActive(false);
+        if (DontLoginButton is not null) DontLoginButton.SetActive(false);
+        if (CancelLoginButton is not null) CancelLoginButton.SetActive(false);
+        if (LogoutButton is not null) LogoutButton.SetActive(false);
+        if (PlayLegalVersionButton is not null) PlayLegalVersionButton.SetActive(false);
+        if (NewVersionAvailableButton is not null) NewVersionAvailableButton.SetActive(false);
     }
 
     /// <summary>
@@ -267,7 +267,7 @@ public class NgioAppConnector : MonoBehaviour
     /// </summary>
     public void OnCancelLoginButtonClick()
     {
-        if (CancelLoginButton != null) CancelLoginButton.SetActive(false);
+        if (CancelLoginButton is not null) CancelLoginButton.SetActive(false);
         NGIO.CancelLogin();
     }
 
@@ -277,7 +277,7 @@ public class NgioAppConnector : MonoBehaviour
     /// </summary>
     public void OnLogoutButtonClick()
     {
-        if (LogoutButton != null) LogoutButton.SetActive(false);
+        if (LogoutButton is not null) LogoutButton.SetActive(false);
         StartCoroutine(NGIO.LogOut());
     }
 

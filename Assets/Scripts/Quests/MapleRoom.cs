@@ -20,7 +20,6 @@ public class MapleRoom : MonoBehaviour
         else 
         {
             GameManager.instance.AddQuest(m_QuestData);
-            GameManager.instance.UnlockMedal(72296);
         }
     }
 

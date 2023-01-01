@@ -42,7 +42,7 @@ public class PauseManager : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape) && GameManager.instance.getSceneID() != 0)
         {
             PauseGame(!m_isPaused);
         }
@@ -53,6 +53,8 @@ public class PauseManager : MonoBehaviour
         if(state == false)
         {
             m_CanvasGroup.alpha = 0.0f;
+            m_CanvasGroup.interactable = false;
+            m_CanvasGroup.blocksRaycasts = false;
             Time.timeScale = 1.0f;
         }
         else 
@@ -60,6 +62,8 @@ public class PauseManager : MonoBehaviour
             if(GameManager.instance.getSceneID() != 0)
             {
                 m_CanvasGroup.alpha = 1.0f;
+                m_CanvasGroup.interactable = true;
+                m_CanvasGroup.blocksRaycasts = true;
                 m_CurrentSection = -1;
                 OpenMapScreen();
                 Time.timeScale = 0.0f;
