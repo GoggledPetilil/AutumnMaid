@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Mailman
   m_EditorClassIdentifier: 
   charName: Matthew
-  voiceClip: {fileID: 8300000, guid: d5b335f8c636bf74eb92ecfeea748dac, type: 3}
+  voiceClip: {fileID: 8300000, guid: 7ef51685af3967644999c04d4c57ac27, type: 3}
   portraitSprite: {fileID: -455242446, guid: c328962e5f484794cbca927d1e34bfee, type: 3}

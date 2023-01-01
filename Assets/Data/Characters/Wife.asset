@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Wife
   m_EditorClassIdentifier: 
   charName: Whitley
-  voiceClip: {fileID: 8300000, guid: faca8c32616606e4c86d4548679a2d9b, type: 3}
+  voiceClip: {fileID: 8300000, guid: 0ed3489c9d048e241a25f3a0f9b1293d, type: 3}
   portraitSprite: {fileID: 21300000, guid: f3211e18164a4224fa04af81cfe3d346, type: 3}

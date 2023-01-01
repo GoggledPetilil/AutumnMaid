@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: OldLady
   m_EditorClassIdentifier: 
   charName: Lillian
-  voiceClip: {fileID: 8300000, guid: faca8c32616606e4c86d4548679a2d9b, type: 3}
-  portraitSprite: {fileID: 0}
+  voiceClip: {fileID: 8300000, guid: 8f6135fe191ae924f992f0b83c0e993a, type: 3}
+  portraitSprite: {fileID: 1176374479, guid: ed284bf37595f8b4eadd7c3c731b957d, type: 3}

@@ -18,34 +18,36 @@ public class QuestFarmerManager : MonoBehaviour
             m_Customer.TriggerDialogue();
             return;
         }
-        
-        GameManager.instance.AddQuest(m_QuestData);
-        Dialogue dialogue = null;
-        if(GameManager.instance.m_FlagMetFarmer == false)
-        {
-            dialogue = m_FirstTalkDialogue;
-            GameManager.instance.m_FlagMetFarmer = true;
-        }
         else 
         {
-            if(GameManager.instance.m_SheepSaved.Count >= 3)
+            GameManager.instance.AddQuest(m_QuestData);
+            Dialogue dialogue = null;
+            if(GameManager.instance.m_FlagMetFarmer == false)
             {
-                if(GameManager.instance.m_FlagSavedSheep)
-                {
-                    dialogue = m_ThanksRepeatDialogue;
-                }
-                else
-                {
-                    dialogue = m_ThanksDialogue;
-                    GameManager.instance.m_FlagSavedSheep = true;
-                    GameManager.instance.CompleteQuest(m_QuestData);
-                }
+                dialogue = m_FirstTalkDialogue;
+                GameManager.instance.m_FlagMetFarmer = true;
             }
             else 
             {
-                dialogue = m_RepeatDialogue;
+                if(GameManager.instance.m_SheepSaved.Count >= 3)
+                {
+                    if(GameManager.instance.m_FlagSavedSheep)
+                    {
+                        dialogue = m_ThanksRepeatDialogue;
+                    }
+                    else
+                    {
+                        dialogue = m_ThanksDialogue;
+                        GameManager.instance.m_FlagSavedSheep = true;
+                        GameManager.instance.CompleteQuest(m_QuestData);
+                    }
+                }
+                else 
+                {
+                    dialogue = m_RepeatDialogue;
+                }
             }
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         }
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 }

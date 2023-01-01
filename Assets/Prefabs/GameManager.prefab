@@ -775,7 +775,7 @@ MonoBehaviour:
   m_Canvas: {fileID: 2126475083}
   m_PortraitImage: {fileID: 1006072422}
   m_InConversation: 0
-  m_TextSpeed: 0.97
+  m_TextSpeed: 1
 --- !u!82 &1779281345
 AudioSource:
   m_ObjectHideFlags: 0
