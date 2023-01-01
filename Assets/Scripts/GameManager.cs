@@ -104,8 +104,7 @@ public class GameManager : MonoBehaviour
 
     public void UnlockMedal(int medal_id)
     {
-        Debug.Log("Medal unlocked!");
-        NGIO.UnlockMedal(medal_id);
+        StartCoroutine(NGIO.UnlockMedal(medal_id));
     }
 
     public void SetCamFollower(GameObject followObj)

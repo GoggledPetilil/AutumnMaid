@@ -38,6 +38,7 @@ public class TitleScreen : MonoBehaviour
     // this will be called once the API has finished loading everything
     public void OnNewgroundsIOReady(BaseEventData e)
     {
+        StartCoroutine(NGIO.UnlockMedal(72296));
         ShowMainMenu();
     }
 
@@ -64,7 +65,6 @@ public class TitleScreen : MonoBehaviour
 
     public void StartGame() 
     {
-        GameManager.instance.UnlockMedal(72296);
         GameManager.instance.TransferPlayer(2, Vector2.zero, true);
     }
 

@@ -37,12 +37,14 @@ public class MedalUnlock : MonoBehaviour
         // medal isn't loaded or doesn't exist
         if (medal is null) {
             UnlockButton.gameObject.SetActive(true);
-            UnlockedText.gameObject.SetActive(false);
+            UnlockedText.text = "null";
+            //UnlockedText.gameObject.SetActive(false);
 
         // medal is locked
         } else if (!medal.unlocked) {
             UnlockButton.gameObject.SetActive(true);
-            UnlockedText.gameObject.SetActive(false);
+            UnlockedText.text = "Locked";
+            //UnlockedText.gameObject.SetActive(false);
 
         // medal is unlocked
         } else {
