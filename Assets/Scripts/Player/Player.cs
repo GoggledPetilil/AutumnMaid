@@ -133,8 +133,6 @@ public class Player : Entity
         {
             FlipSprite(false);
         }
-
-        m_col.enabled = !Input.GetKey(KeyCode.LeftControl);
     }
 
     private void SetTargetPoint()

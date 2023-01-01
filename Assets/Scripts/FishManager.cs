@@ -478,10 +478,17 @@ public class FishManager : MonoBehaviour
         {
             m_Player.m_ani.SetInteger("fishWin", 4);
             msg = "Wha- This isn't a fish at all! I've been bamboozled!";
+            if(m_HookedFish.itemName != "Trash")
+            {
+                StartCoroutine(NGIO.UnlockMedal(72299));
+            }
         }
         else 
         {
-            GameManager.instance.m_FishAmount++;
+            if(GameManager.instance.m_FishAmount < 99)
+            {
+                GameManager.instance.m_FishAmount++;
+            }
         }
         m_WinDialogue.dialogueInfo[1].sentence = msg;
 

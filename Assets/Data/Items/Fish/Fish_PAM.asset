@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   itemName: Not a Fish
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 734ceb97ed67a764992fe67fe407a69c, type: 3}
   fishHealth: 10
   rageDuration: 5
   rageFrequency: 3
