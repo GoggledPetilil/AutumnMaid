@@ -9,14 +9,8 @@ public class BGM : MonoBehaviour
     void Start()
     {
         int r = 0;
-        if(GameManager.instance.isOutside())
-        {
-            r = Random.Range(0, m_BGM.Length+1);
-        }
-        else
-        {
-            r = Random.Range(0, m_BGM.Length);
-        }
+        r = Random.Range(0, m_BGM.Length);
+
         if(r < m_BGM.Length)
         {
             GameManager.instance.PlayBGM(m_BGM[r]);

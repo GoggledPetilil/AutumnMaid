@@ -8,6 +8,9 @@ public class PauseManager : MonoBehaviour
 {
     [SerializeField] private CanvasGroup m_CanvasGroup;
     [SerializeField] private RectTransform m_CanvasTransform;
+    [SerializeField] private GameObject m_MapButton;
+    [SerializeField] private GameObject m_ItemButton;
+    [SerializeField] private GameObject m_SystemButton;
     [SerializeField] private GameObject m_MapHolder;
     [SerializeField] private RectTransform m_IconTransform;
     [SerializeField] private GameObject m_ItemHolder;
@@ -44,13 +47,19 @@ public class PauseManager : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape) && GameManager.instance.getSceneID() != 0)
+        if((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P)))
         {
+            if(GameManager.instance.getSceneID() == 0 && m_isPaused == false) return;
             PauseGame(!m_isPaused);
         }
     }
 
-    void PauseGame(bool state)
+    public bool isPaused()
+    {
+        return m_isPaused;
+    }
+
+    public void PauseGame(bool state)
     {
         if(state == false)
         {
@@ -61,15 +70,26 @@ public class PauseManager : MonoBehaviour
         }
         else 
         {
-            if(GameManager.instance.getSceneID() != 0)
+            m_CanvasGroup.alpha = 1.0f;
+            m_CanvasGroup.interactable = true;
+            m_CanvasGroup.blocksRaycasts = true;
+            m_CurrentSection = -1;
+
+            int titleID = 0;
+            m_MapButton.SetActive(GameManager.instance.getSceneID() != titleID);
+            m_ItemButton.SetActive(GameManager.instance.getSceneID() != titleID);
+            m_SystemButton.SetActive(true);
+
+            if(GameManager.instance.getSceneID() == titleID)
             {
-                m_CanvasGroup.alpha = 1.0f;
-                m_CanvasGroup.interactable = true;
-                m_CanvasGroup.blocksRaycasts = true;
-                m_CurrentSection = -1;
-                OpenMapScreen();
-                Time.timeScale = 0.0f;
+                OpenSystemScreen();
             }
+            else 
+            {
+                OpenMapScreen();
+            }
+
+            Time.timeScale = 0.0f;
         }
         m_isPaused = state;
     }
@@ -260,6 +280,12 @@ public class PauseManager : MonoBehaviour
     public void AdjustSFXVolume(float value)
     {
         GameManager.instance.SetSFXVolume(value);
+    }
+
+    public void MapleEasterEgg()
+    {
+        StartCoroutine(NGIO.UnlockMedal(72300));
+        Application.OpenURL("https://www.youtube.com/watch?v=6rmgyLd9A0k");
     }
 
     public void VisitProfile(string name)

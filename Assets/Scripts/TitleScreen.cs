@@ -16,6 +16,7 @@ public class TitleScreen : MonoBehaviour
     public Button OptionsButton;
 
     private bool m_Started;
+    private bool m_Paused;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,12 @@ public class TitleScreen : MonoBehaviour
         {
             m_Started = true;
             m_NGIO.SetActive(true);
+        }
+
+        if((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P)) && m_Paused)
+        {
+            ShowMainMenu();
+            m_Paused = false;
         }
     }
 
@@ -60,7 +67,7 @@ public class TitleScreen : MonoBehaviour
 
     public void ShowOptionsMenu()
     {
-        // Does nothing yet.
+        FindObjectOfType<PauseManager>().PauseGame(true);
     }
 
     public void StartGame() 
@@ -70,5 +77,7 @@ public class TitleScreen : MonoBehaviour
 
     public void OnOptionsButtonClicked() {
         ShowOptionsMenu();
+        HideMenus();
+        m_Paused = true;
     }
 }

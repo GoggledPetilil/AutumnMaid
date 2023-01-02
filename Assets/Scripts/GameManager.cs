@@ -9,6 +9,7 @@ using Cinemachine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public bool m_GameStarted;
     public Vector2 m_NewPosition;
     public List<int> m_SheepOnHand = new List<int>();
     public List<int> m_SheepSaved = new List<int>();
@@ -133,12 +134,6 @@ public class GameManager : MonoBehaviour
                 m_BGMPlayer.Stop();
                 return;
             }
-
-            if(m_BGMPlayer.loop == true)
-            {
-                // Music doesn't loop when outside.
-                m_BGMPlayer.loop = false;
-            }
         }
         else
         {
@@ -149,9 +144,6 @@ public class GameManager : MonoBehaviour
             }
             else 
             {
-                // Music loops when indoors.
-                m_BGMPlayer.loop = true;
-
                 // Only play the indoor music sometimes.
                 int r = Random.Range(0, 4);
                 if(r != 0)
@@ -162,6 +154,7 @@ public class GameManager : MonoBehaviour
             }
         }
         
+        m_BGMPlayer.loop = !isOutside();
         m_BGMPlayer.clip = song;
         m_BGMPlayer.Play();
     }
@@ -170,6 +163,11 @@ public class GameManager : MonoBehaviour
     {
         m_SFXPlayer.clip = sound;
         m_SFXPlayer.Play();
+    }
+
+    public void StopBGM()
+    {
+        m_BGMPlayer.Stop();
     }
 
     public void SetMasterVolume(float value)
@@ -308,6 +306,11 @@ public class GameManager : MonoBehaviour
     public bool isTalking()
     {
         return FindObjectOfType<DialogueManager>().isTalking();
+    }
+
+    public bool isPaused()
+    {
+        return FindObjectOfType<PauseManager>().isPaused();
     }
 
     public bool isOutside()
