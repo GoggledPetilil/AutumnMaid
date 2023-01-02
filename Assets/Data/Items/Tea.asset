@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   itemName: Tea
+  itemDescription: It's still warm.
   sprite: {fileID: 21300000, guid: 8d2243362ef36cb449a6cab89cb1e228, type: 3}

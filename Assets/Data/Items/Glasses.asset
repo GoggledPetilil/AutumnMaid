@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   itemName: Glasses
+  itemDescription: Someone must have lost these.
   sprite: {fileID: 21300000, guid: 60e2bc383bf592c4e8d977aae8901195, type: 3}

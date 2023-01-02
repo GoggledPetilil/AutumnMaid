@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   itemName: Fish
+  itemDescription: All the fish you've caught.
   sprite: {fileID: 21300000, guid: 48a88cd80e8faef40a9ab3315b4fd6b1, type: 3}

@@ -13,6 +13,8 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private GameObject m_ItemHolder;
     [SerializeField] private Transform m_InventoryHolder;
     [SerializeField] private TMP_Text m_QuestLog;
+    [SerializeField] private TMP_Text m_ItemName;
+    [SerializeField] private TMP_Text m_ItemDescription;
     [SerializeField] private Item m_FishItem;
     [SerializeField] private GameObject m_SystemHolder;
     [SerializeField] private Slider m_MasterSlider;
@@ -151,6 +153,7 @@ public class PauseManager : MonoBehaviour
     {
         if(m_CurrentSection == 1) return;
         m_CurrentSection = 1;
+        ClearItemDescription();
         SetCurrentPage();
         PlayFlipSound();
         FlipPage();
@@ -165,13 +168,13 @@ public class PauseManager : MonoBehaviour
                 child.SetActive(true);
                 ItemSlot itemSlot = child.GetComponentInChildren<ItemSlot>();
                 Item item = GameManager.instance.m_Items[i];
-                itemSlot.SetItemSlot(item.itemName, item.sprite, 0);
+                itemSlot.SetItemSlot(item.itemName, item.itemDescription, item.sprite, 0);
             }
             else if(i == GameManager.instance.m_Items.Count && GameManager.instance.m_FishAmount>0)
             {
                 child.SetActive(true);
                 ItemSlot itemSlot = child.GetComponentInChildren<ItemSlot>();
-                itemSlot.SetItemSlot(m_FishItem.itemName, m_FishItem.sprite, GameManager.instance.m_FishAmount);
+                itemSlot.SetItemSlot(m_FishItem.itemName, m_FishItem.itemDescription, m_FishItem.sprite, GameManager.instance.m_FishAmount);
             }
             else
             {
@@ -226,6 +229,17 @@ public class PauseManager : MonoBehaviour
         m_AudioSource.clip = m_SFXPage;
         m_AudioSource.pitch = 1.0f;
         m_AudioSource.Play();
+    }
+
+    public void SetItemDescription(string name, string description)
+    {
+        m_ItemName.text = name;
+        m_ItemDescription.text = description;
+    }
+
+    public void ClearItemDescription()
+    {
+        SetItemDescription("","");
     }
 
     public void AdjustMasterVolume(float value)
