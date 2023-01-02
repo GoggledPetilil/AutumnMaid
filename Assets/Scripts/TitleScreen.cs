@@ -9,6 +9,7 @@ public class TitleScreen : MonoBehaviour
     [Header("Components")]
     public GameObject m_PressStartText;
     public GameObject m_NGIO;
+    public GameObject m_LogOutButton;
     
     [Header("Main Menu")]
     public GameObject MainMenuWrapper;
@@ -17,6 +18,7 @@ public class TitleScreen : MonoBehaviour
 
     private bool m_Started;
     private bool m_Paused;
+    private bool m_LogOutActive;
 
     // Start is called before the first frame update
     void Start()
@@ -28,8 +30,9 @@ public class TitleScreen : MonoBehaviour
 
     void Update()
     {
-        if(m_Started) return;
-        if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.Space))
+        
+        if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.Space) &&
+        m_Started==false)
         {
             m_Started = true;
             m_NGIO.SetActive(true);
@@ -38,6 +41,10 @@ public class TitleScreen : MonoBehaviour
         if((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P)) && m_Paused)
         {
             ShowMainMenu();
+            if(m_LogOutActive)
+            {
+                m_LogOutButton.SetActive(true);
+            }
             m_Paused = false;
         }
     }
@@ -67,6 +74,7 @@ public class TitleScreen : MonoBehaviour
 
     public void ShowOptionsMenu()
     {
+        m_Paused = true;
         FindObjectOfType<PauseManager>().PauseGame(true);
     }
 
@@ -75,9 +83,14 @@ public class TitleScreen : MonoBehaviour
         GameManager.instance.TransferPlayer(2, Vector2.zero, true);
     }
 
-    public void OnOptionsButtonClicked() {
+    public void OnOptionsButtonClicked() 
+    {
+        m_LogOutActive = m_LogOutButton.activeSelf;
+        if(m_LogOutActive)
+        {
+            m_LogOutButton.SetActive(false);
+        }
         ShowOptionsMenu();
         HideMenus();
-        m_Paused = true;
     }
 }
