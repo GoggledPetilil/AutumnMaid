@@ -6,6 +6,7 @@ public class Hilda : MonoBehaviour
 {
     [Header("Components")]
     [SerializeField] private Animator m_Anim;
+    [SerializeField] private ParticleSystem m_DustParticles;
 
     [Header("Dialogue")]
     public Dialogue m_StartDialogue;
@@ -35,5 +36,10 @@ public class Hilda : MonoBehaviour
         }
 
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+    }
+
+    public void PlayParticles()
+    {
+        m_DustParticles.Play();
     }
 }
