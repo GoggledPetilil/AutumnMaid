@@ -65,5 +65,9 @@ public class PlayerBed : MonoBehaviour
         }
         player.m_ani.SetBool("isMoving", false);
         player.m_ani.SetBool("isSleeping", true);
+
+        yield return new WaitForSeconds(0.5f);
+
+        GameManager.instance.TransferPlayer(13, Vector2.zero, true);
     }
 }
