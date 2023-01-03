@@ -64,6 +64,6 @@ public class PlayerBed : MonoBehaviour
             yield return null;
         }
         player.m_ani.SetBool("isMoving", false);
-        player.m_ani.SetBool("isSitting", true);
+        player.m_ani.SetBool("isSleeping", true);
     }
 }
