@@ -461,10 +461,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sometimes, even just trying is enough.
-
-
-    Thank you for your efforts.'
+  m_text: A kind soul can pierce through even the deepest darkness. May yours forever
+    shine brightly.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ecec13b17d780e3498baed763088d091, type: 2}
   m_sharedMaterial: {fileID: 7407502258793874580, guid: ecec13b17d780e3498baed763088d091, type: 2}
