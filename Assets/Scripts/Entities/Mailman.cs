@@ -15,6 +15,11 @@ public class Mailman : MonoBehaviour
     [SerializeField] private ParticleSystem m_ScooterSmoke;
     [SerializeField] private Quest m_QuestData;
 
+    [Header("Audio Components")]
+    [SerializeField] private AudioSource m_Aud;
+    [SerializeField] private AudioClip m_ScooterStart;
+    [SerializeField] private AudioClip m_ScooterDriveOff;
+
     [Header("Dialogue")]
     public Dialogue m_StartDialogue;
     public Dialogue m_RepeatDialogue;
@@ -40,6 +45,12 @@ public class Mailman : MonoBehaviour
         {
             StartCoroutine(DialogueEvent());
         }
+    }
+
+    void PlaySound(AudioClip clip)
+    {
+        m_Aud.clip = clip;
+        m_Aud.Play();
     }
 
     IEnumerator DialogueEvent()
@@ -97,6 +108,7 @@ public class Mailman : MonoBehaviour
         m_MailManShadow.SetActive(false);
         m_ScooterAnim.SetBool("isDriving", true);
         m_ScooterSmoke.Play();
+        PlaySound(m_ScooterStart);
 
         if(player.transform.position.y > m_ScooterAnim.transform.position.y)
         {
@@ -120,6 +132,7 @@ public class Mailman : MonoBehaviour
         Vector2 scooterEnd = new Vector2(scooterStart.x, scooterStart.y + 12.0f);
         t = 0.0f;
         float driveDur = 2.0f;
+        PlaySound(m_ScooterDriveOff);
         while(t < 1.0f)
         {
             t += Time.deltaTime / driveDur;
@@ -138,6 +151,10 @@ public class Mailman : MonoBehaviour
 
         GameManager.instance.IncreaseHappiness();
         GameManager.instance.CompleteQuest(m_QuestData);
+        while(m_Aud.isPlaying)
+        {
+            yield return null;
+        }
         this.gameObject.SetActive(false);
     }
 }

@@ -59,6 +59,7 @@ public class PlayerBed : MonoBehaviour
         Vector2 endPos = this.transform.position;
         float t = 0.0f;
         float movDur = Vector2.Distance(startPos, endPos) / 5.0f;
+        GameManager.instance.SetCamFollower(player.gameObject);
         while(t < 1.0f)
         {
             t += Time.deltaTime / movDur;
@@ -70,7 +71,7 @@ public class PlayerBed : MonoBehaviour
         player.m_ani.SetBool("isMoving", false);
         player.m_ani.SetBool("isSleeping", true);
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.0f);
 
         GameManager.instance.TransferPlayer(13, Vector2.zero, true);
     }

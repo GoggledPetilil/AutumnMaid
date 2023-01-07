@@ -27,10 +27,10 @@ public class ResultsScreen : MonoBehaviour
         // Show heart
         m_HeartFill.fillAmount = Mathf.Clamp((float)GameManager.instance.m_HappyLevel / (float)10.0f, 0.0f, 1.0f);
         
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.0f);
 
         float t = 0.0f;
-        float fadeDur = 2.0f;
+        float fadeDur = 2.5f;
         while(t < 1.0f)
         {
             t += Time.deltaTime / fadeDur;

@@ -5,21 +5,17 @@ using UnityEngine;
 public class Cat : Entity
 {
     [Header("Cat Components")]
+    [SerializeField] private Animator m_Anim;
     [SerializeField] private Dialogue m_NoFoodDialogue;
     [SerializeField] private Dialogue m_FeedingDialogue;
     [SerializeField] private SpriteRenderer m_sr;
-    [SerializeField] private Sprite[] m_CatSprites;
     [SerializeField] private Quest m_QuestData;
 
     void Start()
     {
         if(GameManager.instance.m_FlagFedCat)
         {
-            m_sr.sprite = m_CatSprites[2];
-        }
-        else 
-        {
-            m_sr.sprite = m_CatSprites[1];
+            m_Anim.SetBool("isContent", true);
         }
     }
     
@@ -32,8 +28,9 @@ public class Cat : Entity
             {
                 dialogue = m_FeedingDialogue;
                 GameManager.instance.m_FlagFedCat = true;
+                m_Anim.SetBool("isHappy", true);
                 GameManager.instance.CompleteQuest(m_QuestData);
-                m_sr.sprite = m_CatSprites[0];
+                GameManager.instance.m_FishAmount -= 1;
             }
             else 
             {
