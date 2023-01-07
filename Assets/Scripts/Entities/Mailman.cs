@@ -98,6 +98,22 @@ public class Mailman : MonoBehaviour
         m_ScooterAnim.SetBool("isDriving", true);
         m_ScooterSmoke.Play();
 
+        if(player.transform.position.y > m_ScooterAnim.transform.position.y)
+        {
+            Vector2 playerStart = player.transform.position;
+            Vector2 playerEnd = new Vector2(m_ScooterAnim.transform.position.x + 1.5f, playerStart.y);
+            t = 0.0f;
+            movDur = Vector2.Distance(playerStart, playerEnd) / 5.0f;
+            while(t < 1.0f)
+            {
+                t += Time.deltaTime / movDur;
+                player.transform.position = Vector2.Lerp(playerStart, playerEnd, t);
+                player.m_ani.SetBool("isMoving", true);
+                yield return null;
+            }
+            player.m_ani.SetBool("isMoving", false);
+        }
+
         yield return new WaitForSeconds(0.5f);
 
         Vector2 scooterStart = m_ScooterAnim.transform.position;

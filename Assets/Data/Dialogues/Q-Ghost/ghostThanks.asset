@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8da991f0f91c6d4408a100030743abd3, type: 3}
   m_Name: ghostThanks
   m_EditorClassIdentifier: 
-  increasesHappiness: 0
+  increasesHappiness: 1
   dialogueInfo:
   - character: {fileID: 0}
     sentence: 
