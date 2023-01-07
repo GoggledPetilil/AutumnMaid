@@ -286,7 +286,7 @@ public class PauseManager : MonoBehaviour
     public void MapleEasterEgg()
     {
         StartCoroutine(NGIO.UnlockMedal(72300));
-        Application.OpenURL("https://www.youtube.com/watch?v=6rmgyLd9A0k");
+        Application.OpenURL("https://www.youtube.com/watch?v=9vJ8ZLT1OE0");
     }
 
     public void VisitProfile(string name)

@@ -151,10 +151,7 @@ public class Mailman : MonoBehaviour
 
         GameManager.instance.IncreaseHappiness();
         GameManager.instance.CompleteQuest(m_QuestData);
-        while(m_Aud.isPlaying)
-        {
-            yield return null;
-        }
+        m_ScooterAnim.transform.position = Vector2.zero;
         this.gameObject.SetActive(false);
     }
 }
