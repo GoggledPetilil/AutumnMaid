@@ -36,7 +36,6 @@ public class QuestGrandma : MonoBehaviour
         if(m_Customer.isCurrentCustomer())
         {
             m_Customer.TriggerDialogue();
-            return;
         }
         else
         {

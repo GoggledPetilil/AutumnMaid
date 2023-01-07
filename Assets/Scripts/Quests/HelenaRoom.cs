@@ -60,6 +60,7 @@ public class HelenaRoom : MonoBehaviour
         m_Book.SetActive(false);
         m_Helena.CanInteract(false);
         Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        player.StopMovement(true);
         float dialogueDelay = 0.25f;
         
         FindObjectOfType<DialogueManager>().StartDialogue(m_FindBookDialogue);
@@ -117,6 +118,7 @@ public class HelenaRoom : MonoBehaviour
         }
         player.m_ani.SetBool("isMoving", false);
         player.DisableColliders(false);
+        player.StopMovement(false);
 
         GameManager.instance.IncreaseHappiness();
         GameManager.instance.CompleteQuest(m_QuestData);

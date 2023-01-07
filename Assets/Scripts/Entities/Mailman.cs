@@ -82,6 +82,7 @@ public class Mailman : MonoBehaviour
         m_Renderer.sprite = m_IdleSprite;
 
         Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        player.StopMovement(true);
 
         FindObjectOfType<DialogueManager>().StartDialogue(m_ThanksDialogue);
 
@@ -89,7 +90,6 @@ public class Mailman : MonoBehaviour
         {
             yield return null;
         }
-        player.StopMovement(true);
         m_BrokenSmoke.Stop();
 
         Vector2 startPos = this.transform.position;
@@ -152,6 +152,6 @@ public class Mailman : MonoBehaviour
         GameManager.instance.IncreaseHappiness();
         GameManager.instance.CompleteQuest(m_QuestData);
         m_ScooterAnim.transform.position = Vector2.zero;
-        this.gameObject.SetActive(false);
+        player.StopMovement(false);
     }
 }

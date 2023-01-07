@@ -16,7 +16,6 @@ public class QuestFarmerManager : MonoBehaviour
         if(m_Customer.isCurrentCustomer())
         {
             m_Customer.TriggerDialogue();
-            return;
         }
         else 
         {
