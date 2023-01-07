@@ -146,7 +146,7 @@ public class GameManager : MonoBehaviour
             {
                 // Only play the indoor music sometimes.
                 int r = Random.Range(0, 4);
-                if(r != 0)
+                if(r == 0)
                 {
                     m_BGMPlayer.Stop();
                     return;
@@ -163,6 +163,12 @@ public class GameManager : MonoBehaviour
     {
         m_SFXPlayer.clip = sound;
         m_SFXPlayer.Play();
+    }
+
+    public void FadeOutBGM()
+    {
+        if(m_BGMPlayer.isPlaying == false) return;
+        StartCoroutine(FadeMusicOut());
     }
 
     public void StopBGM()
@@ -326,6 +332,19 @@ public class GameManager : MonoBehaviour
     public int getSceneID()
     {
         return SceneManager.GetActiveScene().buildIndex;
+    }
+
+    IEnumerator FadeMusicOut()
+    {
+        float t = 0.0f;
+        float fadeDur = 0.8f;
+        while(t < 1.0f)
+        {
+            t += Time.unscaledDeltaTime / fadeDur;
+            m_BGMPlayer.volume = 1.0f - t;
+            yield return null;
+        }
+        m_BGMPlayer.Stop();
     }
 
     IEnumerator TransferSequence(int sceneIndex, Vector2 newPos, bool zoomTransfer)

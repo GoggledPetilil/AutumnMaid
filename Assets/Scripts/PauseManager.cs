@@ -47,6 +47,7 @@ public class PauseManager : MonoBehaviour
 
     void Update()
     {
+        if(GameManager.instance.getSceneID() == 13) return;
         if((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P)))
         {
             if(GameManager.instance.getSceneID() == 0 && m_isPaused == false) return;

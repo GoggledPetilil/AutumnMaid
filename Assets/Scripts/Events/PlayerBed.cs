@@ -7,6 +7,7 @@ public class PlayerBed : MonoBehaviour
     public Dialogue m_CheckDialogue;
     public GameObject m_Interactable;
     public SpriteRenderer m_BedSheetsLayer;
+    public SpriteRenderer m_BedButtLayer;
     private bool m_Checked;
     
     public void TriggerEvent()
@@ -50,7 +51,9 @@ public class PlayerBed : MonoBehaviour
         player.DisableColliders(true);
         player.StopMovement(true);
 
-        m_BedSheetsLayer.sortingOrder = 5;
+        int newOrder = 5;
+        m_BedSheetsLayer.sortingOrder = newOrder;
+        m_BedButtLayer.sortingOrder = newOrder+1;
         
         Vector2 startPos = player.transform.position;
         Vector2 endPos = this.transform.position;
@@ -63,6 +66,7 @@ public class PlayerBed : MonoBehaviour
             player.m_ani.SetBool("isMoving", true);
             yield return null;
         }
+        GameManager.instance.FadeOutBGM();
         player.m_ani.SetBool("isMoving", false);
         player.m_ani.SetBool("isSleeping", true);
 

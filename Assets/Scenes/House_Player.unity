@@ -1646,6 +1646,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8935315768423343394, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -51.80005
+      objectReference: {fileID: 0}
     - target: {fileID: 9087212262023890170, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2206,6 +2210,7 @@ MonoBehaviour:
   m_CheckDialogue: {fileID: 11400000, guid: 2ecad1937e6bea04c8985c0b3fe89fc2, type: 2}
   m_Interactable: {fileID: 7257998477245579817}
   m_BedSheetsLayer: {fileID: 481351366}
+  m_BedButtLayer: {fileID: 1323903457}
 --- !u!1001 &1297119849
 PrefabInstance:
   m_ObjectHideFlags: 0
