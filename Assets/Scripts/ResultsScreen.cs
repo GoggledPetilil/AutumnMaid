@@ -73,14 +73,19 @@ public class ResultsScreen : MonoBehaviour
             // B
             results = "You have done great work for those around you. You are a kind soul.\n\nThank you.";
         }
-        else if(m_HeartFill.fillAmount >= 0.2f)
+        else if(m_HeartFill.fillAmount >= 0.3f)
         {
             // C
+            results = "A kind soul can pierce through even the deepest darkness. May yours forever shine brightly.";
+        }
+        else if(m_HeartFill.fillAmount >= 0.1f)
+        {
+            // D
             results = "Sometimes, even just trying is enough.\n\nThank you for your efforts.";
         }
         else if(m_HeartFill.fillAmount < 0.1f)
         {
-            // D
+            // E
             results = "Flowers grow even after the harshest of winters.\n\nMay your spring come soon.";
         }
 
