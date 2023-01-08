@@ -278,7 +278,7 @@ public class FishManager : MonoBehaviour
         {
             m_HookedFish = m_RareFish[Random.Range(0, m_RareFish.Length)];
         }
-        else if(r <= 16) 
+        else if(r <= 64) 
         {
             m_HookedFish = m_UncommonFish[Random.Range(0, m_UncommonFish.Length)];
         }
