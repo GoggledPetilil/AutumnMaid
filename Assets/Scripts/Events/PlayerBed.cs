@@ -46,6 +46,7 @@ public class PlayerBed : MonoBehaviour
 
     IEnumerator EndingEvent()
     {
+        GameManager.instance.StartDelivery(false);
         Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
         player.DisableColliders(true);

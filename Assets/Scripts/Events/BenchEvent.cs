@@ -39,7 +39,7 @@ public class BenchEvent : MonoBehaviour
 
     public void SitEvent()
     {
-        if(m_InAnimation) return;
+        if(m_InAnimation || GameManager.instance.m_IsDelivering) return;
 
         SetWaitTimer();     // Wait timer is set when the player gets off,
                             // To prevent the quest from being completed while getting off.
