@@ -27,7 +27,7 @@ public class DialogueManager : MonoBehaviour
     private string m_CurrentSentence;
     private bool m_IsTyping;
     private float talkTimer; // Prevents Player from insta-starting another conversation after finishing.
-    private float talkDelay = 0.24f;
+    private float talkDelay = 0.25f;
     private float skipTimer;    // Adds little delay when skipping the text
     private float skipDelay = 0.032f;
 
@@ -153,14 +153,14 @@ public class DialogueManager : MonoBehaviour
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         player.GetComponent<Player>().StopMovement(false);
-
-        m_InConversation = false;
-        talkTimer = Time.time + talkDelay;
         
         if(m_IncreaseHappy == true)
         {
             GameManager.instance.IncreaseHappiness();
         }
+
+        talkTimer = Time.time + talkDelay;
+        m_InConversation = false;
     }
 
     IEnumerator TypeSentence(string sentence)

@@ -68,6 +68,7 @@ public class HelenaRoom : MonoBehaviour
         {
             yield return null;
         }
+        player.StopMovement(true);
 
         // Sit on couch
         player.DisableColliders(true);
@@ -96,6 +97,7 @@ public class HelenaRoom : MonoBehaviour
         {
             yield return null;
         }
+        player.StopMovement(true);
 
         yield return new WaitForSeconds(dialogueDelay);
         m_Helena.FallAsleep();
@@ -105,6 +107,7 @@ public class HelenaRoom : MonoBehaviour
         {
             yield return null;
         }
+        player.StopMovement(true);
 
         // Get off
         player.m_ani.SetBool("isReading", false);

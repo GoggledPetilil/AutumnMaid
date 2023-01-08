@@ -31,8 +31,7 @@ public class TitleScreen : MonoBehaviour
     void Update()
     {
         
-        if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.Space) &&
-        m_Started==false)
+        if(Input.anyKeyDown && m_Started==false)
         {
             m_Started = true;
             m_NGIO.SetActive(true);

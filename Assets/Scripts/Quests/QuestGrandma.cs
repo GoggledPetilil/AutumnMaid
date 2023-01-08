@@ -18,6 +18,7 @@ public class QuestGrandma : MonoBehaviour
     [SerializeField] private Sprite m_NoGlassesSprite;
     [SerializeField] private Quest m_QuestData;
     [SerializeField] private Item m_ItemGlasses;
+    private bool isTalking;
 
     void Start()
     {
@@ -33,6 +34,13 @@ public class QuestGrandma : MonoBehaviour
 
     public void TriggerDialogue()
     {
+        if(isTalking) return;
+        StartCoroutine(TalkEvent());
+    }
+
+    IEnumerator TalkEvent()
+    {
+        isTalking = true;
         if(m_Customer.isCurrentCustomer())
         {
             m_Customer.TriggerDialogue();
@@ -75,5 +83,13 @@ public class QuestGrandma : MonoBehaviour
             }
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         }
+        
+        while(GameManager.instance.isTalking())
+        {
+            yield return null;
+        }
+        
+        yield return new WaitForSeconds(0.25f);
+        isTalking = false;
     }
 }

@@ -10,9 +10,17 @@ public class QuestFarmerManager : MonoBehaviour
     public Dialogue m_ThanksRepeatDialogue;
     public Customer m_Customer;
     [SerializeField] private Quest m_QuestData;
+    private bool isTalking;
     
     public void TriggerDialogue()
     {
+        if(isTalking) return;
+        StartCoroutine(TalkEvent());
+    }
+
+    IEnumerator TalkEvent()
+    {
+        isTalking = true;
         if(m_Customer.isCurrentCustomer())
         {
             m_Customer.TriggerDialogue();
@@ -48,5 +56,13 @@ public class QuestFarmerManager : MonoBehaviour
             }
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         }
+        
+        while(GameManager.instance.isTalking())
+        {
+            yield return null;
+        }
+        
+        yield return new WaitForSeconds(0.25f);
+        isTalking = false;
     }
 }

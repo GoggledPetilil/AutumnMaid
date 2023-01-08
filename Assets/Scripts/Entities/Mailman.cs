@@ -14,6 +14,7 @@ public class Mailman : MonoBehaviour
     [SerializeField] private ParticleSystem m_BrokenSmoke;
     [SerializeField] private ParticleSystem m_ScooterSmoke;
     [SerializeField] private Quest m_QuestData;
+    private bool isTalking;
 
     [Header("Audio Components")]
     [SerializeField] private AudioSource m_Aud;
@@ -37,6 +38,7 @@ public class Mailman : MonoBehaviour
 
     public void TriggerDialogue()
     {
+        if(isTalking) return;
         if(GameManager.instance.m_FlagHaveToolbox)
         {
             StartCoroutine(EndEvent());
@@ -55,6 +57,7 @@ public class Mailman : MonoBehaviour
 
     IEnumerator DialogueEvent()
     {
+        isTalking = true;
         GameManager.instance.AddQuest(m_QuestData);
         m_Renderer.sprite = m_IdleSprite;
 
@@ -74,10 +77,12 @@ public class Mailman : MonoBehaviour
         }
 
         m_Renderer.sprite = m_SadSprite;
+        isTalking = false;
     }
 
     IEnumerator EndEvent()
     {
+        isTalking = true;
         GameManager.instance.m_FlagThanksPostman = true;
         m_Renderer.sprite = m_IdleSprite;
 
@@ -91,6 +96,7 @@ public class Mailman : MonoBehaviour
             yield return null;
         }
         m_BrokenSmoke.Stop();
+        player.StopMovement(true);
 
         Vector2 startPos = this.transform.position;
         Vector2 endPos = m_ScooterAnim.transform.position;
@@ -105,6 +111,7 @@ public class Mailman : MonoBehaviour
         }
 
         m_Renderer.enabled = false;
+        this.transform.position = Vector2.zero;
         m_MailManShadow.SetActive(false);
         m_ScooterAnim.SetBool("isDriving", true);
         m_ScooterSmoke.Play();
@@ -148,10 +155,16 @@ public class Mailman : MonoBehaviour
         {
             yield return null;
         }
+        player.StopMovement(true);
 
         GameManager.instance.IncreaseHappiness();
+        while(GameManager.instance.isFillingHeart())
+        {
+            yield return null;
+        }
         GameManager.instance.CompleteQuest(m_QuestData);
         m_ScooterAnim.transform.position = Vector2.zero;
         player.StopMovement(false);
+        isTalking = false;
     }
 }

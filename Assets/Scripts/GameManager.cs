@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public List<Item> m_Items = new List<Item>();
     public int m_FishAmount;
     public bool m_IsDelivering;
+    private bool m_isFillingHeart;
 
     [Header("Components")]
     [SerializeField] private Animator m_Anim;
@@ -274,8 +275,6 @@ public class GameManager : MonoBehaviour
 
     public void IncreaseHappiness()
     {
-        Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        player.StopMovement(true);
         StartCoroutine(LevelUp());
     }
 
@@ -307,6 +306,11 @@ public class GameManager : MonoBehaviour
     public void HeartFill()
     {
         m_HeartFill.fillAmount = Mathf.Clamp((float)m_HappyLevel / (float)m_MaxHappiness, 0.0f, 1.0f);
+    }
+
+    public bool isFillingHeart()
+    {
+        return m_isFillingHeart;
     }
 
     public bool isTalking()
@@ -382,8 +386,15 @@ public class GameManager : MonoBehaviour
 
     IEnumerator LevelUp()
     {
+        m_isFillingHeart = true;
         // Initialize Everything
         Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        bool frozePlayer = false;
+        if(player.canMove())
+        {
+            player.StopMovement(true);
+            frozePlayer = true;
+        }
         m_GroupHolder.alpha = 1.0f;
         m_HeartHolder.alpha = 0.0f;
         Color heartColor = new Color(0.859f, 0.267f, 0.49f);
@@ -458,6 +469,10 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
 
-        player.StopMovement(false);
+        if(frozePlayer)
+        {
+            player.StopMovement(false);
+        }
+        m_isFillingHeart = false;
     }
 }

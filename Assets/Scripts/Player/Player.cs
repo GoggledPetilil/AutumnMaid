@@ -160,6 +160,11 @@ public class Player : Entity
         m_DisableEvents = state;
     }
 
+    public bool canMove()
+    {
+        return !m_DisableControls;
+    }
+
     public void StopMovement(bool state, bool disableEvents)
     {
         if(state == true)
