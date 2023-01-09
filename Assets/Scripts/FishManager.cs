@@ -25,6 +25,7 @@ public class FishManager : MonoBehaviour
     private float m_LureHighest = -5.4f;    // Lure Position when FishHP is 0.
     private float m_LurePosition;   // What position the Lure is between its lowest and highest.
     private float m_FishNoticeTime = 1.2f;   // The amount of time the player has to notice the fish.
+    private float m_NextTrash;      // How long until the player gets trash again
     private int m_FishingStage;
     private float m_WaitTime;   // How long before you hook in a fish.
     private bool m_SliderGoRight; 
@@ -35,6 +36,7 @@ public class FishManager : MonoBehaviour
     [SerializeField] private Fish[] m_CommonFish;
     [SerializeField] private Fish[] m_UncommonFish;
     [SerializeField] private Fish[] m_RareFish;
+    [SerializeField] private Fish m_TrashFish;
     [SerializeField] private Fish m_HookedFish;
     [SerializeField] private GameObject m_FishObject;
     private float m_FishMaxHP;
@@ -72,6 +74,7 @@ public class FishManager : MonoBehaviour
     void Start()
     {
         m_Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        TrashCooldown();
     }
 
     void Update()
@@ -273,18 +276,26 @@ public class FishManager : MonoBehaviour
 
     void GetFishInfo()
     {
-        float r = Random.Range(0, 512);
+        int chances = 512;
+        float r = Random.Range(0, chances);
         if(r == 0)
         {
             m_HookedFish = m_RareFish[Random.Range(0, m_RareFish.Length)];
         }
-        else if(r <= 64) 
+        else if(r <= chances/3.0f) 
         {
             m_HookedFish = m_UncommonFish[Random.Range(0, m_UncommonFish.Length)];
         }
         else 
         {
-            m_HookedFish = m_CommonFish[Random.Range(0, m_CommonFish.Length)];
+            if(Time.time > m_NextTrash)
+            {
+                m_HookedFish = m_CommonFish[Random.Range(0, m_CommonFish.Length)];
+            }
+            else 
+            {
+                m_HookedFish = m_TrashFish;
+            }
         }
         
         m_FishMaxHP = m_HookedFish.fishHealth;
@@ -297,6 +308,11 @@ public class FishManager : MonoBehaviour
 
         // Open UI ELements
         ToggleUIElements(true);
+    }
+
+    void TrashCooldown()
+    {
+        m_NextTrash = Time.time + Random.Range(30.0f, 60.0f);
     }
 
     void ToggleUIElements(bool state)
@@ -470,7 +486,6 @@ public class FishManager : MonoBehaviour
             yield return null;
         }
         m_Player.m_ani.SetInteger("fishWin", 3);
-        PlayAudio(m_ItemGetSFX);
 
         // Textbox: You got some dogshit!
         string msg = "Wow! I caught a " + m_HookedFish.itemName + "!";
@@ -482,9 +497,14 @@ public class FishManager : MonoBehaviour
             {
                 StartCoroutine(NGIO.UnlockMedal(72299));
             }
+            else 
+            {
+                TrashCooldown();
+            }
         }
         else 
         {
+            PlayAudio(m_ItemGetSFX);
             if(GameManager.instance.m_FishAmount < 99)
             {
                 GameManager.instance.m_FishAmount++;
