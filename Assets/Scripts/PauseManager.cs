@@ -24,6 +24,7 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private Slider m_BGMSlider;
     [SerializeField] private Slider m_BGSSlider;
     [SerializeField] private Slider m_SFXSlider;
+    [SerializeField] private Toggle m_FullScreenToggle;
     [SerializeField] private AudioSource m_AudioSource;
     [SerializeField] private AudioClip m_SFXPage;
     
@@ -48,7 +49,7 @@ public class PauseManager : MonoBehaviour
     void Update()
     {
         if(GameManager.instance.getSceneID() == 13) return;
-        if((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P)))
+        if((Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.P)))
         {
             if(GameManager.instance.getSceneID() == 0 && m_isPaused == false) return;
             PauseGame(!m_isPaused);
@@ -230,6 +231,7 @@ public class PauseManager : MonoBehaviour
         m_BGMSlider.value = GameManager.instance.GetBGMVolume();
         m_BGSSlider.value = GameManager.instance.GetBGSVolume();
         m_SFXSlider.value = GameManager.instance.GetSFXVolume();
+        m_FullScreenToggle.isOn = Screen.fullScreen;
     }
 
     void SetCurrentPage()
@@ -281,6 +283,11 @@ public class PauseManager : MonoBehaviour
     public void AdjustSFXVolume(float value)
     {
         GameManager.instance.SetSFXVolume(value);
+    }
+
+    public void SetFullScreen(bool state)
+    {
+        GameManager.instance.SetFullScreen(state);
     }
 
     public void MapleEasterEgg()

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Morgan
   voiceClip: {fileID: 8300000, guid: 5e5d4eebb9cc1c642a70c9627283579e, type: 3}
-  portraitSprite: {fileID: 21300000, guid: dde69410e7070a94cbc95d63f1624587, type: 3}
+  portraitSprite: {fileID: 21300000, guid: 33cdce20a1e12cb4bac1208df8223da0, type: 3}

@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   itemName: Blimp Fish
+  itemDescription: 
   sprite: {fileID: 21300000, guid: 043f24189df2e3d4ba0e1f9bdb1cd500, type: 3}
-  fishHealth: 6
+  fishHealth: 5
   rageDuration: 1
   rageFrequency: 8
   isNotFish: 0

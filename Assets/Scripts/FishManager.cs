@@ -44,6 +44,7 @@ public class FishManager : MonoBehaviour
     private bool m_CalmFish;
     private float m_FishRage;       // How long rage lasts
     private float m_NextRage;       // How long till next Rage
+    private bool m_StartedFishing;  // Goes to True when the Player starts fishing for the first time.
 
     [Header("Audio Components")]
     [SerializeField] private AudioSource m_aud;
@@ -74,7 +75,6 @@ public class FishManager : MonoBehaviour
     void Start()
     {
         m_Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        TrashCooldown();
     }
 
     void Update()
@@ -288,13 +288,14 @@ public class FishManager : MonoBehaviour
         }
         else 
         {
-            if(Time.time > m_NextTrash)
+            if(Time.time < m_NextTrash)
             {
                 m_HookedFish = m_CommonFish[Random.Range(0, m_CommonFish.Length)];
             }
             else 
             {
                 m_HookedFish = m_TrashFish;
+                TrashCooldown();
             }
         }
         
@@ -312,7 +313,8 @@ public class FishManager : MonoBehaviour
 
     void TrashCooldown()
     {
-        m_NextTrash = Time.time + Random.Range(30.0f, 60.0f);
+        int minutes = Random.Range(1,3);
+        m_NextTrash = Time.time + (minutes * 60f);
     }
 
     void ToggleUIElements(bool state)
@@ -403,6 +405,11 @@ public class FishManager : MonoBehaviour
         m_Player.m_ani.SetBool("isFishing", true);
         m_FishingSlider.value = 0.5f;
         m_LurePosition = 0.0f;
+        if(m_StartedFishing == false)
+        {
+            TrashCooldown();
+            m_StartedFishing = true;
+        }
 
         // Animation delay
         yield return new WaitForSeconds(0.2f);
@@ -496,10 +503,6 @@ public class FishManager : MonoBehaviour
             if(m_HookedFish.itemName != "Trash")
             {
                 StartCoroutine(NGIO.UnlockMedal(72299));
-            }
-            else 
-            {
-                TrashCooldown();
             }
         }
         else 

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Emilie
   voiceClip: {fileID: 8300000, guid: 3ec4e5758e8fe3144bf43c530410408c, type: 3}
-  portraitSprite: {fileID: 21300000, guid: 969e39ecc460b2a4bb5ffc1ede4937e0, type: 3}
+  portraitSprite: {fileID: 21300000, guid: 3472e003c5395704494006adc777af4a, type: 3}

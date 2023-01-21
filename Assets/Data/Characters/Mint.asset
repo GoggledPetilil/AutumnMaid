@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Mint
   voiceClip: {fileID: 8300000, guid: f812bf6eb3a890b4fbf9e4fc384c332d, type: 3}
-  portraitSprite: {fileID: 21300000, guid: d0225e7aa26eec64d8c6c5c0b71f88f5, type: 3}
+  portraitSprite: {fileID: 21300000, guid: 9fac53621b6afc44bb942331ba863bb2, type: 3}

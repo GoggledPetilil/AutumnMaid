@@ -20,6 +20,10 @@ public class MapleRoom : MonoBehaviour
         else 
         {
             GameManager.instance.AddQuest(m_QuestData);
+            if(GameManager.instance.m_BigMode)
+            {
+                StartCoroutine(NGIO.UnlockMedal(72486));
+            }
         }
     }
 

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Oswald
   voiceClip: {fileID: 8300000, guid: 0cf0d156a91f4874a8906420d4d529a6, type: 3}
-  portraitSprite: {fileID: 21300000, guid: 4233be74eacef8d4082575d0b79ff9e3, type: 3}
+  portraitSprite: {fileID: 21300000, guid: 09d3e4473e5a45b4abb43fa637cdc858, type: 3}

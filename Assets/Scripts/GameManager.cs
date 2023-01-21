@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public List<Item> m_Items = new List<Item>();
     public int m_FishAmount;
     public bool m_IsDelivering;
+    public bool m_BigMode;
     private bool m_isFillingHeart;
 
     [Header("Components")]
@@ -104,9 +105,22 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.F4) || (Input.GetKey(KeyCode.LeftAlt) && Input.GetKeyDown(KeyCode.Return)))
+        {
+            SetFullScreen(!Screen.fullScreen);
+        }
+    }
+
     public void UnlockMedal(int medal_id)
     {
         StartCoroutine(NGIO.UnlockMedal(medal_id));
+    }
+
+    public void SetFullScreen(bool isFullscreen)
+    {
+        Screen.fullScreen = isFullscreen;
     }
 
     public void SetCamFollower(GameObject followObj)

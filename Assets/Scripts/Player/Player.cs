@@ -71,6 +71,15 @@ public class Player : Entity
         {
             CarryPizza(GameManager.instance.m_DeliveryStage);
         }
+
+        if(GameManager.instance.m_BigMode)
+        {
+            m_sr.transform.localScale = new Vector2(2.0f, 1.0f);
+        }
+        else 
+        {
+            m_sr.transform.localScale = Vector2.one;
+        }
     }
 
     void Update()
