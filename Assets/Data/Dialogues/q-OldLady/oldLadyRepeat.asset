@@ -16,13 +16,13 @@ MonoBehaviour:
   dialogueInfo:
   - character: {fileID: 0}
     sentence: 
-  - character: {fileID: 11400000, guid: 6883299909d6ea34cbe1147d9ef8c538, type: 2}
+  - character: {fileID: 11400000, guid: 1feba3608b3c7ad44a9aa372767e3b09, type: 2}
     sentence: Have you found my glasses yet?
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
     sentence: Not yet...
-  - character: {fileID: 11400000, guid: 6883299909d6ea34cbe1147d9ef8c538, type: 2}
+  - character: {fileID: 11400000, guid: 1feba3608b3c7ad44a9aa372767e3b09, type: 2}
     sentence: Hmmm....You know, I must've had them yesterday...
-  - character: {fileID: 11400000, guid: 6883299909d6ea34cbe1147d9ef8c538, type: 2}
+  - character: {fileID: 11400000, guid: 1feba3608b3c7ad44a9aa372767e3b09, type: 2}
     sentence: I always do the crossword with my morning tea. Keeps the mind sharp,
       you know?
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
