@@ -157,6 +157,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: spr_Doggie_2
+      rect:
+        serializedVersion: 2
+        x: 2093
+        y: 1170
+        width: 2093
+        height: 1170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 381d4e3e9d86503488ab0b966437e241
+      internalID: 155005648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Doggie_3
+      rect:
+        serializedVersion: 2
+        x: 2093
+        y: 0
+        width: 2093
+        height: 1170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fee88f50a72add4da2bf955359d5f00
+      internalID: 1843973399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -168,8 +210,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      spr_Doggie_3: 1843973399
       spr_Doggie_0: -857509742
       spr_Doggie_1: 1035122074
+      spr_Doggie_2: 155005648
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
