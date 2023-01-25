@@ -19,6 +19,22 @@ public class ResultsScreen : MonoBehaviour
     void Start()
     {
         GameManager.instance.StopBGM();
+
+        if(GameManager.instance.m_HappyLevel >= 10)
+        {
+            StartCoroutine(NGIO.UnlockMedal(72297));
+        }
+        else if(GameManager.instance.m_HappyLevel < 1)
+        {
+            StartCoroutine(NGIO.UnlockMedal(72298));
+        }
+
+        Invoke("ResultsScreenEvent", 0.32f);
+        
+    }
+
+    void ResultsScreenEvent()
+    {
         StartCoroutine(ShowResults());
     }
 

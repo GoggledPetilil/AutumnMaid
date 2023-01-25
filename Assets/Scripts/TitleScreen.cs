@@ -30,21 +30,19 @@ public class TitleScreen : MonoBehaviour
 
     void Update()
     {
-        
         if(Input.anyKeyDown && m_Started==false)
         {
             m_Started = true;
             m_NGIO.SetActive(true);
         }
+    }
 
-        if((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P)) && m_Paused)
+    public void ExitOptions()
+    {
+        ShowMainMenu();
+        if(m_LogOutActive)
         {
-            ShowMainMenu();
-            if(m_LogOutActive)
-            {
-                m_LogOutButton.SetActive(true);
-            }
-            m_Paused = false;
+            m_LogOutButton.SetActive(true);
         }
     }
 
@@ -73,7 +71,6 @@ public class TitleScreen : MonoBehaviour
 
     public void ShowOptionsMenu()
     {
-        m_Paused = true;
         FindObjectOfType<PauseManager>().PauseGame(true);
     }
 

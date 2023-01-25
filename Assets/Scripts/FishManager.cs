@@ -258,6 +258,10 @@ public class FishManager : MonoBehaviour
             if(GameManager.instance.isTalking() == false)
             {
                 StopFishing();
+                if(m_HookedFish.isSpecial)
+                {
+                    StartCoroutine(NGIO.UnlockMedal(72299));
+                }
             }
         }
 
@@ -460,7 +464,16 @@ public class FishManager : MonoBehaviour
 
         m_FishingLure.SetActive(false);
         m_FishObject.SetActive(true);
-        m_FishObject.GetComponent<SpriteRenderer>().sprite = m_HookedFish.sprite;
+        SpriteRenderer fishSprite = m_FishObject.GetComponent<SpriteRenderer>();
+        fishSprite.sprite = m_HookedFish.sprite;
+        if(m_HookedFish.isSpecial)
+        {
+            fishSprite.transform.localScale = Vector2.one * 1.25f;
+        }
+        else 
+        {
+            fishSprite.transform.localScale = Vector2.one * 1.0f;
+        }
 
         // Have fish go from lure all the way up to the screen
         PlaySplash();
@@ -496,13 +509,13 @@ public class FishManager : MonoBehaviour
 
         // Textbox: You got some dogshit!
         string msg = "Wow! I caught a " + m_HookedFish.itemName + "!";
-        if(m_HookedFish.isNotFish)
+        if(m_HookedFish.isTrash || m_HookedFish.isSpecial)
         {
             m_Player.m_ani.SetInteger("fishWin", 4);
             msg = "Wha- This isn't a fish at all! I've been bamboozled!";
-            if(m_HookedFish.itemName != "Trash")
+            if(m_HookedFish.isSpecial)
             {
-                StartCoroutine(NGIO.UnlockMedal(72299));
+                PlayAudio(m_ItemGetSFX);
             }
         }
         else 

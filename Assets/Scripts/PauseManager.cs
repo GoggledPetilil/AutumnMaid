@@ -94,6 +94,11 @@ public class PauseManager : MonoBehaviour
             Time.timeScale = 0.0f;
         }
         m_isPaused = state;
+
+        if(GameManager.instance.getSceneID() == 0 && m_isPaused == false)
+        {
+            FindObjectOfType<TitleScreen>().ExitOptions();
+        }
     }
 
     public void OpenMapScreen()
