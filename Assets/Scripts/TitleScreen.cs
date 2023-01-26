@@ -25,7 +25,9 @@ public class TitleScreen : MonoBehaviour
     {
         NewGameButton.onClick.AddListener(this.StartGame);
         OptionsButton.onClick.AddListener(this.OnOptionsButtonClicked);
+
         m_PressStartText.SetActive(true);
+        HideMenus();
     }
 
     void Update()
@@ -33,6 +35,7 @@ public class TitleScreen : MonoBehaviour
         if(Input.anyKeyDown && m_Started==false)
         {
             m_Started = true;
+            GameManager.instance.m_GameStarted = true;
             m_NGIO.SetActive(true);
         }
     }
@@ -76,6 +79,7 @@ public class TitleScreen : MonoBehaviour
 
     public void StartGame() 
     {
+        GameManager.instance.ResetGameStats();
         GameManager.instance.TransferPlayer(2, Vector2.zero, true);
     }
 

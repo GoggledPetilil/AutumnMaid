@@ -9,6 +9,7 @@ public class ResultsScreen : MonoBehaviour
     [SerializeField] private Image m_HeartFill;
     [SerializeField] private CanvasGroup m_HeartGroup;
     [SerializeField] private TMP_Text m_ResultsText;
+    private bool m_Finished;
 
     void Awake()
     {
@@ -30,7 +31,15 @@ public class ResultsScreen : MonoBehaviour
         }
 
         Invoke("ResultsScreenEvent", 0.32f);
-        
+    }
+
+    void Update()
+    {
+        if(Input.anyKeyDown)
+        {
+            GameManager.instance.ResetGameStats();
+            GameManager.instance.TransferPlayer(2, Vector2.zero, true);
+        }
     }
 
     void ResultsScreenEvent()
@@ -68,6 +77,7 @@ public class ResultsScreen : MonoBehaviour
             
             yield return new WaitForSeconds(Mathf.Clamp(1.0f - textSpeed, 0.01f, 1.0f));
         }
+        m_Finished = true;
         yield return null;
     }
 

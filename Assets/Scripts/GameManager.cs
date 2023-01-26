@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public List<Quest> m_CompletedQuests = new List<Quest>();
     public List<Item> m_Items = new List<Item>();
     public int m_FishAmount;
+    public int m_PausePage;
     public bool m_IsDelivering;
     public bool m_BigMode;
     private bool m_isFillingHeart;
@@ -111,6 +112,51 @@ public class GameManager : MonoBehaviour
         {
             SetFullScreen(!Screen.fullScreen);
         }
+    }
+
+    public void ResetGameStats()
+    {
+        m_GameStarted = false;
+        m_SheepSaved.Clear();
+        m_AllQuests.Clear();
+        m_CompletedQuests.Clear();
+        m_Items.Clear();
+
+        m_FishAmount = 0;
+        m_HappyLevel = 0;
+        m_DeliveryStage = 0;
+        m_PausePage = 0;
+        m_BGMPlayer.volume = 1.0f;
+
+        m_FlagCleanedMapleRoom = false;
+        m_FlagMetFarmer = false;
+        m_FlagSavedSheep = false;
+        m_FlagMetFisher = false;
+        m_FlagThankFisher = false;
+        m_FlagFedCat = false;
+        m_FlagMetOldLady = false;
+        m_FlagHaveGlasses = false;
+        m_FlagLadyHelped = false;
+        m_FlagMetCafe = false;
+        m_FlagHaveTea = false;
+        m_FlagDrankTea = false;
+        m_FlagMetGhost = false;
+        m_FlagHaveMemento = false;
+        m_FlagGhostThanks = false;
+        m_FlagMetPostman = false;
+        m_FlagThanksPostman = false;
+        m_FlagCheckedMycen = false;
+        m_FlagMycenDoorOpen = false;
+        m_FlagAskedDIY = false;
+        m_FlagHaveToolbox = false;
+        m_FlagReturnedToolbox = false;
+        m_FlagMetHelena = false;
+        m_FlagCleanedHelenaRoom = false;
+        m_FlagHelenaBook = false;
+        m_FlagMetOswald = false;
+        m_FlagMetHilda = false;
+        m_FlagMetJan = false;
+        m_BigMode = false;
     }
 
     public void UnlockMedal(int medal_id)

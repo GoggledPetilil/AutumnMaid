@@ -30,6 +30,7 @@ public class PauseManager : MonoBehaviour
     
     private bool m_isPaused;
     private int m_CurrentSection;
+    private bool m_Started;
 
     private float m_PlayerMinPosX = -7.5f;
     private float m_PlayerMinPosY = -70.0f;
@@ -44,6 +45,7 @@ public class PauseManager : MonoBehaviour
     void Start()
     {
         PauseGame(false);
+        m_Started = true;
     }
 
     void Update()
@@ -88,16 +90,36 @@ public class PauseManager : MonoBehaviour
             }
             else 
             {
-                OpenMapScreen();
+                OpenPage();
             }
 
             Time.timeScale = 0.0f;
         }
         m_isPaused = state;
 
-        if(GameManager.instance.getSceneID() == 0 && m_isPaused == false)
+        if(m_Started == false)
+        {
+            m_Started = true;
+        }
+        else if(GameManager.instance.getSceneID() == 0 && m_isPaused == false)
         {
             FindObjectOfType<TitleScreen>().ExitOptions();
+        }
+    }
+
+    void OpenPage()
+    {
+        if(GameManager.instance.m_PausePage == 1)
+        {
+            OpenItemsScreen();
+        }
+        else if(GameManager.instance.m_PausePage == 2)
+        {
+            OpenSystemScreen();
+        }
+        else 
+        {
+            OpenMapScreen();
         }
     }
 
@@ -244,6 +266,7 @@ public class PauseManager : MonoBehaviour
         m_MapHolder.SetActive(m_CurrentSection == 0);
         m_ItemHolder.SetActive(m_CurrentSection == 1);
         m_SystemHolder.SetActive(m_CurrentSection == 2);
+        GameManager.instance.m_PausePage = m_CurrentSection;
     }
 
     void FlipPage()

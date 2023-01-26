@@ -36,5 +36,9 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
     sentence: Why don't you stand over on the pier there? You'll have a firmer stance
       than on the sand here.
+  - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
+    sentence: Will you be ok, my dear?
   - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
-    sentence: Okey dokey!
+    sentence: I'll figure it out!
+  - character: {fileID: 11400000, guid: c90cca497cc967e4bb4a41342a81e6eb, type: 2}
+    sentence: There's no shame in asking for help if you can't figure it out.

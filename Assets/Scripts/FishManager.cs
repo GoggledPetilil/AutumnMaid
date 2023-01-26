@@ -139,7 +139,7 @@ public class FishManager : MonoBehaviour
             if(m_FishHP > 0.0f)
             {
                 // Adjust the slider.
-                float sliderMod = (m_CalmFish) ? 1.0f : 1.8f;
+                float sliderMod = (m_CalmFish) ? 1.0f : 1.5f;
                 if(m_SliderGoRight)
                 {
                     if(m_FishingSlider.value >= m_FishingSlider.maxValue)
@@ -203,12 +203,12 @@ public class FishManager : MonoBehaviour
                     if((val > 0.0f && val < 0.1f) || (val > 0.9f && val < 1.0f))
                     {
                         // Red
-                        m_FishHP += Time.deltaTime * 5.0f;
+                        m_FishHP += Time.deltaTime * 4.0f;
                     }
                     else if((val > 0.1f && val < 0.235f) || (val > 0.76f && val < 1.0f))
                     {
                         // Orange
-                        m_FishHP += Time.deltaTime * 2.5f;
+                        m_FishHP += Time.deltaTime * 2.0f;
                     }
                     else if((val > 0.235f && val < 0.375f) || (val > 0.625f && val < 0.76f))
                     {
@@ -218,12 +218,12 @@ public class FishManager : MonoBehaviour
                     else if((val > 0.375f && val < 0.468f) || (val > 0.53f && val < 0.625f))
                     {
                         // Green
-                        m_FishHP -= Time.deltaTime * 2.0f;
+                        m_FishHP -= Time.deltaTime * 2.5f;
                     }
                     else if(val > 0.468f && val < 0.53f)
                     {
                         // Blue
-                        m_FishHP -= Time.deltaTime * 4.5f;
+                        m_FishHP -= Time.deltaTime * 5.0f;
                     }
                 }
                 else 
@@ -232,7 +232,7 @@ public class FishManager : MonoBehaviour
                     m_FishCursor.SetBool("isDown", false);
                     m_FishingPoleAS.Stop();
 
-                    m_FishHP += Time.deltaTime * 0.25f;
+                    m_FishHP += Time.deltaTime * 0.2f;
                 }
 
                 float fishHealth = m_FishHP / m_FishMaxHP;
