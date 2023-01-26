@@ -35,7 +35,7 @@ public class ResultsScreen : MonoBehaviour
 
     void Update()
     {
-        if(Input.anyKeyDown)
+        if(Input.anyKeyDown && m_Finished)
         {
             GameManager.instance.ResetGameStats();
             GameManager.instance.TransferPlayer(2, Vector2.zero, true);
