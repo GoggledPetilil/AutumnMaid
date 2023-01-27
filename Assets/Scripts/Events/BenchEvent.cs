@@ -29,7 +29,6 @@ public class BenchEvent : MonoBehaviour
         {
             Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
             
-
             if(Time.time > m_WaitTimer && drankTea==false)
             {    
                 player.m_ani.SetBool("isDrinking", false);
@@ -42,6 +41,7 @@ public class BenchEvent : MonoBehaviour
             else 
             {
                 player.m_InteractEvent = null;
+                player.PromptAppear(false);
             }
 
             if(GameManager.instance.isFillingHeart()==false && drankTea==true)
@@ -49,6 +49,7 @@ public class BenchEvent : MonoBehaviour
                 GameManager.instance.m_FlagDrankTea = true;
                 FindObjectOfType<DialogueManager>().StartDialogue(m_EndDialogue);
                 player.m_InteractEvent = GetComponentInChildren<Interactable>();
+                player.PromptAppear(true);
             }
         }
     }

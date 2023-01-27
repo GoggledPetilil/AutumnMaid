@@ -71462,7 +71462,7 @@ MonoBehaviour:
   m_StartDialogue: {fileID: 11400000, guid: f3cae8eb069471d42bf00116eff6f4ce, type: 2}
   m_EndDialogue: {fileID: 11400000, guid: c6736131de027734cbd6a4b4d7c217d0, type: 2}
   m_IsSpecial: 1
-  m_Minutes: 1
+  m_Minutes: 3
 --- !u!1 &2128705772
 GameObject:
   m_ObjectHideFlags: 0
