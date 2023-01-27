@@ -31,6 +31,7 @@ public class FishManager : MonoBehaviour
     private bool m_SliderGoRight; 
     private float m_FishingCoolDown;    // Time until you can fish/cancel again.
     private bool m_NoticedFish;
+    private bool m_CaughtTheFish;
 
     [Header("Fish Parameters")]
     [SerializeField] private Fish[] m_CommonFish;
@@ -258,10 +259,6 @@ public class FishManager : MonoBehaviour
             if(GameManager.instance.isTalking() == false)
             {
                 StopFishing();
-                if(m_HookedFish.isSpecial)
-                {
-                    StartCoroutine(NGIO.UnlockMedal(72299));
-                }
             }
         }
 
@@ -275,6 +272,7 @@ public class FishManager : MonoBehaviour
     {
         if(m_IsFishing || m_FishingCoolDown > 0.0f || GameManager.instance.m_IsDelivering || 
         GameManager.instance.m_FlagMetFisher == false) return;
+        m_CaughtTheFish = false;
         StartCoroutine("StartFishingEvent");
     }
 
@@ -344,13 +342,17 @@ public class FishManager : MonoBehaviour
 
     void FailFishing()
     {
-        Debug.Log("No fish...");
-
+        m_CaughtTheFish = false;
         StopFishing();
     }
 
     void StopFishing()
     {
+        if(m_HookedFish.isSpecial && m_CaughtTheFish)
+        {
+            StartCoroutine(NGIO.UnlockMedal(72299));
+        }
+        
         ToggleUIElements(false);
         GameManager.instance.SetCamFollower(m_SeaPosition.gameObject);
 
@@ -458,6 +460,7 @@ public class FishManager : MonoBehaviour
 
     IEnumerator CaughtFish()
     {
+        m_CaughtTheFish = true;
         ToggleUIElements(false);
         m_FishingPoleAS.Stop();
         GameManager.instance.SetCamFollower(m_Player.gameObject);

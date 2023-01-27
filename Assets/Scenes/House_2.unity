@@ -5649,7 +5649,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1086710832}
   - component: {fileID: 1086710833}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Fireplace
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -445,7 +445,7 @@ GameObject:
   - component: {fileID: 9094615152468198260}
   - component: {fileID: 9094615152468198261}
   - component: {fileID: 9094615152468198258}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: InteractableCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

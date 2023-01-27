@@ -28,6 +28,18 @@ public class TitleScreen : MonoBehaviour
 
         m_PressStartText.SetActive(true);
         HideMenus();
+
+        if(GameManager.instance.m_GameStarted)
+        {
+            if(GameManager.instance.m_HappyLevel >= 10)
+            {
+                StartCoroutine(NGIO.UnlockMedal(72297));
+            }
+            else if(GameManager.instance.m_HappyLevel < 1)
+            {
+                StartCoroutine(NGIO.UnlockMedal(72298));
+            }
+        }
     }
 
     void Update()

@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public int m_FishAmount;
     public int m_PausePage;
     public bool m_IsDelivering;
+    public bool m_CaughtRareFish;
     public bool m_BigMode;
     private bool m_isFillingHeart;
 
@@ -335,6 +336,7 @@ public class GameManager : MonoBehaviour
 
     public void IncreaseHappiness()
     {
+        if(isFillingHeart()) return;
         StartCoroutine(LevelUp());
     }
 

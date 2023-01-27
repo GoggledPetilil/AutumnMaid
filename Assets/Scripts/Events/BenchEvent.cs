@@ -14,9 +14,12 @@ public class BenchEvent : MonoBehaviour
     [Header("Special Components")]
     [SerializeField] private Quest m_QuestData;
     [SerializeField] private Item m_TeaItem;
+    [SerializeField] private Dialogue m_StartDialogue;
+    [SerializeField] private Dialogue m_EndDialogue;
     public bool m_IsSpecial;    // On this beach, you drink.
     public int m_Minutes;       // How many minutes you gotta wait.
     private float m_WaitTimer;
+    private bool drankTea;
 
     void Update()
     {
@@ -24,15 +27,28 @@ public class BenchEvent : MonoBehaviour
 
         if(m_IsSitting && GameManager.instance.m_FlagHaveTea && !GameManager.instance.m_FlagDrankTea)
         {
-            if(Time.time > m_WaitTimer)
-            {
-                Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+            Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+            
+
+            if(Time.time > m_WaitTimer && drankTea==false)
+            {    
                 player.m_ani.SetBool("isDrinking", false);
 
-                GameManager.instance.m_FlagDrankTea = true;
                 GameManager.instance.IncreaseHappiness();
                 GameManager.instance.CompleteQuest(m_QuestData);
                 GameManager.instance.RemoveItem(m_TeaItem);
+                drankTea = true;
+            }
+            else 
+            {
+                player.m_InteractEvent = null;
+            }
+
+            if(GameManager.instance.isFillingHeart()==false && drankTea==true)
+            {
+                GameManager.instance.m_FlagDrankTea = true;
+                FindObjectOfType<DialogueManager>().StartDialogue(m_EndDialogue);
+                player.m_InteractEvent = GetComponentInChildren<Interactable>();
             }
         }
     }
@@ -64,6 +80,17 @@ public class BenchEvent : MonoBehaviour
         player.DisableColliders(true);
 
         yield return new WaitForSeconds(0.1f);
+
+        if(m_IsSpecial && GameManager.instance.m_FlagHaveTea && !GameManager.instance.m_FlagDrankTea)
+        {
+            FindObjectOfType<DialogueManager>().StartDialogue(m_StartDialogue);
+            while(GameManager.instance.isTalking())
+            {
+                yield return null;
+            }
+            player.StopMovement(true, false);
+            player.DisableColliders(true);
+        }
 
         // Move Player towards door
         float t = 0.0f;
@@ -106,6 +133,7 @@ public class BenchEvent : MonoBehaviour
         }
 
         player.m_InteractEvent = GetComponentInChildren<Interactable>();
+
         m_IsSitting = true;
         m_InAnimation = false;
     }

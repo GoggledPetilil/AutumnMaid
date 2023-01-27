@@ -216,6 +216,10 @@ PrefabInstance:
       value: Wheat (23)
       objectReference: {fileID: 0}
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -356,7 +360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 17628291}
   - component: {fileID: 17628292}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -457,6 +461,10 @@ PrefabInstance:
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_Name
       value: Wheat (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_IsActive
@@ -587,6 +595,10 @@ PrefabInstance:
       value: Wheat (6)
       objectReference: {fileID: 0}
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -691,7 +703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 31213835}
   - component: {fileID: 31213836}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -749,7 +761,7 @@ GameObject:
   m_Component:
   - component: {fileID: 34185955}
   - component: {fileID: 34185956}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -802,7 +814,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 38484189}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -969,7 +981,7 @@ GameObject:
   m_Component:
   - component: {fileID: 46638986}
   - component: {fileID: 46638987}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6364,7 +6376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 81866484}
   - component: {fileID: 81866485}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6502,6 +6514,10 @@ PrefabInstance:
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_Name
       value: Wheat (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_IsActive
@@ -6941,6 +6957,10 @@ PrefabInstance:
       value: Wheat (10)
       objectReference: {fileID: 0}
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -7049,6 +7069,10 @@ PrefabInstance:
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_Name
       value: Wheat (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_IsActive
@@ -7409,7 +7433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 155261850}
   - component: {fileID: 155261851}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7695,7 +7719,7 @@ GameObject:
   m_Component:
   - component: {fileID: 161514544}
   - component: {fileID: 161514545}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7750,7 +7774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 165105676}
   - component: {fileID: 165105677}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13484,6 +13508,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4880032995374387652, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4880032995374387654, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -14057,7 +14085,7 @@ GameObject:
   m_Component:
   - component: {fileID: 230334057}
   - component: {fileID: 230334058}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision (1)
   m_TagString: Water
   m_Icon: {fileID: 0}
@@ -19389,7 +19417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 250513565}
   - component: {fileID: 250513566}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19990,6 +20018,10 @@ PrefabInstance:
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_Name
       value: Wheat (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_IsActive
@@ -20710,7 +20742,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 291664623}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SunsetPoint
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -21054,7 +21086,7 @@ GameObject:
   m_Component:
   - component: {fileID: 312767596}
   - component: {fileID: 312767597}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21300,7 +21332,7 @@ GameObject:
   m_Component:
   - component: {fileID: 324029810}
   - component: {fileID: 324029811}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21707,6 +21739,10 @@ PrefabInstance:
       value: Wheat (4)
       objectReference: {fileID: 0}
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -21921,7 +21957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 354159787}
   - component: {fileID: 354159788}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision (2)
   m_TagString: Water
   m_Icon: {fileID: 0}
@@ -22890,7 +22926,7 @@ GameObject:
   m_Component:
   - component: {fileID: 417264827}
   - component: {fileID: 417264828}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23197,7 +23233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 438980981}
   - component: {fileID: 438980982}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28689,7 +28725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 487737348}
   - component: {fileID: 487737349}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29035,7 +29071,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 505296857}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29114,6 +29150,10 @@ PrefabInstance:
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_Name
       value: Wheat (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_IsActive
@@ -29293,6 +29333,10 @@ PrefabInstance:
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_Name
       value: Wheat (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_IsActive
@@ -29548,7 +29592,7 @@ GameObject:
   m_Component:
   - component: {fileID: 520821007}
   - component: {fileID: 520821008}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29926,7 +29970,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 534615683}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30044,7 +30088,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 538754604}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30079,6 +30123,10 @@ PrefabInstance:
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_Name
       value: Wheat (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_IsActive
@@ -30476,6 +30524,10 @@ PrefabInstance:
       value: Wheat (2)
       objectReference: {fileID: 0}
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -30586,6 +30638,10 @@ PrefabInstance:
       value: Wheat (25)
       objectReference: {fileID: 0}
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -30606,6 +30662,10 @@ PrefabInstance:
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_Name
       value: Wheat (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_IsActive
@@ -30718,6 +30778,10 @@ PrefabInstance:
       value: Wheat (24)
       objectReference: {fileID: 0}
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -30798,7 +30862,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 576521333}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31024,6 +31088,10 @@ PrefabInstance:
       value: Wheat (15)
       objectReference: {fileID: 0}
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -31088,7 +31156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 623544351}
   - component: {fileID: 623544352}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Confider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31686,7 +31754,7 @@ GameObject:
   m_Component:
   - component: {fileID: 674455465}
   - component: {fileID: 674455466}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Col4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32250,6 +32318,10 @@ PrefabInstance:
       value: Wheat (5)
       objectReference: {fileID: 0}
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -32310,6 +32382,10 @@ PrefabInstance:
     - target: {fileID: 8455707005567660240, guid: 9a937c0bda4c0284ba84346ddbdb2e5e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8455707005567660241, guid: 9a937c0bda4c0284ba84346ddbdb2e5e, type: 3}
+      propertyPath: m_CollisionLayers.m_Bits
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 8455707005567660247, guid: 9a937c0bda4c0284ba84346ddbdb2e5e, type: 3}
       propertyPath: m_Name
@@ -33096,7 +33172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 763541986}
   - component: {fileID: 763541987}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision (1)
   m_TagString: Water
   m_Icon: {fileID: 0}
@@ -33420,6 +33496,10 @@ PrefabInstance:
       value: Wheat (19)
       objectReference: {fileID: 0}
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -33484,6 +33564,10 @@ PrefabInstance:
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_Name
       value: Wheat (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_IsActive
@@ -33612,6 +33696,10 @@ PrefabInstance:
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_Name
       value: Wheat (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_IsActive
@@ -34451,7 +34539,7 @@ GameObject:
   m_Component:
   - component: {fileID: 825491518}
   - component: {fileID: 825491519}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34800,7 +34888,7 @@ GameObject:
   m_Component:
   - component: {fileID: 841383379}
   - component: {fileID: 841383380}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Lamp
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
@@ -34977,6 +35065,10 @@ PrefabInstance:
       value: Wheat (6)
       objectReference: {fileID: 0}
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -35085,6 +35177,10 @@ PrefabInstance:
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_Name
       value: Wheat (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_IsActive
@@ -35551,6 +35647,10 @@ PrefabInstance:
       value: Wheat (3)
       objectReference: {fileID: 0}
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -35650,6 +35750,10 @@ PrefabInstance:
       value: Wheat (16)
       objectReference: {fileID: 0}
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -35718,7 +35822,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 894291179}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36730,7 +36834,7 @@ GameObject:
   m_Component:
   - component: {fileID: 934473770}
   - component: {fileID: 934473771}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision_Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36872,7 +36976,7 @@ GameObject:
   m_Component:
   - component: {fileID: 952201746}
   - component: {fileID: 952201747}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision
   m_TagString: Water
   m_Icon: {fileID: 0}
@@ -37028,6 +37132,10 @@ PrefabInstance:
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_Name
       value: Wheat (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_IsActive
@@ -37217,7 +37325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 963265891}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37780,6 +37888,10 @@ PrefabInstance:
       value: Wheat (8)
       objectReference: {fileID: 0}
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -37974,6 +38086,10 @@ PrefabInstance:
       value: Wheat (13)
       objectReference: {fileID: 0}
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -38082,6 +38198,10 @@ PrefabInstance:
       value: Wheat (13)
       objectReference: {fileID: 0}
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -38102,7 +38222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 997731223}
   - component: {fileID: 997731224}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38204,6 +38324,10 @@ PrefabInstance:
       value: Wheat (15)
       objectReference: {fileID: 0}
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -38224,6 +38348,10 @@ PrefabInstance:
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_Name
       value: Wheat (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_IsActive
@@ -38594,6 +38722,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2103312118}
     m_Modifications:
+    - target: {fileID: 599126558967888698, guid: fbd1fc70a9b1183428d5f6c372ba1adc, type: 3}
+      propertyPath: m_Radius
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7847822822332422565, guid: fbd1fc70a9b1183428d5f6c372ba1adc, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -38837,6 +38969,10 @@ PrefabInstance:
       value: Wheat (20)
       objectReference: {fileID: 0}
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -38901,7 +39037,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1066445636}
   - component: {fileID: 1066445637}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38956,7 +39092,7 @@ GameObject:
   - component: {fileID: 1070429622}
   - component: {fileID: 1070429624}
   - component: {fileID: 1070429623}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HorizonTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39146,6 +39282,10 @@ PrefabInstance:
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_Name
       value: Wheat (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_IsActive
@@ -39358,7 +39498,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1089460591}
   - component: {fileID: 1089460592}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision_Stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39765,7 +39905,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1100694029}
   - component: {fileID: 1100694030}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40083,6 +40223,10 @@ PrefabInstance:
       value: Wheat (20)
       objectReference: {fileID: 0}
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -40277,6 +40421,10 @@ PrefabInstance:
       value: Wheat (12)
       objectReference: {fileID: 0}
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -40297,7 +40445,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1123158382}
   - component: {fileID: 1123158383}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision_Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40631,6 +40779,10 @@ PrefabInstance:
       value: Wheat (5)
       objectReference: {fileID: 0}
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -40738,7 +40890,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1147135907}
   - component: {fileID: 1147135908}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41449,7 +41601,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1204307992}
   - component: {fileID: 1204307993}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41560,6 +41712,10 @@ PrefabInstance:
       value: Wheat (4)
       objectReference: {fileID: 0}
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -41624,6 +41780,10 @@ PrefabInstance:
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_Name
       value: Wheat (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_IsActive
@@ -41722,6 +41882,10 @@ PrefabInstance:
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_Name
       value: Wheat (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_IsActive
@@ -41882,7 +42046,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1224155112}
   - component: {fileID: 1224155113}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42244,7 +42408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1263173907}
   - component: {fileID: 1263173908}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Col3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42348,6 +42512,10 @@ PrefabInstance:
       value: Wheat (21)
       objectReference: {fileID: 0}
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -42367,7 +42535,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1267924282}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collissions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42593,6 +42761,10 @@ PrefabInstance:
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_Name
       value: Wheat
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_IsActive
@@ -42920,7 +43092,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1300474640}
   - component: {fileID: 1300474641}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision
   m_TagString: Water
   m_Icon: {fileID: 0}
@@ -43329,6 +43501,10 @@ PrefabInstance:
       value: Wheat (19)
       objectReference: {fileID: 0}
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -43402,7 +43578,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1336024539}
   - component: {fileID: 1336024540}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43660,7 +43836,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1346403856}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44866,6 +45042,10 @@ PrefabInstance:
       value: Wheat (2)
       objectReference: {fileID: 0}
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -44930,7 +45110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1415589801}
   - component: {fileID: 1415589802}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45062,7 +45242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1422728627}
   - component: {fileID: 1422728628}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45453,7 +45633,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1431227289}
   - component: {fileID: 1431227290}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51604,6 +51784,10 @@ PrefabInstance:
       value: Wheat (13)
       objectReference: {fileID: 0}
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -51670,6 +51854,10 @@ PrefabInstance:
       value: Wheat (14)
       objectReference: {fileID: 0}
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -51690,7 +51878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1477600391}
   - component: {fileID: 1477600392}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision_Water
   m_TagString: Water
   m_Icon: {fileID: 0}
@@ -51954,7 +52142,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1493087841}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52111,7 +52299,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1499282125}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52541,7 +52729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1529821467}
   - component: {fileID: 1529821468}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision
   m_TagString: Water
   m_Icon: {fileID: 0}
@@ -52709,6 +52897,10 @@ PrefabInstance:
       value: Wheat (9)
       objectReference: {fileID: 0}
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -52773,6 +52965,10 @@ PrefabInstance:
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_Name
       value: Wheat (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_IsActive
@@ -52916,6 +53112,10 @@ PrefabInstance:
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_Name
       value: Wheat (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_IsActive
@@ -53798,6 +53998,10 @@ PrefabInstance:
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_Name
       value: Wheat (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_IsActive
@@ -59010,6 +59214,10 @@ PrefabInstance:
       value: Wheat (11)
       objectReference: {fileID: 0}
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -59256,7 +59464,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1666666906}
   - component: {fileID: 1666666907}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59846,6 +60054,10 @@ PrefabInstance:
       value: Wheat (17)
       objectReference: {fileID: 0}
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -59969,7 +60181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1723029920}
   - component: {fileID: 1723029921}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Col2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60171,6 +60383,10 @@ PrefabInstance:
       value: Wheat (17)
       objectReference: {fileID: 0}
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -60235,6 +60451,10 @@ PrefabInstance:
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_Name
       value: Wheat (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_IsActive
@@ -60441,7 +60661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1755480192}
   - component: {fileID: 1755480193}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60961,6 +61181,10 @@ PrefabInstance:
       value: Wheat (3)
       objectReference: {fileID: 0}
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -61119,6 +61343,10 @@ PrefabInstance:
       value: Wheat (14)
       objectReference: {fileID: 0}
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -61243,7 +61471,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1808205316}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61280,6 +61508,10 @@ PrefabInstance:
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_Name
       value: Wheat (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_IsActive
@@ -61648,7 +61880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1823665810}
   - component: {fileID: 1823665811}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collission
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61705,7 +61937,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1825318003}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61836,7 +62068,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1835932141}
   - component: {fileID: 1835932142}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61904,7 +62136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1838366708}
   - component: {fileID: 1838366709}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision
   m_TagString: Water
   m_Icon: {fileID: 0}
@@ -62227,6 +62459,10 @@ PrefabInstance:
       value: Wheat (6)
       objectReference: {fileID: 0}
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -62335,6 +62571,10 @@ PrefabInstance:
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_Name
       value: Wheat (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_IsActive
@@ -62495,6 +62735,10 @@ PrefabInstance:
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_Name
       value: Wheat (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_IsActive
@@ -63165,6 +63409,10 @@ PrefabInstance:
       value: Wheat (4)
       objectReference: {fileID: 0}
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -63352,7 +63600,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1928561880}
   - component: {fileID: 1928561881}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63494,7 +63742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1940212940}
   - component: {fileID: 1940212941}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63549,7 +63797,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1940917118}
   - component: {fileID: 1940917119}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision_Stairs (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63673,6 +63921,10 @@ PrefabInstance:
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_Name
       value: Wheat
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5722052913531812828, guid: 814c986d41b1ad047bc5274e0e8e1a9d, type: 3}
       propertyPath: m_IsActive
@@ -69276,6 +69528,10 @@ PrefabInstance:
       value: Wheat (9)
       objectReference: {fileID: 0}
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -69340,6 +69596,10 @@ PrefabInstance:
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_Name
       value: Wheat (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_IsActive
@@ -69411,6 +69671,10 @@ PrefabInstance:
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_Name
       value: Wheat (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_IsActive
@@ -69547,7 +69811,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2001810000}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69644,7 +69908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2006790779}
   - component: {fileID: 2006790780}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70226,7 +70490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2063535119}
   - component: {fileID: 2063535120}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70447,6 +70711,10 @@ PrefabInstance:
       value: Wheat (7)
       objectReference: {fileID: 0}
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -70597,6 +70865,10 @@ PrefabInstance:
       value: Wheat (8)
       objectReference: {fileID: 0}
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -70738,6 +71010,10 @@ PrefabInstance:
       value: Wheat (11)
       objectReference: {fileID: 0}
     - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602766095507259843, guid: 80e2d48c1ea20764f9e3daed2eb76e0b, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -70802,6 +71078,10 @@ PrefabInstance:
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_Name
       value: Wheat (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1902095718854598707, guid: 5290ce0e257cd4b4a9adceb72da7debd, type: 3}
       propertyPath: m_IsActive
@@ -70926,7 +71206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2112859279}
   - component: {fileID: 2112859280}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70984,7 +71264,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2116783279}
   - component: {fileID: 2116783280}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Col1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71179,8 +71459,10 @@ MonoBehaviour:
   m_StandPosition: {fileID: 1178345923}
   m_QuestData: {fileID: 11400000, guid: e8d152d8abf20d745b99b56051693f71, type: 2}
   m_TeaItem: {fileID: 11400000, guid: 9a180f2e08ab1ef4db37f3d01a0c081b, type: 2}
+  m_StartDialogue: {fileID: 11400000, guid: f3cae8eb069471d42bf00116eff6f4ce, type: 2}
+  m_EndDialogue: {fileID: 11400000, guid: c6736131de027734cbd6a4b4d7c217d0, type: 2}
   m_IsSpecial: 1
-  m_Minutes: 3
+  m_Minutes: 1
 --- !u!1 &2128705772
 GameObject:
   m_ObjectHideFlags: 0
@@ -76157,7 +76439,7 @@ GameObject:
   - component: {fileID: 599126559472136543}
   - component: {fileID: 599126559472136542}
   - component: {fileID: 599126559472136537}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: InteractableCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76244,6 +76526,8 @@ MonoBehaviour:
   m_StandPosition: {fileID: 623176467888118401}
   m_QuestData: {fileID: 0}
   m_TeaItem: {fileID: 0}
+  m_StartDialogue: {fileID: 0}
+  m_EndDialogue: {fileID: 0}
   m_IsSpecial: 0
   m_Minutes: 0
 --- !u!1 &623176467747821858
@@ -76319,6 +76603,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 477153935}
     m_Modifications:
+    - target: {fileID: 2498994816498499641, guid: 735eb1d5fe262e44abaf4a980cdfbd02, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5050683226804097445, guid: 735eb1d5fe262e44abaf4a980cdfbd02, type: 3}
       propertyPath: m_Name
       value: Sign
@@ -76609,7 +76897,7 @@ GameObject:
   - component: {fileID: 1142553090808849573}
   - component: {fileID: 1142553090808849572}
   - component: {fileID: 1142553090808849571}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: InteractableCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76942,7 +77230,7 @@ GameObject:
   - component: {fileID: 1438516851665874196}
   - component: {fileID: 1438516851665874197}
   - component: {fileID: 1438516851665874194}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: InteractableCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77685,7 +77973,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3508663394271685570}
   - component: {fileID: 3508663394271685581}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78202,7 +78490,7 @@ GameObject:
   - component: {fileID: 4442713859659543281}
   - component: {fileID: 4442713859659543280}
   - component: {fileID: 4442713859659543287}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: InteractableCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78248,7 +78536,7 @@ GameObject:
   - component: {fileID: 4442713860872293738}
   - component: {fileID: 4442713860872293739}
   - component: {fileID: 4442713860872293740}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: InteractableCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78325,7 +78613,7 @@ GameObject:
   - component: {fileID: 4442713861117898947}
   - component: {fileID: 4442713861117898946}
   - component: {fileID: 4442713861117898949}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: InteractableCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81474,7 +81762,7 @@ GameObject:
   - component: {fileID: 7896234957244815721}
   - component: {fileID: 289556875777012042}
   - component: {fileID: 6976858130653421573}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SortingTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81523,7 +81811,7 @@ GameObject:
   - component: {fileID: 6676005904982367968}
   - component: {fileID: 6676005904982367969}
   - component: {fileID: 6676005904982367974}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: InteractableCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81876,7 +82164,7 @@ GameObject:
   - component: {fileID: 7257998477258439754}
   - component: {fileID: 7257998477258439755}
   - component: {fileID: 7257998477258439756}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: InteractableCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82192,7 +82480,7 @@ GameObject:
   - component: {fileID: 7790207676422948616}
   - component: {fileID: 7790207676422948617}
   - component: {fileID: 7790207676422948622}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: InteractableCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

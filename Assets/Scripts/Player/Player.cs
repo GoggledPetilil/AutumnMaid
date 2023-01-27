@@ -16,6 +16,8 @@ public class Player : Entity
     public float m_Speed;
     public float m_SpeedMod;
     public TerrainTag m_CurrentTerrain;
+    public LayerMask m_CollisionLayers;
+    private float m_PatDistance = 1.5f;
 
     [Header("Move Physics")]
     public Vector2 m_MovDir;
@@ -233,7 +235,15 @@ public class Player : Entity
     public void PatObject(Entity obj)
     {
         if(GameManager.instance.m_IsDelivering) return;
-        StartCoroutine(PatThis(obj));
+
+        // Check if no colliders are in the way.
+        float distance = (this.transform.position.x > obj.transform.position.x) ? m_PatDistance : -m_PatDistance;
+        RaycastHit2D hit = Physics2D.Raycast(obj.transform.position, Vector2.right, distance, m_CollisionLayers);
+
+        if(hit.collider == null)
+        {
+            StartCoroutine(PatThis(obj));
+        }
     }
 
     public void CarryPizza(int amount)
@@ -260,7 +270,7 @@ public class Player : Entity
 
         Vector2 startPos = this.transform.position;
         Vector2 endPos = new Vector2(obj.transform.position.x, obj.transform.position.y - 0.01f);
-        float distance = (startPos.x > endPos.x) ? 1.5f : -1.5f;
+        float distance = (startPos.x > endPos.x) ? m_PatDistance : -m_PatDistance;
         endPos.x += distance;
         float t = 0.0f;
         float walkDur = Vector2.Distance(transform.position, endPos) / 3.2f;

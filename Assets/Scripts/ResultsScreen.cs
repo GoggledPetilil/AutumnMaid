@@ -78,7 +78,17 @@ public class ResultsScreen : MonoBehaviour
             yield return new WaitForSeconds(Mathf.Clamp(1.0f - textSpeed, 0.01f, 1.0f));
         }
         m_Finished = true;
+        
         yield return null;
+
+        if(GameManager.instance.m_HappyLevel >= 10)
+        {
+            StartCoroutine(NGIO.UnlockMedal(72297));
+        }
+        else if(GameManager.instance.m_HappyLevel < 1)
+        {
+            StartCoroutine(NGIO.UnlockMedal(72298));
+        }
     }
 
     private string GetResultText()
