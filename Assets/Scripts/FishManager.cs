@@ -519,6 +519,7 @@ public class FishManager : MonoBehaviour
             if(m_HookedFish.isSpecial)
             {
                 PlayAudio(m_ItemGetSFX);
+                StartCoroutine(NGIO.UnlockMedal(72299));
             }
         }
         else 

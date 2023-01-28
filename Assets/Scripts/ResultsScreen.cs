@@ -35,8 +35,17 @@ public class ResultsScreen : MonoBehaviour
 
     void Update()
     {
-        if(Input.anyKeyDown && m_Finished)
+        if((Input.anyKeyDown && !(Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2))) && m_Finished)
         {
+            if(GameManager.instance.m_HappyLevel >= 10)
+            {
+                StartCoroutine(NGIO.UnlockMedal(72297));
+            }
+            else if(GameManager.instance.m_HappyLevel < 1)
+            {
+                StartCoroutine(NGIO.UnlockMedal(72298));
+            }
+
             GameManager.instance.ResetGameStats();
             GameManager.instance.TransferPlayer(2, Vector2.zero, true);
         }

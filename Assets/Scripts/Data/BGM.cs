@@ -8,6 +8,11 @@ public class BGM : MonoBehaviour
 
     void Start()
     {
+        PlayBGM();
+    }
+
+    public void PlayBGM()
+    {
         int r = 0;
         if(m_BGM.Length > 1)
         {

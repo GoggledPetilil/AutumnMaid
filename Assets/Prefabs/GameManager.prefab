@@ -5472,9 +5472,12 @@ MonoBehaviour:
   m_CompletedQuests: []
   m_Items: []
   m_FishAmount: 0
+  m_PausePage: 0
   m_IsDelivering: 0
+  m_CaughtRareFish: 0
   m_BigMode: 0
   m_Anim: {fileID: 4880032994631046687}
+  m_LoadingIcon: {fileID: 0}
   m_AudioMixer: {fileID: 24100000, guid: ba3425bb84c757e4ba840d2d1e1be697, type: 2}
   m_BGMPlayer: {fileID: 966497973506966594}
   m_SFXPlayer: {fileID: 4574602580390232027}

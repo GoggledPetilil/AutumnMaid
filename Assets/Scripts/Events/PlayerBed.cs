@@ -15,8 +15,18 @@ public class PlayerBed : MonoBehaviour
         if(GameManager.instance.isTalking()) return;
 
         if(m_Checked || GameManager.instance.m_HappyLevel >= 10)
-        {            
+        { 
             m_Interactable.SetActive(false);
+            
+            if(GameManager.instance.m_HappyLevel >= 10)
+            {
+                StartCoroutine(NGIO.UnlockMedal(72297));
+            }
+            else if(GameManager.instance.m_HappyLevel < 1)
+            {
+                StartCoroutine(NGIO.UnlockMedal(72298));
+            }
+
             StartCoroutine(EndingEvent());
         }
         else 
