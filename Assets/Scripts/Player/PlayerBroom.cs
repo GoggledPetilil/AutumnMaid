@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerBroom : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class PlayerBroom : MonoBehaviour
     public float m_SweepSpeed;
     public float m_ArcDegrees;
     public float m_Range;
-    private float m_PosMod = 2.0f;
+    //private float m_PosMod = 2.0f;
     public LayerMask m_TargetLayers;
     [SerializeField] private Transform m_HolderObj;
     [SerializeField] private Transform m_Target;
@@ -27,18 +28,25 @@ public class PlayerBroom : MonoBehaviour
     [SerializeField] private ParticleSystem m_ps;
     [SerializeField] private Rigidbody2D m_rb;
     [SerializeField] private SpriteRenderer m_sr;
+    private PlayerInput playerInput;
+    private PlayerInputActions playerInputActions;
 
     void Awake()
     {
         m_Sprite = m_sr.gameObject;
+
+        playerInput = GetComponent<PlayerInput>();
+        playerInputActions = new PlayerInputActions();
+        playerInputActions.Player.Enable();
+        playerInputActions.Player.Sweep.performed += Sweep;
     }
 
     void Update()
     {
-        if((Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.L)))
+        /*if((Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.L)))
         {
             m_SweepTimer = Time.time + m_SweepDelay;
-        }
+        }*/
         
         if(m_isAttacking)
         {
@@ -57,6 +65,14 @@ public class PlayerBroom : MonoBehaviour
         {
             AfterImagePool.instance.GetFromPool();
             StartCoroutine("Attack");
+        }
+    }
+
+    public void Sweep(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            m_SweepTimer = Time.time + m_SweepDelay;
         }
     }
 
@@ -118,7 +134,7 @@ public class PlayerBroom : MonoBehaviour
             transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotZ + rotMod);
             CreateAfterImage();
 
-            if((Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.L)))
+            if(playerInputActions.Player.Sweep.WasPerformedThisFrame())
             {
                 if(t > 0.25f)
                 {
@@ -157,6 +173,11 @@ public class PlayerBroom : MonoBehaviour
     {
         m_isAttacking = false;
         m_ps.Stop();
+    }
+
+    void OnDisable()
+    {
+        m_sr.enabled = false;
     }
 
     void OnDrawGizmosSelected()

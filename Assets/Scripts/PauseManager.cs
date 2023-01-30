@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 using TMPro;
 
 public class PauseManager : MonoBehaviour
@@ -48,14 +50,13 @@ public class PauseManager : MonoBehaviour
         m_Started = true;
     }
 
-    void Update()
+    public void OnPause(InputAction.CallbackContext context)
     {
         if(GameManager.instance.getSceneID() == 13) return;
-        if((Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.P)))
-        {
-            if(GameManager.instance.getSceneID() == 0 && m_isPaused == false) return;
-            PauseGame(!m_isPaused);
-        }
+        if(GameManager.instance.getSceneID() == 0 && m_isPaused == false) return;
+        if(!context.performed) return;
+        
+        PauseGame(!m_isPaused);
     }
 
     public bool isPaused()
@@ -74,6 +75,8 @@ public class PauseManager : MonoBehaviour
         }
         else 
         {
+            GameManager.instance.SetAllTouchControls(false, false, false, true);
+            
             m_CanvasGroup.alpha = 1.0f;
             m_CanvasGroup.interactable = true;
             m_CanvasGroup.blocksRaycasts = true;
@@ -112,14 +115,17 @@ public class PauseManager : MonoBehaviour
         if(GameManager.instance.m_PausePage == 1)
         {
             OpenItemsScreen();
+            EventSystem.current.SetSelectedGameObject(m_ItemButton.GetComponentInChildren<Button>().gameObject);
         }
         else if(GameManager.instance.m_PausePage == 2)
         {
             OpenSystemScreen();
+            EventSystem.current.SetSelectedGameObject(m_SystemButton.GetComponentInChildren<Button>().gameObject);
         }
         else 
         {
             OpenMapScreen();
+            EventSystem.current.SetSelectedGameObject(m_MapButton.GetComponentInChildren<Button>().gameObject);
         }
     }
 

@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioMixer m_AudioMixer;
     [SerializeField] private AudioSource m_BGMPlayer;
     [SerializeField] private AudioSource m_SFXPlayer;
+    [SerializeField] private GameObject m_TouchControls;
 
     [Header("Music Parameters")]
     private float m_MusicTime = 64;     // Time between each song.
@@ -107,12 +108,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Update()
+    /*void Update()
     {
         if(Input.GetKeyDown(KeyCode.F4) || (Input.GetKey(KeyCode.LeftAlt) && Input.GetKeyDown(KeyCode.Return)))
         {
             SetFullScreen(!Screen.fullScreen);
         }
+    }*/
+
+    void OnFullscreenTrigger()
+    {
+        SetFullScreen(!Screen.fullScreen);
     }
 
     public void ResetGameStats()
@@ -158,6 +164,26 @@ public class GameManager : MonoBehaviour
         m_FlagMetHilda = false;
         m_FlagMetJan = false;
         m_BigMode = false;
+    }
+
+    public void SetTouchControls(bool state)
+    {
+        m_TouchControls.gameObject.SetActive(state && Application.isMobilePlatform);
+    }
+
+    public void SetAllTouchControls(bool joystick, bool talk, bool broom, bool pause)
+    {
+        if(Application.isMobilePlatform)
+        {
+            m_TouchControls.transform.GetChild(0).gameObject.SetActive(joystick);
+            m_TouchControls.transform.GetChild(1).gameObject.SetActive(talk);
+            m_TouchControls.transform.GetChild(2).gameObject.SetActive(broom);
+            m_TouchControls.transform.GetChild(3).gameObject.SetActive(pause);
+        }
+        else
+        {
+            SetTouchControls(false);
+        }
     }
 
     public void UnlockMedal(int medal_id)

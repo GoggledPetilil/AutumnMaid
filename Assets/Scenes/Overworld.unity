@@ -60204,11 +60204,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ffbb0decd94ee9641b926fe98a78bd54, type: 2}
   - {fileID: 11400000, guid: d807f67832fa01f4dae0e8f30a5c71a5, type: 2}
   - {fileID: 11400000, guid: d807f67832fa01f4dae0e8f30a5c71a5, type: 2}
+  - {fileID: 11400000, guid: f9f04adc8c73853419c62febd71e2d9c, type: 2}
+  - {fileID: 11400000, guid: f9f04adc8c73853419c62febd71e2d9c, type: 2}
   m_UncommonFish:
   - {fileID: 11400000, guid: 1bd192c12abfad94dbe43858adc55018, type: 2}
   - {fileID: 11400000, guid: 1bd192c12abfad94dbe43858adc55018, type: 2}
   - {fileID: 11400000, guid: e474fb1ce9606ac4aa27725fe8b40e38, type: 2}
   - {fileID: 11400000, guid: e474fb1ce9606ac4aa27725fe8b40e38, type: 2}
+  - {fileID: 11400000, guid: 7f62b87362d66f7408e3312b6cdf2770, type: 2}
+  - {fileID: 11400000, guid: 7f62b87362d66f7408e3312b6cdf2770, type: 2}
   - {fileID: 11400000, guid: e51cb405f4ca8fa4c9782adee5074854, type: 2}
   - {fileID: 11400000, guid: a1aedd35f97d30b45800ea7befb90d2e, type: 2}
   m_RareFish:

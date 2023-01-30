@@ -117,8 +117,8 @@ MonoBehaviour:
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlight
-    m_PressedTrigger: Normal
-    m_SelectedTrigger: Normal
+    m_PressedTrigger: Highlight
+    m_SelectedTrigger: Highlight
     m_DisabledTrigger: Normal
   m_Interactable: 1
   m_TargetGraphic: {fileID: 5911543066984029615}
@@ -203,6 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ItemName: 
+  m_ItemDescription: 
   m_Icon: {fileID: 5911543066984029615}
   m_Amount: {fileID: 906741436971387239}
 --- !u!1 &2613950746444268636

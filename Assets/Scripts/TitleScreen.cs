@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class TitleScreen : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class TitleScreen : MonoBehaviour
     public GameObject m_PressStartText;
     public GameObject m_NGIO;
     public GameObject m_LogOutButton;
+    private PlayerInput playerInput;
+    private PlayerInputActions playerInputActions;
     
     [Header("Main Menu")]
     public GameObject MainMenuWrapper;
@@ -19,8 +22,15 @@ public class TitleScreen : MonoBehaviour
     private bool m_Started;
     private bool m_Paused;
     private bool m_LogOutActive;
+    
+    void Awake()
+    {
+        playerInput = GetComponent<PlayerInput>();
+        playerInputActions = new PlayerInputActions();
+        playerInputActions.Player.Enable();
+        playerInputActions.UI.Enable();
+    }
 
-    // Start is called before the first frame update
     void Start()
     {
         NewGameButton.onClick.AddListener(this.StartGame);
@@ -28,15 +38,18 @@ public class TitleScreen : MonoBehaviour
 
         m_PressStartText.SetActive(true);
         HideMenus();
+        GameManager.instance.SetTouchControls(false);
     }
 
     void Update()
     {
-        if(Input.anyKeyDown && m_Started==false)
+        if(m_Started) return;
+        if(playerInputActions.Player.Interact.WasPressedThisFrame() || playerInputActions.UI.Submit.WasPressedThisFrame() || 
+        playerInputActions.UI.Start.WasPressedThisFrame() || playerInputActions.UI.Click.WasPressedThisFrame())
         {
+            m_NGIO.SetActive(true);
             m_Started = true;
             GameManager.instance.m_GameStarted = true;
-            m_NGIO.SetActive(true);
         }
     }
 
@@ -70,6 +83,8 @@ public class TitleScreen : MonoBehaviour
     {
         SetMenuVisibility(true,false);
         m_PressStartText.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(NewGameButton.gameObject);
+        //EventSystem.current.firstSelectedGameObject = NewGameButton.gameObject;
     }
 
     public void ShowOptionsMenu()

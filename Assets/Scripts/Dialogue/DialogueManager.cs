@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 using TMPro;
 
 public class DialogueManager : MonoBehaviour
@@ -18,6 +19,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private AudioClip m_DefaultTextSFX;
     [SerializeField] private CanvasGroup m_Canvas;
     [SerializeField] private Image m_PortraitImage;
+    private PlayerInput playerInput;
+    private PlayerInputActions playerInputActions;
 
     [Header("Parameters")]
     public bool m_InConversation;
@@ -31,15 +34,23 @@ public class DialogueManager : MonoBehaviour
     private float skipTimer;    // Adds little delay when skipping the text
     private float skipDelay = 0.032f;
 
+    void Awake()
+    {
+        playerInput = GetComponent<PlayerInput>();
+        playerInputActions = new PlayerInputActions();
+        playerInputActions.Player.Enable();
+    }
+
     void Update()
     {
         if(m_InConversation && Time.time > talkTimer)
         {
-            if((Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.K)))
+            if(playerInputActions.Player.Interact.WasPerformedThisFrame())
             {
                 AdvanceDialogue();
             }
-            else if((Input.GetKey(KeyCode.X) || Input.GetKey(KeyCode.L)))
+            
+            if(playerInputActions.Player.Sweep.IsPressed())
             {
                 if(skipTimer > skipDelay)
                 {

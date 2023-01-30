@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 using TMPro;
 
 public class ResultsScreen : MonoBehaviour
@@ -10,16 +11,24 @@ public class ResultsScreen : MonoBehaviour
     [SerializeField] private CanvasGroup m_HeartGroup;
     [SerializeField] private TMP_Text m_ResultsText;
     private bool m_Finished;
+    private PlayerInput playerInput;
+    private PlayerInputActions playerInputActions;
 
     void Awake()
     {
         m_ResultsText.text = "";
         m_HeartGroup.alpha = 0.0f;
+
+        playerInput = GetComponent<PlayerInput>();
+        playerInputActions = new PlayerInputActions();
+        playerInputActions.Player.Enable();
+        playerInputActions.UI.Enable();
     }
 
     void Start()
     {
         GameManager.instance.StopBGM();
+        GameManager.instance.SetTouchControls(false);
 
         if(GameManager.instance.m_HappyLevel >= 10)
         {
@@ -35,7 +44,9 @@ public class ResultsScreen : MonoBehaviour
 
     void Update()
     {
-        if((Input.anyKeyDown && !(Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2))) && m_Finished)
+        if(!m_Finished) return;
+        if(playerInputActions.Player.Interact.WasPressedThisFrame() || playerInputActions.UI.Submit.WasPressedThisFrame() || 
+        playerInputActions.UI.Start.WasPressedThisFrame() || playerInputActions.UI.Click.WasPressedThisFrame())
         {
             if(GameManager.instance.m_HappyLevel >= 10)
             {

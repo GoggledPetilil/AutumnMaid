@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : Entity
 {
@@ -82,13 +83,15 @@ public class Player : Entity
         {
             m_sr.transform.localScale = Vector2.one;
         }
+
+        GameManager.instance.SetTouchControls(true);
     }
 
     void Update()
     {
-        Move();
+        //Move();
 
-        if(m_InteractEvent != null)
+        /*if(m_InteractEvent != null)
         {
             if(m_DisableEvents) return;
 
@@ -114,19 +117,21 @@ public class Player : Entity
 
                 SetTargetPoint();
             }
-        }
+        }*/
     }
 
     void FixedUpdate()
     {
         m_rb.velocity = m_MovDir * GetSpeed();
+        m_ani.SetBool("isMoving", m_rb.velocity.magnitude > 0.1f);
     }
 
-    void Move()
+    public void Move(InputAction.CallbackContext context)
     {
-        if(!m_DisableControls)
+        if(!m_DisableControls && !GameManager.instance.isPaused())
         {
-            m_MovDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+            //m_MovDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+            m_MovDir = context.ReadValue<Vector2>();
         }
         
         if(m_MovDir != Vector2.zero)
@@ -135,7 +140,6 @@ public class Player : Entity
             SetTargetPoint();
         }
 
-        m_ani.SetBool("isMoving", m_rb.velocity.magnitude > 0.1f);
         if(m_MovDir.x < 0)
         {
             FlipSprite(true);
@@ -144,6 +148,30 @@ public class Player : Entity
         {
             FlipSprite(false);
         }
+    }
+
+    public void Interact(InputAction.CallbackContext context)
+    {
+        if(m_DisableEvents || !context.performed || m_InteractEvent == null || GameManager.instance.isPaused()) return;
+
+        m_broom.StopAttack();
+        PromptAppear(false);
+        m_InteractEvent.InvokeEvent();
+
+        if(m_InteractEvent.isActiveAndEnabled)
+        {
+            if(transform.position.x > m_InteractEvent.transform.position.x)
+            {
+                FlipSprite(true);
+                m_LookDir = Vector2.left;
+            }
+            else if(transform.position.x < m_InteractEvent.transform.position.x)
+            {
+                FlipSprite(false);
+                m_LookDir = Vector2.right;
+            }
+        }
+        SetTargetPoint();
     }
 
     private void SetTargetPoint()

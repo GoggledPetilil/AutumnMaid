@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class FishManager : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class FishManager : MonoBehaviour
     [SerializeField] private Slider m_FishingSlider;
     [SerializeField] private Animator m_SliderAnim;
     [SerializeField] private Dialogue m_WinDialogue;
+    private PlayerInput playerInput;
+    private PlayerInputActions playerInputActions;
     
     [Header("Fishing Components")]
     [SerializeField] private Transform m_SeaPosition;   // The position of the ocean.
@@ -71,6 +74,10 @@ public class FishManager : MonoBehaviour
         m_FishingPoleAS.clip = m_ReelSFX;
         m_FishingPoleAS.loop = true;
         m_FishingLure.SetActive(false);
+
+        playerInput = GetComponent<PlayerInput>();
+        playerInputActions = new PlayerInputActions();
+        playerInputActions.Player.Enable();
     }
 
     void Start()
@@ -86,7 +93,7 @@ public class FishManager : MonoBehaviour
             {
                 m_WaitTime -= Time.deltaTime;
 
-                if(Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.K))
+                if(playerInputActions.Player.Interact.WasPressedThisFrame())
                 {
                     if(m_FishingCoolDown <= 0.0f)
                     {
@@ -113,7 +120,7 @@ public class FishManager : MonoBehaviour
                 m_NoticedFish = true;
             }
 
-            if(Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.K))
+            if(playerInputActions.Player.Interact.WasPressedThisFrame())
             {
                 if(m_WaitTime <= (0.0f - m_FishNoticeTime))
                 {
@@ -194,7 +201,7 @@ public class FishManager : MonoBehaviour
                 }
 
                 // Player controller
-                if(Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.K))
+                if(playerInputActions.Player.Interact.IsPressed())
                 {
                     m_Player.m_ani.SetBool("reelingIn", true);
                     m_FishCursor.SetBool("isDown", true);
@@ -348,7 +355,7 @@ public class FishManager : MonoBehaviour
 
     void StopFishing()
     {
-        if(m_HookedFish.isSpecial && m_CaughtTheFish)
+        if(m_HookedFish != null && m_HookedFish.isSpecial && m_CaughtTheFish)
         {
             StartCoroutine(NGIO.UnlockMedal(72299));
         }
