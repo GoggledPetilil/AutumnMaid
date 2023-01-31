@@ -83,41 +83,11 @@ public class Player : Entity
         {
             m_sr.transform.localScale = Vector2.one;
         }
-
-        GameManager.instance.SetTouchControls(true);
     }
 
     void Update()
     {
         //Move();
-
-        /*if(m_InteractEvent != null)
-        {
-            if(m_DisableEvents) return;
-
-            if(Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.K))
-            {
-                m_broom.StopAttack();
-                PromptAppear(false);
-                m_InteractEvent.InvokeEvent();
-
-                if(m_InteractEvent.isActiveAndEnabled)
-                {
-                    if(transform.position.x > m_InteractEvent.transform.position.x)
-                    {
-                        FlipSprite(true);
-                        m_LookDir = Vector2.left;
-                    }
-                    else if(transform.position.x < m_InteractEvent.transform.position.x)
-                    {
-                        FlipSprite(false);
-                        m_LookDir = Vector2.right;
-                    }
-                }
-
-                SetTargetPoint();
-            }
-        }*/
     }
 
     void FixedUpdate()
@@ -132,6 +102,10 @@ public class Player : Entity
         {
             //m_MovDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
             m_MovDir = context.ReadValue<Vector2>();
+        }
+        else 
+        {
+            m_MovDir = Vector2.zero;
         }
         
         if(m_MovDir != Vector2.zero)

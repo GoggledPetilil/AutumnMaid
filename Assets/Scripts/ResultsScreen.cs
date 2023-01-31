@@ -28,7 +28,6 @@ public class ResultsScreen : MonoBehaviour
     void Start()
     {
         GameManager.instance.StopBGM();
-        GameManager.instance.SetTouchControls(false);
 
         if(GameManager.instance.m_HappyLevel >= 10)
         {
@@ -44,13 +43,9 @@ public class ResultsScreen : MonoBehaviour
 
     void Update()
     {
-<<<<<<< HEAD
         if(!m_Finished) return;
         if(playerInputActions.Player.Interact.WasPressedThisFrame() || playerInputActions.UI.Submit.WasPressedThisFrame() || 
         playerInputActions.UI.Start.WasPressedThisFrame() || playerInputActions.UI.Click.WasPressedThisFrame())
-=======
-        if(Input.anyKeyDown && m_Finished)
->>>>>>> parent of c44333c (v2.0.4)
         {
             GameManager.instance.ResetGameStats();
             GameManager.instance.TransferPlayer(2, Vector2.zero, true);

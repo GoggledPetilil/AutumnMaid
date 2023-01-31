@@ -17,6 +17,7 @@ public class FishManager : MonoBehaviour
     [SerializeField] private Dialogue m_WinDialogue;
     private PlayerInput playerInput;
     private PlayerInputActions playerInputActions;
+    private bool m_StartUpAnimation;
     
     [Header("Fishing Components")]
     [SerializeField] private Transform m_SeaPosition;   // The position of the ocean.
@@ -240,7 +241,7 @@ public class FishManager : MonoBehaviour
                     m_FishCursor.SetBool("isDown", false);
                     m_FishingPoleAS.Stop();
 
-                    m_FishHP += Time.deltaTime * 0.2f;
+                    m_FishHP += Time.deltaTime * (m_FishMaxHP * 0.025f);
                 }
 
                 float fishHealth = m_FishHP / m_FishMaxHP;
@@ -278,7 +279,7 @@ public class FishManager : MonoBehaviour
     public void StartFishing()
     {
         if(m_IsFishing || m_FishingCoolDown > 0.0f || GameManager.instance.m_IsDelivering || 
-        GameManager.instance.m_FlagMetFisher == false) return;
+        GameManager.instance.m_FlagMetFisher == false || m_StartUpAnimation) return;
         m_CaughtTheFish = false;
         StartCoroutine("StartFishingEvent");
     }
@@ -395,6 +396,7 @@ public class FishManager : MonoBehaviour
 
     IEnumerator StartFishingEvent()
     {
+        m_StartUpAnimation = true;
         // Move Player towards pier
         float t = 0.0f;
         Vector2 playPos = m_Player.transform.position;
@@ -461,6 +463,7 @@ public class FishManager : MonoBehaviour
         FishCoolDown();
         m_WaitTime = Random.Range(5.0f, 10.0f);
         m_FishingStage = 1;
+        m_StartUpAnimation = false;
 
         yield return null;
     }

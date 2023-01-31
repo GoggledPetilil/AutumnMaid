@@ -38,22 +38,6 @@ public class TitleScreen : MonoBehaviour
 
         m_PressStartText.SetActive(true);
         HideMenus();
-<<<<<<< HEAD
-        GameManager.instance.SetTouchControls(false);
-=======
-
-        if(GameManager.instance.m_GameStarted)
-        {
-            if(GameManager.instance.m_HappyLevel >= 10)
-            {
-                StartCoroutine(NGIO.UnlockMedal(72297));
-            }
-            else if(GameManager.instance.m_HappyLevel < 1)
-            {
-                StartCoroutine(NGIO.UnlockMedal(72298));
-            }
-        }
->>>>>>> parent of c44333c (v2.0.4)
     }
 
     void Update()
@@ -99,7 +83,6 @@ public class TitleScreen : MonoBehaviour
         SetMenuVisibility(true,false);
         m_PressStartText.SetActive(false);
         EventSystem.current.SetSelectedGameObject(NewGameButton.gameObject);
-        //EventSystem.current.firstSelectedGameObject = NewGameButton.gameObject;
     }
 
     public void ShowOptionsMenu()

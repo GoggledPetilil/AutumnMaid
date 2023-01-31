@@ -75,8 +75,6 @@ public class PauseManager : MonoBehaviour
         }
         else 
         {
-            GameManager.instance.SetAllTouchControls(false, false, false, true);
-            
             m_CanvasGroup.alpha = 1.0f;
             m_CanvasGroup.interactable = true;
             m_CanvasGroup.blocksRaycasts = true;
@@ -115,17 +113,14 @@ public class PauseManager : MonoBehaviour
         if(GameManager.instance.m_PausePage == 1)
         {
             OpenItemsScreen();
-            EventSystem.current.SetSelectedGameObject(m_ItemButton.GetComponentInChildren<Button>().gameObject);
         }
         else if(GameManager.instance.m_PausePage == 2)
         {
             OpenSystemScreen();
-            EventSystem.current.SetSelectedGameObject(m_SystemButton.GetComponentInChildren<Button>().gameObject);
         }
         else 
         {
             OpenMapScreen();
-            EventSystem.current.SetSelectedGameObject(m_MapButton.GetComponentInChildren<Button>().gameObject);
         }
     }
 
@@ -136,6 +131,7 @@ public class PauseManager : MonoBehaviour
         SetCurrentPage();
         PlayFlipSound();
         FlipPage();
+            EventSystem.current.SetSelectedGameObject(m_MapButton.GetComponentInChildren<Button>().gameObject);
         
         Vector2 mapPos = Vector2.zero;
         if(GameManager.instance.isOutside())
@@ -212,6 +208,7 @@ public class PauseManager : MonoBehaviour
         SetCurrentPage();
         PlayFlipSound();
         FlipPage();
+        EventSystem.current.SetSelectedGameObject(m_ItemButton.GetComponentInChildren<Button>().gameObject);
 
         int c = m_InventoryHolder.childCount;
         for(int i = 0; i < c; i++)
@@ -259,6 +256,7 @@ public class PauseManager : MonoBehaviour
         SetCurrentPage();
         PlayFlipSound();
         FlipPage();
+        EventSystem.current.SetSelectedGameObject(m_SystemButton.GetComponentInChildren<Button>().gameObject);
 
         m_MasterSlider.value = GameManager.instance.GetMasterVolume();
         m_BGMSlider.value = GameManager.instance.GetBGMVolume();

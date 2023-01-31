@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioMixer m_AudioMixer;
     [SerializeField] private AudioSource m_BGMPlayer;
     [SerializeField] private AudioSource m_SFXPlayer;
-    [SerializeField] private GameObject m_TouchControls;
+    [SerializeField] private GameObject m_LoadingIcon;
 
     [Header("Music Parameters")]
     private float m_MusicTime = 64;     // Time between each song.
@@ -99,6 +99,7 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             m_Anim = GetComponentInChildren<Animator>();
+            m_LoadingIcon.SetActive(false);
 
             DontDestroyOnLoad(this.gameObject);
         }
@@ -164,26 +165,6 @@ public class GameManager : MonoBehaviour
         m_FlagMetHilda = false;
         m_FlagMetJan = false;
         m_BigMode = false;
-    }
-
-    public void SetTouchControls(bool state)
-    {
-        m_TouchControls.gameObject.SetActive(state && Application.isMobilePlatform);
-    }
-
-    public void SetAllTouchControls(bool joystick, bool talk, bool broom, bool pause)
-    {
-        if(Application.isMobilePlatform)
-        {
-            m_TouchControls.transform.GetChild(0).gameObject.SetActive(joystick);
-            m_TouchControls.transform.GetChild(1).gameObject.SetActive(talk);
-            m_TouchControls.transform.GetChild(2).gameObject.SetActive(broom);
-            m_TouchControls.transform.GetChild(3).gameObject.SetActive(pause);
-        }
-        else
-        {
-            SetTouchControls(false);
-        }
     }
 
     public void UnlockMedal(int medal_id)
@@ -468,7 +449,21 @@ public class GameManager : MonoBehaviour
         m_Anim.SetTrigger("FadeOut");
         yield return new WaitForSeconds(0.5f);
 
-        SceneManager.LoadScene(sceneIndex, LoadSceneMode.Single);
+        //SceneManager.LoadScene(sceneIndex, LoadSceneMode.Single);
+        m_LoadingIcon.SetActive(true);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneIndex);
+        asyncLoad.allowSceneActivation = false;
+
+        while(!asyncLoad.isDone)
+        {
+            if(asyncLoad.progress >= 0.9f)
+            {
+                asyncLoad.allowSceneActivation = true;
+            }
+            yield return null;
+        }
+
+        m_LoadingIcon.SetActive(false);
         m_Anim.SetTrigger("FadeIn");
     }
 
