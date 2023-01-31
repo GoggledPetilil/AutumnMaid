@@ -28,5 +28,5 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 7276492335e4c8c43972bcaa15c718b6, type: 2}
     sentence: Maybe they're having a pizza party or something? It's four pizzas this
       time....Huh. Lotta pizza for such a small class...
-  - character: {fileID: 11400000, guid: 333132de45a547f45847de41a3d719ca, type: 2}
+  - character: {fileID: 11400000, guid: 7276492335e4c8c43972bcaa15c718b6, type: 2}
     sentence: Even so, Speedy Maple will get the job done! Here we go!

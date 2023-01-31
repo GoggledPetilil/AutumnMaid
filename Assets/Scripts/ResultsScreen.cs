@@ -44,19 +44,14 @@ public class ResultsScreen : MonoBehaviour
 
     void Update()
     {
+<<<<<<< HEAD
         if(!m_Finished) return;
         if(playerInputActions.Player.Interact.WasPressedThisFrame() || playerInputActions.UI.Submit.WasPressedThisFrame() || 
         playerInputActions.UI.Start.WasPressedThisFrame() || playerInputActions.UI.Click.WasPressedThisFrame())
+=======
+        if(Input.anyKeyDown && m_Finished)
+>>>>>>> parent of c44333c (v2.0.4)
         {
-            if(GameManager.instance.m_HappyLevel >= 10)
-            {
-                StartCoroutine(NGIO.UnlockMedal(72297));
-            }
-            else if(GameManager.instance.m_HappyLevel < 1)
-            {
-                StartCoroutine(NGIO.UnlockMedal(72298));
-            }
-
             GameManager.instance.ResetGameStats();
             GameManager.instance.TransferPlayer(2, Vector2.zero, true);
         }

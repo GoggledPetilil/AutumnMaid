@@ -6606,7 +6606,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD
   m_text: v1.1.0
+=======
+  m_text: v1.0.3
+>>>>>>> parent of c44333c (v2.0.4)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d3431093b7ead047b373ea77b8c29a2, type: 2}
   m_sharedMaterial: {fileID: -4798228240550958997, guid: 5d3431093b7ead047b373ea77b8c29a2, type: 2}
