@@ -6328,6 +6328,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5235383109721821275, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235383109721821275, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235383109721821275, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 774184775}
+    - target: {fileID: 5235383109721821275, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235383109721821275, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnFullscreenTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235383109721821275, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235383109721821275, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5251252594866064166, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6424,6 +6452,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6592965188763966954, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
+      propertyPath: m_LeftClickAction
+      value: 
+      objectReference: {fileID: 2477793178937268022, guid: 07cf630debe43264699ed103d9f87441, type: 3}
     - target: {fileID: 6890401710411073143, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7182,7 +7214,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: v1.0.5
+  m_text: v1.0.6
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d3431093b7ead047b373ea77b8c29a2, type: 2}
   m_sharedMaterial: {fileID: -4798228240550958997, guid: 5d3431093b7ead047b373ea77b8c29a2, type: 2}
@@ -8259,6 +8291,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 706386483}
   m_CullTransparentMesh: 1
+--- !u!114 &774184775 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4880032995374387653, guid: 7c0b9fabc2e43dc488cdb8154e700479, type: 3}
+  m_PrefabInstance: {fileID: 197764394}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 406b33df90ed92545bb0a80fd76573c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &829519374
 GameObject:
   m_ObjectHideFlags: 0

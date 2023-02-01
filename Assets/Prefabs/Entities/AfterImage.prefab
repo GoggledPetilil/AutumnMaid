@@ -100,4 +100,4 @@ MonoBehaviour:
   m_ActiveTime: 0.2
   m_AlphaSet: 0.8
   m_AlphaMultiplier: 0.85
-  m_Color: {r: 1, g: 0, b: 0.33020306, a: 1}
+  m_Color: {r: 0.7725491, g: 0.18823531, b: 0.40784317, a: 1}

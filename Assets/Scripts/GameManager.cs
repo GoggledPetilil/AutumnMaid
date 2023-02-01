@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 using Cinemachine;
@@ -117,8 +118,9 @@ public class GameManager : MonoBehaviour
         }
     }*/
 
-    void OnFullscreenTrigger()
+    public void OnFullscreenTrigger(InputAction.CallbackContext context)
     {
+        if(!context.performed) return;
         SetFullScreen(!Screen.fullScreen);
     }
 

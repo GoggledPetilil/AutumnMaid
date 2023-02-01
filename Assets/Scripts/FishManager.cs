@@ -148,7 +148,7 @@ public class FishManager : MonoBehaviour
             if(m_FishHP > 0.0f)
             {
                 // Adjust the slider.
-                float sliderMod = (m_CalmFish) ? 1.0f : 1.5f;
+                float sliderMod = (m_CalmFish) ? 1.0f : 1.75f;
                 if(m_SliderGoRight)
                 {
                     if(m_FishingSlider.value >= m_FishingSlider.maxValue)

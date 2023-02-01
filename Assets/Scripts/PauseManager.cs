@@ -131,7 +131,7 @@ public class PauseManager : MonoBehaviour
         SetCurrentPage();
         PlayFlipSound();
         FlipPage();
-            EventSystem.current.SetSelectedGameObject(m_MapButton.GetComponentInChildren<Button>().gameObject);
+        EventSystem.current.SetSelectedGameObject(m_MapButton.GetComponentInChildren<Button>().gameObject);
         
         Vector2 mapPos = Vector2.zero;
         if(GameManager.instance.isOutside())
